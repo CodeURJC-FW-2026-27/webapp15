@@ -44,9 +44,7 @@ Search queries may relate to the _Name of the Album_, _Name of the Author_, _Nam
 
 The data's categorization will be primarily organised as follows:
 
-* Artist
-  * Album
-    * Song
-      * Genre
-      
-_(It's possible that the Artist or the Album may be included in a Genre, attending to the main genre the artist releases music of)_
+* Genre
+  * Artist
+    * Album
+      * Song
