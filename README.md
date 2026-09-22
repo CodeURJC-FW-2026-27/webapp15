@@ -18,7 +18,7 @@ The goal is to provide a curated list of albums across different genres with des
 ### Entities
 
 * #### Main Entity | Albums 
-  An _lbum consists of _7 attributes_:
+  An Album consists of _7 attributes_:
   1. **Album Cover:** An image of the album's cover art.
   2. **Description:** A description of the album's vision and inspirations, sometimes with details about the _making of_ and the _creative process_.
   3. **Tracklist:** The list of _songs_ contained in the album.
