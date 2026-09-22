@@ -28,12 +28,12 @@ The goal is to provide a curated list of albums across different genres with des
   7. **Date of Release:** The _day, month and year_ the album was published on.
 
 * #### Secondary Entity | Songs
-  A Song consists of _3 attributes_:
+  A Song consists of _4 attributes_:
   1. **Cover Art:** A image of the song's cover photo (or photos if multiple).
-  1. **Runtime:** The duration of the song.
-  2. **BPM:** The _Beats Per Minute_ (essentially the _rythm_) of the song.
-  3. **Genre:** Alternatively provides the music genre the song belongs to since the same album can contain songs that belong to various genres.
-  4. **Artists:** The author and (if any) featured artists' name, photo and brief description.
+  2. **Runtime:** The duration of the song.
+  3. **BPM:** The _Beats Per Minute_ (essentially the _rythm_) of the song.
+  4. **Genre:** Alternatively provides the music genre the song belongs to since the same album can contain songs that belong to various genres.
+  5. **Artists:** The author and (if any) featured artists' name, photo and brief description.
 
 ### Images
 * **Albums:** Albums will feature an image for the _Album Cover_ and _Author_, as well and sometimes images from the album's _Photo Shoot_ (if any) or related to the album or any of the songs in it.
