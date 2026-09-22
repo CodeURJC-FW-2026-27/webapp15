@@ -22,7 +22,7 @@ The goal is to provide a curated list of albums across different genres with des
   1. **Album Cover:** An image of the album's cover art.
   2. **Description:** A description of the album's vision and inspirations, sometimes with details about the _making of_ and the _creative process_.
   3. **Tracklist:** The list of _songs_ contained in the album.
-  4. **Lead Single:** The _main single or most popular track_ of the album.
+  4. **Lead Single:** A sample audio file of the _main single or most popular track_ of the album.
   5. **Genre:** The genre (or genres) the music on the album belongs to.
   6. **Author:** The author's name, photo and brief description.
   7. **Date of Release:** The _day, month and year_ the album was published on.
