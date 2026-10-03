@@ -279,7 +279,7 @@ ol {
 
 .header.header--normal {
 	position: relative;
-	background: #290849;
+	background: #410404;
 }
 
 .header__logo a {
@@ -603,7 +603,7 @@ ol {
 
 .breadcrumb__links a {
 	font-size: 15px;
-	color: #111111;
+	color: #885151;
 	margin-right: 18px;
 	display: inline-block;
 	position: relative;
@@ -653,8 +653,19 @@ ol {
 }
 
 .about.about--page .about__text p {
-	color: #111111;
+	color: #ffffff;
+	font-size:20px;
 }
+
+.about.about--page .about__text h4 {
+	color: #ffffff;
+}
+
+.about.about--page .about__text h2 {
+	padding-top:20px;
+	color: #ffffff;
+}
+
 
 .about__text {
 	padding-top: 110px;
@@ -674,9 +685,9 @@ ol {
 }
 
 .skills__content {
-	background: #5c00ce;
+	background: #410404;
 	height: 500px;
-	padding: 100px 70px 60px;
+	padding: 70px 70px 60px;
 }
 
 .skills__content .section-title h2 {
@@ -821,7 +832,7 @@ ol {
 .about__services__item__pic .icon {
 	height: 50px;
 	width: 50px;
-	background: #5c00ce;
+	background: #121212;
 	border-radius: 50%;
 	line-height: 50px;
 	text-align: center;
@@ -865,7 +876,7 @@ ol {
 }
 
 .feature.feature--about .feature__item h5 {
-	color: #111111;
+	color: #ffffff;
 }
 
 .feature__text {
