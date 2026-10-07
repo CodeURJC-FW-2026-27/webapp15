@@ -104,6 +104,41 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+#index-page{
+  background-color: #161616;
+  background-image: url(/resources/background.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+
+.title-text{
+  color: white;
+  font-size: 7em;
+} 
+.title-text span{
+  color: #701818 ;
+} 
+
+.title-img{
+  width: 25vw;
+  height: 50vh;
+  margin-top: 8%;
+  background-image: url('/resources/record.png');
+  background-size: cover;
+} 
+.title-img:hover{
+  margin-top: 7%;
+  width: 27vw;
+  height: 54vh;
+  cursor: pointer;
+}
+.title-img:active{  
+  background-image: url('/resources/record_broken.png');
+} 
+
 hr {
   margin: 1rem 0;
   color: inherit;
