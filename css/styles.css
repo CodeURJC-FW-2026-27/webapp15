@@ -139,6 +139,7 @@ body {
   height: 50vh;
   background-image: url('/resources/record.png');
   background-size: cover;
+  transition: 0.3s ease;
 } 
 .title-img:hover{
   width: 27vw;
