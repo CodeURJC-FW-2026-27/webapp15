@@ -5252,7 +5252,7 @@ textarea.form-control-lg {
   background-color: #959596;
   border-color: #959596;
 }
-url(../template.html)
+
 .list-group-item-dark {
   color: #141619;
   background-color: #d3d3d4;
@@ -11109,6 +11109,7 @@ html {
 .masthead {
   padding: 0;
   justify-content: center;
+  background-image: url(/resources/background.jpg)
 }
 .masthead div {
   display: flex;
