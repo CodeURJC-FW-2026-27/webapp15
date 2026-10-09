@@ -15,23 +15,55 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
     <body id="page-top">
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
-            <div>
-                <!-- Masthead Heading-->    
-                <h1 class="masthead-heading">Record</h1>
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar" src="resources/record_broken.png" alt="Vinyl Record" />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading" style="color: #701818">Scratch</h1>
+            <div>  
+                <img class="masthead-avatar" src="resources/record_left.png" alt="Vinyl Record" />
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Filter
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#">Genre</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Pop</a></li>
+                                <li><a class="dropdown-item" href="#">Hyperpop</a></li>
+                                <li><a class="dropdown-item" href="#">K-Pop</a></li>
+                                <li><a class="dropdown-item" href="#">Electronic</a></li>
+                                <li><a class="dropdown-item" href="#">Reggaeton</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#">Author</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Tiffany Day</a></li>
+                                <li><a class="dropdown-item" href="#">Alan Walker</a></li>
+                                <li><a class="dropdown-item" href="#">BlackPink</a></li>
+                                <li><a class="dropdown-item" href="#">Bad Bunny</a></li>
+                                <li><a class="dropdown-item" href="#">Olivia Rodrigo</a></li>
+                                <li><a class="dropdown-item" href="#">Conan Gray</a></li>
+                                <li><a class="dropdown-item" href="#">The Gluttonies</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-item">
+                            Release Date &nbsp;
+                            <input type="date">
+                        </li>
+                    </ul>
+                </div>
+                <img class="masthead-avatar" src="resources/record_right.png" alt="Vinyl Record" />
             </div>
         </header>
 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-success text-black rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler text-uppercase bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
@@ -43,6 +75,7 @@
                     </ul>
                 </div>
         </nav>
+
         
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="portfolio">
