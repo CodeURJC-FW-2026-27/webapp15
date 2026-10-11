@@ -820,6 +820,29 @@ body {
 
 /* START OF ALBUM GRID -------------------------------------*/
 
+
+/* START OF DETAIL GRID -------------------------------------*/
+.videoleadsongGrid{
+  max-width: 100%;
+  height:100%;
+  display:grid;
+}
+
+.Hides{
+  display:none;
+}
+.Hidel{
+  display:block;
+}
+
+@media (min-width:992px){
+  .Hides{display:block;}
+  .Hidel{display:none;}
+}
+
+
+/* END OF DETAIL GRID-------------------------------------*/
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -7510,6 +7533,14 @@ textarea.form-control-lg {
   height: 75% !important;
 }
 
+.h-90 {
+  height: 90% !important;
+}
+
+.min-h-90{
+  min-height:300px;
+}
+
 .h-100 {
   height: 100% !important;
 }
@@ -11218,9 +11249,9 @@ html {
   cursor: pointer;
   position: relative;
   display: block;
-  max-width: 25rem;
   border-radius: 0.5rem;
-  overflow: hidden;
+  height:100%;
+  width:auto;
 }
 .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
