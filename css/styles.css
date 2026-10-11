@@ -73,8 +73,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #1abc9c;
-  --bs-link-hover-color: #15967d;
+  --bs-link-color: #ffffff;
+  --bs-link-hover-color: #fcfdfd;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -821,7 +821,10 @@ body {
 /* START OF ALBUM GRID -------------------------------------*/
 
 
+
+
 /* START OF DETAIL GRID -------------------------------------*/
+
 .videoleadsongGrid{
   max-width: 100%;
   height:100%;
@@ -834,10 +837,81 @@ body {
 .Hidel{
   display:block;
 }
-
 @media (min-width:992px){
   .Hides{display:block;}
   .Hidel{display:none;}
+}
+
+.divider-customd {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divider-customd .divider-custom-lined {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: #5a0b0b;
+  border-radius: 1rem;
+  border-color: #ffffff;
+}
+.divider-customd .divider-custom-lined:first-child {
+  margin-right: 1rem;
+}
+.divider-customd .divider-custom-lined:last-child {
+  margin-left: 1rem;
+}
+.divider-customd .divider-custom-icond {
+  color: #5a0b0b;
+  font-size: 2rem;
+}
+.divider-customd.divider-light .divider-custom-lined {
+  background-color: #fff;
+}
+.divider-customd.divider-light .divider-custom-icond {
+  color: #fff;
+}
+
+#createButtond {
+  position: absolute;
+  left: 17%;
+}
+#createButtond a {
+  text-decoration: none;
+}
+
+.detailGrids{
+  color:white; 
+  --bs-text-opacity: 1;
+}
+div>h2{
+  color:white
+}
+div>ol{
+  color: white; 
+  font-size:150%;
+}
+div>ul{
+  color: white; 
+  font-size:150%;
+}
+div>p{
+  color: white; 
+  font-size:130%;
+
+}
+
+.authordesc{
+  color: white; 
+  font-size:150%;
+  padding-bottom:5%;
+  padding-top:5%;
+}
+
+.button-detail{
+  padding-top: 5%;
 }
 
 
@@ -3621,11 +3695,11 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #711010;
-  --bs-btn-border-color: #520808;
+  --bs-btn-bg: #5f0e0e;
+  --bs-btn-border-color: #500505;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #c51d1d;
-  --bs-btn-hover-border-color: #b21616;
+  --bs-btn-hover-bg: #c51d1d8c;
+  --bs-btn-hover-border-color: #660d0d93;
   --bs-btn-focus-shadow-rgb: 200, 13, 13;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #fc6464;
@@ -5545,7 +5619,7 @@ textarea.form-control-lg {
   width: 100%;
   color: var(--bs-modal-color);
   pointer-events: auto;
-  background-color: var(--bs-modal-bg);
+  background-color: #121212;
   background-clip: padding-box;
   border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
   border-radius: var(--bs-modal-border-radius);
