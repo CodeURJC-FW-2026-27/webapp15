@@ -756,7 +756,8 @@ body {
 .albumGrid .slot {
     position: relative;
     height: 220px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
+    text-decoration: none;
 }
 
 .albumCover {
@@ -769,7 +770,7 @@ body {
 }
 
 .albumCover:hover {
-    top: 3%;
+    top: 2%;
     left: 10%;
     rotate: -5deg;
     cursor: pointer;
@@ -783,12 +784,24 @@ body {
     margin-top: -5%;
 }
 
-#createButton {
+.albumGrid .title {
+  margin-top: 73%;
+  margin-left: 17%;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+.albumGrid .author {
+  margin-left: 17%;
+  margin-top: -2%;
+  font-size: 1rem;
+}
+
+.homeButton {
   position: absolute;
   right: 19.5%;
-  margin-top: 6%;
+  margin-top: 5%;
 }
-#createButton a {
+.createButton a {
   text-decoration: none;
 }
 
@@ -801,7 +814,18 @@ body {
 
     .albumGrid .slot {
         height: 220px;
-        margin-bottom: 60px;
+        margin-bottom: 80px;
+    }
+
+    .albumGrid p {
+      margin-top: 72%;
+      margin-left: 17%;
+    }
+
+    .homeButton {
+      position: absolute;
+      right: 10%;
+      margin-top: 4%;
     }
 }
 
@@ -814,11 +838,20 @@ body {
 
     .albumGrid .slot {
         height: 220px;
-        margin-bottom: 60px;
+        margin-bottom: 80px;
+    }
+    .albumGrid p {
+      margin-top: 72%;
+      margin-left: 17%;
+    }
+    .homeButton {
+      position: absolute;
+      right: 5%;
+      margin-top: 2%;
     }
 }
 
-/* START OF ALBUM GRID -------------------------------------*/
+/* END OF ALBUM GRID -------------------------------------*/
 
 
 
@@ -8405,7 +8438,7 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+  color: #919ba3 !important;
 }
 
 .text-black-50 {
