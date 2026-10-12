@@ -83,13 +83,14 @@
     
         <!--  Main Center -->
         <main>
-            <div class="formulario">
+            <div class="form">
                 <form>
                    <label for ="inputAlbumCover" > Album Cover</label>
                    <input type="Album Cover" id="inputAlbumCover" placeholder="Album Cover">
-                   <label for ="text-area" > Description</label>
-                   <textarea id="text-area" rows="4"></textarea>
-                   <!--Falta Tracklist-->
+                   <label for ="inputDescription" > Description </label>
+                   <input type='Description' id="inputDescription" placeholder="Description">
+                   <label for="Tracklist ">Tracklist</label>
+                   <textarea  id="songs"  rows="8" placeholder="Tracklist"></textarea>                   
                    <label for ="inputLeadSingle" >Lead Single</label>
                    <input type="Lead Single" id="inputLeadSingle" placeholder="Lead Single"> <!--Falta añadir patron de validacion-->
                    <label for ="inputGenre" >Genre</label>
@@ -99,7 +100,10 @@
                    <label for ="inputDate" >Date</label>
                    <input type="date" id="inputDate" placeholder="Date">
             </div>
-           
+            <div class='buttons'>
+                <button >Save</button>
+                <button>Cancel</button>
+            </div>
         </main>
 
 
