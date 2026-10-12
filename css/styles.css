@@ -792,8 +792,28 @@ body {
 }
 .albumGrid .author {
   margin-left: 17%;
-  margin-top: -2%;
+  margin-top: -1%;
   font-size: 1rem;
+}
+
+.genre {
+  position: absolute;
+  z-index: 3;
+  margin-top: 77%;
+  right: 15%;
+  padding: 0.5% 2%;
+  border-radius: 7px;
+  opacity: 80%;
+  font-size: 0.7rem;
+}
+.hyperpop {
+  background-color: #3590a0
+}
+.EDM {
+  background-color: #1919a3
+}
+.kpop {
+  background-color: #b33b79;
 }
 
 .homeButton {
@@ -827,6 +847,9 @@ body {
       right: 10%;
       margin-top: 4%;
     }
+    .genre {
+      top: 5%;
+    }
 }
 
 @media (max-width: 575px) {
@@ -848,6 +871,9 @@ body {
       position: absolute;
       right: 5%;
       margin-top: 2%;
+    }
+    .genre {
+      top: 5%;
     }
 }
 
