@@ -966,6 +966,17 @@ div>p{
 }
 
 
+.bpmback {
+  border-radius: 7px;
+  opacity: 80%;
+  font-size: 0.7rem;
+  background-color:#410404; 
+}
+.bpmlist{
+  list-style-type:none;
+} 
+
+
 /* END OF DETAIL GRID-------------------------------------*/
 
 
