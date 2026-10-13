@@ -815,6 +815,9 @@ body {
 .kpop {
   background-color: #b33b79;
 }
+.rock {
+  background-color: #262626;
+}
 
 .homeButton {
   position: absolute;
@@ -959,7 +962,6 @@ div>ul{
 div>p{
   color: white; 
   font-size:130%;
-
 }
 
 .authordesc{
@@ -971,6 +973,11 @@ div>p{
 
 .button-detail{
   padding-top: 5%;
+}
+
+.img-fluiddesc {
+  max-width: 50%;
+  height: auto;
 }
 
 
