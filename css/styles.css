@@ -12275,6 +12275,20 @@ body {
 .pop {
   background-color: #6f00ff;
 }
+ 
+.rap {
+  background-color: #1a1aff;
+} 
+
+.bachata {
+   background-color: #4d2600; 
+}
+
+.reggaetón {
+    background-color: #4d004d;
+
+}
+
 
 .homeButton {
   position: absolute;
