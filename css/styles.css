@@ -972,34 +972,25 @@ div>p{
 
 /* START OF CREATION GRID-------------------------------------*/
 
-.divider-customc {
-  margin: 1.25rem 0 1.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.divider-customc .divider-custom-linec {
-  width: 100%;
-  max-width: 7rem;
-  height: 0.25rem;
-  background-color: #5a0b0b;
-  border-radius: 1rem;
-  border-color: #5a0b0b ;
-}
-.divider-customc .divider-custom-iconc {
-  color: #5a0b0b;
-  font-size: 2rem;
-}
 .page-sectionc {
   padding: 6rem 0;
 }
 .page-sectionc .page-section-headingc {
   padding-top:7%;
-  font-size: 2.25rem;
-  line-height: 2rem;
+  font-size: 6 rem;
+  line-height: 3 
+  rem;
   color: white;
 }
+
+.field {
+  margin: 2rem;
+  border-radius: 10%;
+  border-color: #5a0b0b ;  
+}
+
+
+
 
 /* END OF CREATION GRID-------------------------------------*/
 
@@ -11455,4 +11446,4 @@ html {
 
 .copyright {
   background-color: #171717;
-}
+} 
