@@ -755,10 +755,16 @@ body {
 
 .albumGrid .slot {
     position: relative;
-    height: 220px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     text-decoration: none;
 }
+
+.albumGrid .authorGenre {
+  display: flex;
+  margin-left: 3%;
+  width: 85%;
+  justify-content: space-between;
+} 
 
 .albumCover {
     position: absolute;
@@ -797,10 +803,7 @@ body {
 }
 
 .genre {
-  position: absolute;
   z-index: 3;
-  margin-top: 77%;
-  right: 15%;
   padding: 0.5% 2%;
   border-radius: 7px;
   opacity: 80%;
@@ -835,16 +838,6 @@ body {
         margin-left: 10%;
     }
 
-    .albumGrid .slot {
-        height: 220px;
-        margin-bottom: 80px;
-    }
-
-    .albumGrid p {
-      margin-top: 72%;
-      margin-left: 17%;
-    }
-
     .homeButton {
       position: absolute;
       right: 10%;
@@ -861,15 +854,7 @@ body {
         margin-left: 5%;
         padding-top: 15%;
     }
-
-    .albumGrid .slot {
-        height: 220px;
-        margin-bottom: 80px;
-    }
-    .albumGrid p {
-      margin-top: 72%;
-      margin-left: 17%;
-    }
+    
     .homeButton {
       position: absolute;
       right: 5%;
