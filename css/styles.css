@@ -756,9 +756,13 @@ body {
 .albumGrid .slot {
     position: relative;
     height: 220px;
-    margin-bottom: 50px;
+    margin-bottom: 120px;
     text-decoration: none;
 }
+
+.albumGrid .authorGenre {
+  display: flex;
+} 
 
 .albumCover {
     position: absolute;
@@ -798,9 +802,8 @@ body {
 
 .genre {
   position: absolute;
-  z-index: 3;
-  margin-top: 77%;
   right: 15%;
+  z-index: 3;
   padding: 0.5% 2%;
   border-radius: 7px;
   opacity: 80%;
