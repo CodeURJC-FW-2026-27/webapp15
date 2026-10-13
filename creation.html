@@ -83,27 +83,46 @@
     
         <!--  Main Center -->
         <main>
+
+            <!--Form for creation page-->
             <div class="form">
                 <form>
                    <label for ="inputAlbumCover" > Album Cover</label>
                    <input type="Album Cover" id="inputAlbumCover" placeholder="Album Cover">
+
                    <label for ="inputDescription" > Description </label>
                    <input type='Description' id="inputDescription" placeholder="Description">
+
                    <label for="Tracklist ">Tracklist</label>
-                   <textarea  id="songs"  rows="8" placeholder="Tracklist"></textarea>                   
+                   <textarea  id="songs"  rows="8" placeholder="Tracklist"></textarea> 
+
                    <label for ="inputLeadSingle" >Lead Single</label>
-                   <input type="Lead Single" id="inputLeadSingle" placeholder="Lead Single"> <!--Falta añadir patron de validacion-->
+                   <input type="url" id="inputLeadSingle" placeholder="Lead Single">
+
                    <label for ="inputGenre" >Genre</label>
                    <input type="Genre" id="inputGenre" placeholder="Genre">
+
                    <label for ="inputAuthor" >Author</label>
                    <input type="Author" id="inputAuthor" placeholder="Author">
+                   
                    <label for ="inputDate" >Date</label>
                    <input type="date" id="inputDate" placeholder="Date">
             </div>
+
+            <!--Save button-->
             <div class='buttons'>
-                <button >Save</button>
-                <button>Cancel</button>
+                <button >Save </button>
             </div>
+
+            <!--Cancel button-->
+            <div class='buttons''>
+                <button> Cancel <a href="home.html">Cancel</a></button>
+            </div>
+
+
+
+
+
         </main>
 
 
