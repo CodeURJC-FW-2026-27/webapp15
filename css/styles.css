@@ -881,6 +881,65 @@ body {
   display:grid;
 }
 
+  .Showl{
+    display:block;
+  }
+  .Showm{
+    display:none;
+  }
+  .Shows{
+    display:none;
+  }
+  .Showxs{
+    display:none;
+  }
+
+
+@media (min-width:992px) and (max-width:1999px){
+  .Showl{
+    display:none;
+  }
+  .Showm{
+    display:block;
+  }
+  .Shows{
+    display:none;
+  }
+  .Showxs{
+    display:none;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .Showl{
+    display:none;
+  }
+  .Showm{
+    display:none;
+  }
+  .Shows{
+    display:block;
+  }
+  .Showxs{
+    display:none;
+  }
+}
+
+@media (max-width:767px){
+  .Showl{
+    display:none;
+  }
+  .Showm{
+    display:none;
+  }
+  .Shows{
+    display:none;
+  }
+  .Showxs{
+    display:block;
+  }
+}
+
 .Hides{
   display:none;
 }
@@ -978,6 +1037,7 @@ div>p{
 .bpmlist{
   list-style-type:none;
 } 
+
 
 
 /* END OF DETAIL GRID-------------------------------------*/
