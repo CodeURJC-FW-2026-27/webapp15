@@ -84,44 +84,73 @@
         <!--  Main Center -->
         <main>
 
-            <!--Form for creation page-->
-            <div class="form">
+
+          <!-- Creation Container for Grid-->
+          <div class="container" style="border: 2px solid white;">
+
+            <h2 class="page-section-headingc text-center text-uppercase mb-0 detailGrids">New Album</h2>
+                <!-- Icon Divider-->
+            <div class="divider-customc">
+                <div class="divider-custom-linec"></div>
+                <div class="divider-custom-iconc"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-linec"></div>
+            </div>
+
+               <!--Form for creation page-->
+        <div class="row" style="border: 2px solid white;">  
                 <form>
-                   <label for ="inputAlbumCover" > Album Cover</label>
-                   <input type="Album Cover" id="inputAlbumCover" placeholder="Album Cover">
+                    <div class="field col-ml-2">
+                        <label for ="inputAlbumCover" > Album Cover</label>
+                        <input type="Album Cover" id="inputAlbumCover" placeholder="Album Cover">
+                    </div>
 
-                   <label for ="inputDescription" > Description </label>
-                   <input type='Description' id="inputDescription" placeholder="Description">
+                    <div class="field col-ml-2">
+                       <label for ="inputDescription" > Description </label>
+                       <input type='Description' id="inputDescription" placeholder="Description">
+                    </div>
 
-                   <label for="Tracklist ">Tracklist</label>
-                   <textarea  id="songs"  rows="8" placeholder="Tracklist"></textarea> 
+                    <div class="field col-ml-2"></div>
+                       <label for="Tracklist ">Tracklist</label>
+                       <textarea  id="songs"  rows="8" placeholder="Tracklist"></textarea> 
+                    </div>
 
-                   <label for ="inputLeadSingle" >Lead Single</label>
-                   <input type="url" id="inputLeadSingle" placeholder="Lead Single">
+                    <div class="field col-ml-2">
+                       <label for ="inputLeadSingle" >Lead Single</label>
+                       <input type="url" id="inputLeadSingle" placeholder="Lead Single">
+                    </div>
 
-                   <label for ="inputGenre" >Genre</label>
-                   <input type="Genre" id="inputGenre" placeholder="Genre">
+                    <div class="field col-ml-2">
+                    <label for ="inputGenre" >Genre</label>
+                    <input type="Genre" id="inputGenre" placeholder="Genre">
+                    </div>
+ 
+                    <div class="field col-ml-2">
+                    <label for ="inputAuthor" >Author</label>
+                    <input type="Author" id="inputAuthor" placeholder="Author">
+                    </div>
+ 
+                    <div class="field col-ml-2">
+                    <label for ="inputDate" >Date</label>
+                    <input type="date" id="inputDate" placeholder="Date">
+                    </div>
+                    
+                </form>
+                
+            
 
-                   <label for ="inputAuthor" >Author</label>
-                   <input type="Author" id="inputAuthor" placeholder="Author">
-                   
-                   <label for ="inputDate" >Date</label>
-                   <input type="date" id="inputDate" placeholder="Date">
-            </div>
+                 <!--Save button-->
+                 <div  class="col-md-6 col-lg-4 mb-5">
+                    <button class="btn btn-primary createButton">Save </button>
+                 </div>
 
-            <!--Save button-->
-            <div class='buttons'>
-                <button >Save </button>
-            </div>
-
-            <!--Cancel button-->
-            <div class='buttons''>
-                <button> Cancel <a href="home.html">Cancel</a></button>
-            </div>
-
-
-
-
+                 <!--Cancel button-->
+                 <div class="col-md-6 col-lg-4 mb-5">
+                   <button class="btn btn-primary createButton"> <a href="home.html">Cancel</a></button>
+                 </div>
+             </div>          
+        
+                
+        </div>
 
         </main>
 
@@ -159,6 +188,8 @@
                 </div>
             </div>
         </footer>
+
+
 
 
         <!-- Copyright Section-->
@@ -369,6 +400,4 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
-
-</html>
+  
