@@ -1,4 +1,4 @@
-# RecordScratch
+<img width="1397" height="243" alt="image" src="https://github.com/user-attachments/assets/5263f05b-742c-46dd-8828-c62e62c9123b" /># RecordScratch
 
 
 ## Development Team
@@ -48,7 +48,11 @@ The data's categorization will be primarily organised as follows:
   * Artist
     * Album
       * Song
-### Participation in the workplace 
+## Participation in the workplace 
+
+### Home Page
+![Home Page screenshot](home.png)
+
   * Adrienn Brinza
       * Description: I've created the detail page, which includes a form with 8 different fields and 2 buttons: one labeled “Save” (which has no function) and   another labeled “Cancel” that redirects you to the home page. I've also added my 3 favorite albums to the home page, each with its cover art and respective genre.       * Commits:
          *
