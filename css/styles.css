@@ -126,29 +126,54 @@ body {
   margin: 0;
 } 
 .firstWord {
+  display: flex;
+  justify-content: center;
   color: white;
-  margin-top: -15%;
+  border: 2px solid white;
+  font-size: 6em;
 }
 .secondWord{
+  border: 2px solid white;
   color: #701818 ;
-  margin-bottom: -15%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  font-size: 6em;
 } 
 
 .title-img{
-  width: 25vw;
-  height: 50vh;
+  border: 2px solid white;
+  height: 100%;
+  width: 100%;
   background-image: url('/resources/record.png');
   background-size: cover;
   transition: 0.3s ease;
+  background-repeat: no-repeat;
 } 
 .title-img:hover{
-  width: 27vw;
-  height: 54vh;
+  height: 430px;
+  width: 430px;
   cursor: pointer;
 }
 .title-img:active{  
   background-image: url('/resources/record_broken.png');
 } 
+
+@media (max-width: 991px) {
+  .title-img {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 575px) {
+  .firstWord {
+    font-size: 5em;
+  }
+  .secondWord {
+    font-size: 5em;
+  }
+}
 
 /* END OF INDEX --------------------------------------------*/
 
