@@ -66,6 +66,20 @@ The data's categorization will be primarily organised as follows:
          *  Styles (css)
          *  Template page (template.html)
          *  Detail (detail.html)
+
+  * Sofía Gómez García
+      * Description: I made the detail page, along with the detail page that shows an album as an example whenever you click any album in the home page. The detail page Shows the title of the album, its cover, specifications about the genre, release date and author; the tracklist along with each song's runtime and bpm, and a button to delete and edit each one as well; a description of the album and what it is about, a video of the album's lead single, a button to go to creation page, another button to go to home page, a form to add a new song to the album, and the footer. I have also added three albums to the home page.
+      * Commits
+        * 
+        * 
+        * 
+        * 
+        * 
+      * Files
+        * Detail page (detail.html)
+        * Detail album example page (detail_WPSIATWIN.html)
+        * Home page (home.html)
+        * Styles (styles.css)
          
          
          
