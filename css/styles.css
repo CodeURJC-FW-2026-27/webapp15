@@ -928,7 +928,7 @@ body {
   }
 }
 
-@media (min-width:1999px){
+@media (min-width:1200px){
   .Showm{
     display:none;
   }
