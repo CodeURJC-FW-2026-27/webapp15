@@ -56,34 +56,49 @@ The data's categorization will be primarily organised as follows:
 ### Creation Page
 ![Creation Page screenshot](creation.png)
 
-  * Adrienn Brinza
-      * Description: I've created the detail page, which includes a form with 8 different fields and 2 buttons: one labeled “Save” (which has no function) and   another labeled “Cancel” that redirects you to the home page. I've also added my 3 favorite albums to the home page, each with its cover art and respective genre.       * Commits:
-         *
-         *
-         *
-         *
-         *
-      * Files:
-         *  Creation page (creation.html)
-         *  Home page (home.html)
-         *  Styles (css)
-         *  Template page (template.html)
-         *  Detail (detail.html)
+### Eric Vela Pérez
+  * **Description:** I've created the index and home page, which includes the heading, navigation bar and album grid. It also has a "Create New Element" button that links to the creation page. I made the album grid show the image in a vinyl record case style and also display the Title and Author of the album. At last, I've also added my 3 favorite albums to the grid.
 
-  * Sofía Gómez García
-      * Description: I made the detail page, along with the detail page that shows an album as an example whenever you click any album in the home page. The detail page Shows the title of the album, its cover, specifications about the genre, release date and author; the tracklist along with each song's runtime and bpm, and a button to delete and edit each one as well; a description of the album and what it is about, a video of the album's lead single, a button to go to creation page, another button to go to home page, a form to add a new song to the album, and the footer. I have also added three albums to the home page.
-      * Commits
-        * 
-        * 
-        * 
-        * 
-        * 
-      * Files
-        * Detail page (detail.html)
-        * Detail album example page (detail_WPSIATWIN.html)
-        * Home page (home.html)
-        * Styles (styles.css)
-         
-         
-         
+  * **5 most important Commits:**
+      *
+      *
+      *
+      *
+      *
+  * **Files I worked on:**
+      *  [Index page](index.html)
+      *  [Home page](home.html)
+      *  [Detail page](detail_WPSIATWIN.html)
+      *  [Creation page](detail.html)
+      *  [Styles](styles.css)
 
+### Sofía Gómez García
+  * **Description:** I made the detail page, along with the detail page that shows an album as an example whenever you click any album in the home page. The detail page Shows the title of the album, its cover, specifications about the genre, release date and author; the tracklist along with each song's runtime and bpm, and a button to delete and edit each one as well; a description of the album and what it is about, a video of the album's lead single, a button to go to creation page, another button to go to home page, a form to add a new song to the album, and the footer. I have also added three albums to the home page.
+
+  * **5 most important Commits:**
+      *
+      *
+      *
+      *
+      *
+  * **Files I worked on:**
+    *  [Home page](home.html)
+    *  [Detail Template page](detail.html)
+    *  [Detail page](detail_WPSIATWIN.html)
+    *  [Styles](styles.css)
+
+### Adrienn Brinza
+  * **Description:** I've created the detail page, which includes a form with 8 different fields and 2 buttons: one labeled “Save” (which has no function) and   another labeled “Cancel” that redirects you to the home page. I've also added my 3 favorite albums to the home page, each with its cover art and respective genre.      
+
+  * **5 most important Commits:**
+      *
+      *
+      *
+      *
+      *
+  * **Files I worked on:**
+    *  [Home page](home.html)
+    *  [Detail page](detail_WPSIATWIN.html)
+    *  [Creation page](creation.html)
+    *  [Template Page](template.html)
+    *  [Styles](styles.css)
