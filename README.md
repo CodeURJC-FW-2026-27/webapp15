@@ -27,17 +27,15 @@ The goal is to provide a curated list of albums across different genres with des
 
 * #### Secondary Entity | Songs
   A Song consists of _4 attributes_:
-  1. **Cover Art:** A image of the song's cover photo (or photos if multiple).
+  1. **Name:** The name of the song.
   2. **Runtime:** The duration of the song.
   3. **BPM:** The _Beats Per Minute_ (essentially the _rythm_) of the song.
-  4. **Artists:** The author and (if any) featured artists' name, photo and brief description.
 
 ### Images
 * **Albums:** Albums will feature an image for the _Album Cover_ and _Author_, as well and sometimes images from the album's _Photo Shoot_ (if any) or related to the album or any of the songs in it.
-* **Songs:** Songs will feature an image (or images) for the _Cover Art_ and _Artists_.
 
 ### Search, filtering and categorization
-Search queries may relate to the _Name of the Album_, _Name of the Author_, _Name of the Song_, _Name of the Genre_, _Date of Release_ or _BPM_, allowing the user to filter the search based on these preferences.
+The user can filter the search via the categories button next to the searchbar, where you can select music genre and date of release.
 
 The data's categorization will be primarily organised as follows:
 
@@ -45,6 +43,7 @@ The data's categorization will be primarily organised as follows:
   * Artist
     * Album
       * Song
+    
 ## Participation in the workplace 
 
 ### Home Page
@@ -64,7 +63,7 @@ The data's categorization will be primarily organised as follows:
       * [Created navbar and added it to all pages](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/05f83ece66ac5770e550efaddbd3bb3736be3981)
       * [Created album grid on home page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/5815b4f6def1eb4b74983e1597ed7a2580774f57)
       * [Made searchbar and filter button on Header and added it to all pages](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/729c64cbc0903a604141e84ca50cbec62d8efc49)
-      * [Made index record breaking animation smoother](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4d3ee4518a96e8a9edbfc975f1186805a162f900)
+      * [Created index landing page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/1099921e9c17a1626a6e9a281e7ee24546628cf6)
   * **Files I worked on:**
       *  [Index page](index.html)
       *  [Home page](home.html)
