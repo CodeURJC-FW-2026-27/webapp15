@@ -57,14 +57,14 @@ The data's categorization will be primarily organised as follows:
 ![Creation Page screenshot](creation.png)
 
 ### Eric Vela Pérez
-  * **Description:** I've created the index and home page, which includes the heading, navigation bar and album grid. It also has a "Create New Element" button that links to the creation page. I made the album grid show the image in a vinyl record case style and also display the Title and Author of the album. At last, I've also added my 3 favorite albums to the grid.
+  * **Description:** I've created the index and home page, which includes the heading, footer, navigation bar and album grid. It also has a "Create New Element" button that links to the creation page. I made the album grid show the image in a vinyl record case style and also display the Title and Author of the album. At last, I've also added my 3 favorite albums to the grid.
 
   * **5 most important Commits:**
-      * [Added title header](9e7c2b8b1d768a6e071da477823f6faddea327db)
-      *
-      *
-      *
-      *
+      * [Added title header](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/9e7c2b8b1d768a6e071da477823f6faddea327db)
+      * [Created navbar and added it to all pages](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/05f83ece66ac5770e550efaddbd3bb3736be3981)
+      * [Created album grid on home page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/5815b4f6def1eb4b74983e1597ed7a2580774f57)
+      * [Made searchbar and filter button on Header and added it to all pages](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/729c64cbc0903a604141e84ca50cbec62d8efc49)
+      * [Made index record breaking animation smoother](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4d3ee4518a96e8a9edbfc975f1186805a162f900)
   * **Files I worked on:**
       *  [Index page](index.html)
       *  [Home page](home.html)
