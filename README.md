@@ -44,7 +44,7 @@ The data's categorization will be primarily organised as follows:
     * Album
       * Song
     
-## Participation in the workplace 
+## Practice 1  
 
 ### Home Page
 ![Home Page screenshot](home.png)
@@ -72,7 +72,7 @@ The data's categorization will be primarily organised as follows:
       *  [Styles](styles.css)
 
 ### Sofía Gómez García
-  * **Description:** I made the detail page, along with the detail page that shows an album as an example whenever you click any album in the home page. The detail page Shows the title of the album, its cover, specifications about the genre, release date and author; the tracklist along with each song's runtime and bpm, and a button to delete and edit each one as well; a description of the album and what it is about, a video of the album's lead single, a button to go to creation page, another button to go to home page, a form to add a new song to the album, and the footer. I have also added three albums to the home page.
+  * **Description:** I made the detail page template, along with the detail page that shows an album as an example whenever you click any album in the home page. The detail page Shows the title of the album, its cover, specifications about the genre, release date and author; the tracklist along with each song's runtime and bpm, and a button to delete and edit each one as well; a description of the album and what it is about, a video of the album's lead single, a button to go to creation page, another button to go to home page, a form to add a new song to the album, and the footer. I have also added three albums to the home page.
 
   * **5 most important Commits:**
       * [Created project files form template](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/e50f708434dbf8fec9bc9afaf45f8052ef9ea885)
@@ -81,14 +81,14 @@ The data's categorization will be primarily organised as follows:
       * [Changed some details in detail pages](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/d8ec57f6b8f8212f3472f20057e677a05f0a57e3)
       * [Added delete and edit buttons to each song in detail](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/8f1bfc576a83cab56cf172eee48d8c085d560a08)
   * **Files I worked on:**
-    *  [Detail Template page](detail.html)[Home page](home.html)
+    *  [Detail Template page](detail.html)  [Home page](home.html)
     *  [Detail page](detail_WPSIATWIN.html)
     *  [Styles](styles.css)
     *  [Home page](home.html)
     *  [Creation page](detail.html)
 
 ### Adrienn Brinza
-  * **Description:** I've created the detail page, which includes a form with 8 different fields and 2 buttons: one labeled “Save” (which has no function) and   another labeled “Cancel” that redirects you to the home page. I've also added my 3 favorite albums to the home page, each with its cover art and respective genre.     
+  * **Description:** I've made the creation page template, which includes a form with 8 different fields and 2 buttons: one labeled “Save” (which has no function) and   another labeled “Cancel” that redirects you to the home page. I've also added my 3 favorite albums to the home page, each with its cover art and respective genre.     
               
   * **5 most important Commits:**
       * [Introduction to all elements of the “Create” page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/10157cc7584c51a3aa768f4492c6ac65dbd135bb)
