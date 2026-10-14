@@ -1050,7 +1050,17 @@ div>p{
 .bpmlist{
   list-style-type:none;
 } 
+.songformd{
+  color: white; 
+  font-size:120%;
+}
 
+.detailformt{
+  color:white; 
+  --bs-text-opacity: 1;
+  font-size:130%;
+  padding-top:5%;
+}
 
 
 /* END OF DETAIL GRID-------------------------------------*/
