@@ -834,7 +834,7 @@ body {
 }
 
 .reggaetón {
-    background-color: 4d004d;
+    background-color: #4d004d;
 
 }
 
@@ -843,9 +843,6 @@ body {
   position: absolute;
   right: 19.5%;
   margin-top: 5%;
-}
-.createButton a {
-  text-decoration: none;
 }
 
 @media (max-width: 991px) {
@@ -888,6 +885,8 @@ body {
 
 
 /* START OF DETAIL GRID -------------------------------------*/
+
+
 
 .videoleadsongGrid{
   max-width: 100%;
@@ -3887,6 +3886,9 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #7b7979;
   --bs-btn-disabled-border-color: #454545;
+}
+.btn-primary a {
+  text-decoration: none;
 }
 
 .btn-secondary {
