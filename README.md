@@ -44,7 +44,7 @@ The data's categorization will be primarily organised as follows:
     * Album
       * Song
     
-## Practice 1  
+## Práctica 1  
 
 ### Home Page
 ![Home Page screenshot](home.png)
