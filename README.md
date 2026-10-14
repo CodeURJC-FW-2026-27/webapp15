@@ -50,6 +50,9 @@ The data's categorization will be primarily organised as follows:
 ### Home Page
 ![Home Page screenshot](home.png)
 
+### Detail Page
+![Detail Page screenshot](detail.png)
+
 ### Creation Page
 ![Creation Page screenshot](creation.png)
 
