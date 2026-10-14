@@ -60,7 +60,7 @@ The data's categorization will be primarily organised as follows:
   * **Description:** I've created the index and home page, which includes the heading, navigation bar and album grid. It also has a "Create New Element" button that links to the creation page. I made the album grid show the image in a vinyl record case style and also display the Title and Author of the album. At last, I've also added my 3 favorite albums to the grid.
 
   * **5 most important Commits:**
-      *
+      * [Added title header](9e7c2b8b1d768a6e071da477823f6faddea327db)
       *
       *
       *
