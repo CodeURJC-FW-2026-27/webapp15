@@ -894,60 +894,53 @@ body {
   display:grid;
 }
 
+.Showxl{
+  display:none;
+}
+.Showl{
+  display:none;
+}
+.Showm{
+  display:none;
+}
+.Shows{
+  display:none;
+}
+.Showxs{
+  display:none;
+}
+
+@media (min-width:1400px){
+  .Showxl{
+    display:block;
+  }
+}
+
+@media (min-width:1200px) and (max-width:1399px){
   .Showl{
     display:block;
   }
-  .Showm{
-    display:none;
-  }
-  .Shows{
-    display:none;
-  }
-  .Showxs{
-    display:none;
-  }
-
+}
 
 @media (min-width:992px) and (max-width:1999px){
-  .Showl{
-    display:none;
-  }
   .Showm{
     display:block;
   }
-  .Shows{
-    display:none;
-  }
-  .Showxs{
+}
+
+@media (min-width:1999px){
+  .Showm{
     display:none;
   }
 }
 
 @media (min-width:768px) and (max-width:991px){
-  .Showl{
-    display:none;
-  }
-  .Showm{
-    display:none;
-  }
   .Shows{
     display:block;
-  }
-  .Showxs{
-    display:none;
   }
 }
 
 @media (max-width:767px){
-  .Showl{
-    display:none;
-  }
-  .Showm{
-    display:none;
-  }
-  .Shows{
-    display:none;
-  }
   .Showxs{
     display:block;
   }
