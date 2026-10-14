@@ -19,13 +19,14 @@ The goal is to provide a curated list of albums across different genres with des
 
 * #### Main Entity | Albums 
   An Album consists of _7 attributes_:
-  1. **Album Cover:** An image of the album's cover art.
-  2. **Description:** A description of the album's vision and inspirations, sometimes with details about the _making of_ and the _creative process_.
-  3. **Tracklist:** The list of _songs_ contained in the album.
-  4. **Lead Single:** A youtube videoplayer with the main single or most listened song on the album.
-  5. **Genre:** The genre (or genres) the music on the album belongs to.
-  6. **Author:** The author's name, photo and brief description.
-  7. **Date of Release:** The _day, month and year_ the album was published on.
+  1. **Album Name:** The name of the album.
+  2. **Album Cover:** An image of the album's cover art.
+  3. **Description:** A description of the album's vision and inspirations, sometimes with details about the _making of_ and the _creative process_.
+  4. **Tracklist:** The list of _songs_ contained in the album.
+  5. **Lead Single:** A youtube videoplayer with the main single or most listened song on the album.
+  6. **Genre:** The genre (or genres) the music on the album belongs to.
+  7. **Author:** The author's name, photo and brief description.
+  8. **Date of Release:** The _day, month and year_ the album was published on.
 
 * #### Secondary Entity | Songs
   A Song consists of _4 attributes_:
@@ -47,3 +48,18 @@ The data's categorization will be primarily organised as follows:
   * Artist
     * Album
       * Song
+### Participation in the workplace 
+  * Adrienn Brinza
+      * Description: I've created the detail page, which includes a form with 8 different fields and 2 buttons: one labeled “Save” (which has no function) and   another labeled “Cancel” that redirects you to the home page. I've also added my 3 favorite albums to the home page, each with its cover art and respective genre.       * Commits:
+         *
+         *
+         *
+         *
+         *
+      * Files:
+         *
+         *
+         *
+         *
+         *
+
