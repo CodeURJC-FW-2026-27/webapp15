@@ -76,16 +76,17 @@ The data's categorization will be primarily organised as follows:
   * **Description:** I made the detail page, along with the detail page that shows an album as an example whenever you click any album in the home page. The detail page Shows the title of the album, its cover, specifications about the genre, release date and author; the tracklist along with each song's runtime and bpm, and a button to delete and edit each one as well; a description of the album and what it is about, a video of the album's lead single, a button to go to creation page, another button to go to home page, a form to add a new song to the album, and the footer. I have also added three albums to the home page.
 
   * **5 most important Commits:**
-      *
-      *
-      *
-      *
-      *
+      * [Created project files form template](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/e50f708434dbf8fec9bc9afaf45f8052ef9ea885)
+      * [Made changes in the distribution of detail page and added WPSIATWIN album](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/9f6ee6275a4ebe57e665ae7bd1b34ac5e2aae294)
+      * [Made the last changes in detail page and added albums to home](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/9aa2c14bb8cec7df92b12ca10d322f09eb875161)
+      * [Changed some details in detail pages](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/d8ec57f6b8f8212f3472f20057e677a05f0a57e3)
+      * [Added delete and edit buttons to each song in detail](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/8f1bfc576a83cab56cf172eee48d8c085d560a08)
   * **Files I worked on:**
-    *  [Home page](home.html)
-    *  [Detail Template page](detail.html)
+    *  [Detail Template page](detail.html)[Home page](home.html)
     *  [Detail page](detail_WPSIATWIN.html)
     *  [Styles](styles.css)
+    *  [Home page](home.html)
+    *  [Creation page](detail.html)
 
 ### Adrienn Brinza
   * **Description:** I've created the detail page, which includes a form with 8 different fields and 2 buttons: one labeled “Save” (which has no function) and   another labeled “Cancel” that redirects you to the home page. I've also added my 3 favorite albums to the home page, each with its cover art and respective genre.     
