@@ -129,50 +129,123 @@ body {
   display: flex;
   justify-content: center;
   color: white;
-  border: 2px solid white;
   font-size: 6em;
+  margin-top: -16%;
 }
 .secondWord{
-  border: 2px solid white;
   color: #701818 ;
   display: flex;
   align-items: end;
   justify-content: center;
   font-size: 6em;
+  margin-top: 16%;
 } 
 
 .title-img{
-  border: 2px solid white;
-  height: 100%;
-  width: 100%;
+  height: 400px;
+  width: 400px;
   background-image: url('/resources/record.png');
   background-size: cover;
   transition: 0.3s ease;
   background-repeat: no-repeat;
+  background-position: 0;
 } 
 .title-img:hover{
-  height: 430px;
-  width: 430px;
+  height: 410px;
+  width: 410px;
   cursor: pointer;
 }
 .title-img:active{  
+  height: 410px;
+  width: 410px;
   background-image: url('/resources/record_broken.png');
 } 
 
-@media (max-width: 991px) {
-  .title-img {
-    width: 500px;
-    height: 500px;
-  }
-}
-
-@media (max-width: 575px) {
+@media (max-width: 1200px) {
   .firstWord {
     font-size: 5em;
   }
   .secondWord {
     font-size: 5em;
   }
+  .title-img{
+    height: 300px;
+  } 
+  .title-img:hover{
+    height: 310px;
+    width: 310px;
+    cursor: pointer;
+  }
+  .title-img:active{  
+    background-image: url('/resources/record_broken.png');
+    height: 310px;
+    width: 310px;
+  } 
+}
+
+@media (max-width: 991px) {
+  .firstWord {
+    font-size: 8em;
+  }
+  .secondWord {
+    font-size: 8em;
+  }
+  .title-img{
+    height: 700px;
+  } 
+  .title-img:hover{
+    height: 710px;
+    width: 710px;
+    cursor: pointer;
+  }
+  .title-img:active{  
+    background-image: url('/resources/record_broken.png');
+    height: 710px;
+    width: 710px;
+  } 
+}
+
+@media (max-width: 768px) {
+  .firstWord {
+    font-size: 8em;
+  }
+  .secondWord {
+    font-size: 8em;
+  }
+  .title-img{
+    height: 500px;
+  } 
+  .title-img:hover{
+    height: 510px;
+    width: 7510px;
+    cursor: pointer;
+  }
+  .title-img:active{  
+    background-image: url('/resources/record_broken.png');
+    height: 510px;
+    width: 510px;
+  }  
+}
+
+@media (max-width: 575px) {
+  .firstWord {
+    font-size: 4em;
+  }
+  .secondWord {
+    font-size: 4em;
+  }
+  .title-img{
+    height: 380px;
+    background-position: -15px;
+  } 
+  .title-img:hover{
+    height: 360px;
+    cursor: pointer;
+  }
+  .title-img:active{  
+    background-image: url('/resources/record_broken.png');
+    height: 360px;
+  } 
 }
 
 /* END OF INDEX --------------------------------------------*/
@@ -833,6 +906,8 @@ body {
 }
 
 .genre {
+  display: flex;
+  align-items: center;
   z-index: 3;
   padding: 0.5% 2%;
   border-radius: 7px;
