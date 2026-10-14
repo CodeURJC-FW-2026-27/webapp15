@@ -38,7 +38,9 @@
                                 <li><a class="dropdown-item" href="#">K-Pop</a></li>
                                 <li><a class="dropdown-item" href="#">EDM</a></li>
                                 <li><a class="dropdown-item" href="#">Rock</a></li>
-                                <li><a class="dropdown-item" href="#">Reggaeton</a></li>
+                                <li><a class="dropdown-item" href="#">Rap</a></li>
+                                <li><a class="dropdown-item" href="#">Bachata</a></li>
+                                <li><a class="dropdown-item" href="#">Reggaetón</a></li>
                             </ul>
                         </li>
                         <!--<li class="dropend">
@@ -87,7 +89,7 @@
 
            <!-- Creation Container for Grid-->
             <div class="container"> 
-                  <h2 class="page-section-heading text-center text-uppercase mb-0 detailGrids">New Album </h2>
+                  <h2 class="page-section-heading text-center text-uppercase mb-0 mt-3 detailGrids">New Album </h2>
                   <!-- Icon Divider-->
                   <div class="divider-customd">
                       <div class="divider-custom-lined"></div>
@@ -97,54 +99,58 @@
                 <!--Form for creation page-->
                 <div> 
                    <form class="row justify-content-center">
-                       <div class="field col-lg-4 col-md-6 ">
-                           <label for ="inputAlbumCover" > Album Cover</label>
-                           <input type="file" id="inputAlbumCover" accept="image/*" placeholder="Album Cover">
+
+                        <div class="field col-lg-4 col-md-8 ">
+                         <label for ="inputAuthor" >Album Name</label>
+                         <input type="text" id="inputAuthor" class="form-control" placeholder="Album Name">
                        </div>
 
-                       <div class="field col-lg-4 col-md-6 ">
-                          <label for ="Description" > Description </label>
-                          <textarea id="Description" rows="8" placeholder="Description"></textarea>
-                       </div>
-
-                       <div class="field col-lg-4 col-md-6 ">
-                          <label for="Tracklist ">Tracklist</label>
-                          <textarea  id="songs"  rows="15" placeholder="Tracklist"></textarea> 
-                       </div>
-
-                       <div class="field col-lg-4 col-md-6 ">
-                          <label for ="inputLeadSingle" >Lead Single</label>
-                          <input type="url" id="inputLeadSingle" placeholder="Lead Single">
-                       </div>
-
-                       <div class="field col-lg-4 col-md-6 ">
-                         <label for ="inputGenre" >Genre</label>
-                         <input type="text" id="inputGenre" placeholder="Genre">
-                       </div>
- 
-                       <div class="field col-lg-4 col-md-6 ">
+                        <div class="field col-lg-4 col-md-8 ">
                          <label for ="inputAuthor" >Author</label>
-                         <input type="text" id="inputAuthor" placeholder="Author">
-                       </div>
- 
-                       <div class="field col-lg-4 col-md-6 ">
-                         <label for ="inputDate" >Date</label>
-                         <input type="date" id="inputDate" placeholder="Date">
+                         <input type="text" id="inputAuthor" class="form-control" placeholder="Author">
+                        </div>
+
+                       <div class="field col-lg-4 col-md-8 ">
+                         <label for ="inputGenre" >Genre</label>
+                         <input type="text" id="inputGenre" class="form-control" placeholder="Genre">
                        </div>
 
-                    </form>
+                       <div class="field col-lg-4 col-md-8 ">
+                           <label for ="inputAlbumCover" > Album Cover</label>
+                           <input type="file" id="inputAlbumCover" accept="image/*" class="form-control" placeholder="Album Cover">
+                       </div>
+
+                        <div class="field col-lg-4 col-md-8 ">
+                          <label for ="inputLeadSingle" >Lead Single</label>
+                          <input type="url" id="inputLeadSingle"class="form-control" placeholder="Lead Single">
+                       </div>
+
+                        <div class="field col-lg-4 col-md-8 ">
+                         <label for ="inputDate" >Publication Date</label>
+                         <input type="date" id="inputDate" class="form-control" placeholder="Date">
+                       </div>
+
+                       <div class="field col-lg-4 col-md-8 ">
+                          <label for ="Description" > Description </label>
+                          <textarea id="Description" rows="8" class="form-control" placeholder="Description"></textarea>
+                       </div>
+
+                       <div class="field col-lg-4 col-md-8">
+                          <label for="Tracklist ">Tracklist</label>
+                          <textarea id="songs" class="form-control" rows='15' placeholder="Tracklist"></textarea> 
+                       </div>
+
+                    
+
+                    
                 
             
 
-                    <!--Save button-->
-                    <div  class="col-md-6 col-lg-4 mb-5">
-                       <button class="btn btn-primary createButton">Save </button>
-                    </div>
-
-                    <!--Cancel button-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                      <button class="btn btn-primary createButton"> <a href="home.html">Cancel</a></button>
-                    </div>
+                       <div class="col-12 d-flex justify-content-center gap-3 mb-5">
+                         <button type="submit" class="btn btn-primary createButton">Save</button>
+                         <a href="home.html" class="btn btn-primary createButton">Cancel</a>
+                       </div>
+                    </form>
                 </div>      
         
             </div>
