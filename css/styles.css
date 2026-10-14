@@ -771,6 +771,11 @@ body {
 
 /* START OF ALBUM GRID -------------------------------------*/
 
+.homeHeading {
+  margin: 5%;
+}
+
+
 .albumGrid {
     margin-top: 10%;
     margin-left: 20%;
