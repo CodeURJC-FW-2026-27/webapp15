@@ -57,9 +57,12 @@ The data's categorization will be primarily organised as follows:
          *
          *
       * Files:
-         *
-         *
-         *
-         *
-         *
+         *  Creation page (creation.html)
+         *  Home page (home.html)
+         *  Styles (css)
+         *  Template page (template.html)
+         *  Detail (detail.html)
+         
+         
+         
 
