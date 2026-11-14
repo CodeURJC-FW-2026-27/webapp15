@@ -994,9 +994,18 @@ body {
 
 
 .videoleadsongGrid{
+  width: 100%;
   max-width: 100%;
   height:100%;
   display:grid;
+}
+.videoleadsongGrid iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
 }
 
 .Showxl{
