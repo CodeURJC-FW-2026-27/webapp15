@@ -110,7 +110,7 @@ body {
 
 #index-page{
   background-color: #161616;
-  background-image: url(/resources/background.jpg);
+  background-image: url(../resources/assets/background.jpg);
   background-size: cover;
   background-position-y: 50%;
   background-repeat: no-repeat;
@@ -144,7 +144,7 @@ body {
 .title-img{
   height: 400px;
   width: 400px;
-  background-image: url('/resources/record.png');
+  background-image: url('../resources/assets/record.png');
   background-size: cover;
   transition: 0.3s ease;
   background-repeat: no-repeat;
@@ -158,7 +158,7 @@ body {
 .title-img:active{  
   height: 410px;
   width: 410px;
-  background-image: url('/resources/record_broken.png');
+  background-image: url('../resources/assets/record_broken.png');
 } 
 
 @media (max-width: 1200px) {
@@ -177,7 +177,7 @@ body {
     cursor: pointer;
   }
   .title-img:active{  
-    background-image: url('/resources/record_broken.png');
+    background-image: url('../resources/assets/record_broken.png');
     height: 310px;
     width: 310px;
   } 
@@ -199,7 +199,7 @@ body {
     cursor: pointer;
   }
   .title-img:active{  
-    background-image: url('/resources/record_broken.png');
+    background-image: url('../resources/assets/record_broken.png');
     height: 710px;
     width: 710px;
   } 
@@ -221,7 +221,7 @@ body {
     cursor: pointer;
   }
   .title-img:active{  
-    background-image: url('/resources/record_broken.png');
+    background-image: url('../resources/assets/record_broken.png');
     height: 510px;
     width: 510px;
   }  
@@ -243,7 +243,7 @@ body {
     cursor: pointer;
   }
   .title-img:active{  
-    background-image: url('/resources/record_broken.png');
+    background-image: url('../resources/assets/record_broken.png');
     height: 360px;
   } 
 }
@@ -672,7 +672,7 @@ body {
     overflow-y: visible;
   }
   .navbar-collapse {
-    background-image: url(/resources/pentagrama2.png);
+    background-image: url(../resources/assets/pentagrama2.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -11577,7 +11577,7 @@ html {
 .masthead {
   padding: 0;
   justify-content: center;
-  background-image: url(/resources/background.jpg)
+  background-image: url(../resources/assets/background.jpg)
 }
 .masthead div {
   display: flex;

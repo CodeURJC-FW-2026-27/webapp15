@@ -47,13 +47,13 @@ The data's categorization will be primarily organised as follows:
 ## Práctica 1  
 
 ### Home Page
-![Home Page screenshot](home.png)
+![Home Page screenshot](public/resources/screenshots/home.png)
 
 ### Detail Page
-![Detail Page screenshot](detail.png)
+![Detail Page screenshot](public/resources/screenshots/detail.png)
 
 ### Creation Page
-![Creation Page screenshot](creation.png)
+![Creation Page screenshot](public/resources/screenshots/creation.png)
 
 ### Eric Vela Pérez
   * **Description:** I've created the index and home page, which includes the heading, footer, navigation bar and album grid. It also has a "Create New Element" button that links to the creation page. I made the album grid show the image in a vinyl record case style and also display the Title and Author of the album. At last, I've also added my 3 favorite albums to the grid.
