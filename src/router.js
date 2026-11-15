@@ -16,13 +16,14 @@ router.get('/home', async (req,res) => {
   let albumList = await utils.getAlbumList(albumVault);
   let albumArray = [];
   
-  for (let id of albumList) {
-    let album = utils.getAlbum(albumVault,id);
+  for (let name of albumList) {
+    let album = await utils.getAlbum(albumVault, name);
     albumArray.push(album);
   }
+  console.log(albumArray);
 
   res.render('home', {
-    albumGrid: albumArray
+    albumArray
   });
 });
 

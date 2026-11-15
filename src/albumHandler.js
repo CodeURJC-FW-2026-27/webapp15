@@ -1,12 +1,10 @@
-import { ObjectId } from "mongodb";
-
 export async function getAlbumList(collection) {
-   let albumList = await collection.findOne({name: 'album list'});
+   let albumList = await collection.findOne({name: 'albumList'});
    return albumList.list;
 }
 
-export async function getAlbum(collection, id){
-  return await collection.findOne({_id: new ObjectId(id)});
+export async function getAlbum(collection, name){
+  return await collection.findOne({name: name});
 }
 
 export function getName(album) {
