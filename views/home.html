@@ -19,6 +19,33 @@
         <div class="albumGrid bg-secondary">
             <div class="container">
                 <div class="row">
+
+                    {{#albumGrid}}
+                        <div class="slot col-lg-4 col-md-6 col-xs-12">
+                            <a href="detail">
+                                 <img class="albumCover" src="resources/assets/{{cover}}">
+                                 <img class="record" src="resources/assets/record.png">
+                                 <p class="title">{{name}}</p>
+                        <div class="authorGenre">
+                            <p class="author text-muted">{{author}}</p>
+                            <p class="genre hyperpop">{{genre}}</p>
+                        </div>
+                            </a>
+                        </div>
+                    {{/albumGrid}}
+
+                    <div class="slot col-lg-4 col-md-6 col-xs-12">
+                        <a href="detail">
+                            <img class="albumCover" src={{cover}}>
+                            <img class="record" src="resources/assets/record.png">
+                        </a>
+                        <p class="title">{{name}}</p>
+                        <div class="authorGenre">
+                            <p class="author text-muted">{{author}}</p>
+                            <p class="genre hyperpop">{{genre}}</p>
+                        </div>
+                    </div>
+
                     <div class="slot col-lg-4 col-md-6 col-xs-12">
                         <a href="detail">
                             <img class="albumCover" src="resources/covers/halo.jpg">

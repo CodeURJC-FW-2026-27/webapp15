@@ -1,0 +1,41 @@
+
+'name': 'Halo',
+'author': 'Tiffany Day',
+'genre': 'hyperpop',
+'cover': 'halo.jpg',
+'lead single': 'pretty4u',
+'release date': '03-04-2026',
+'description': 'Some description'
+
+{
+  _id: ObjectId('6af9997019737335af0df108'),
+  'name': 'Halo',
+  'author': 'Tiffany Day',
+  'genre': 'hyperpop',
+  'cover': 'halo.jpg',
+  'description': "Halo is sthe second studio album by Chinese-American sinegr-songwriter and producer Tiffany Day. Different from her previous bedroom pop sound, Tiffany dives ths time into electronic, hyperpop and EDM. In her latest record, she delves into themes of introspection, self doubt, identity and navigating the uncertainties of youth.",
+  'leadSingle': 'https://youtu.be/4yYAptebRvI',
+  'releaseDate': '03-04-2026'
+},
+
+{
+  _id: ObjectId('6af999ce19737335af0df10a'),
+  'name': 'Different World',
+  'author': 'Alan Walker',
+  'genre': 'EDM',
+  'cover': 'different_world.jpg',
+  'description': "Differnet World is the debut studio album by Norwegian DJ and producer Alan Walker. Focusing on an electronic sound, with songs like Faded which currently exceeds 4.000 million views on youtube, he became a renown pillar of the electronic music background. Different World tells a story about loneliness, feeling different, and being afraid to love all throughout it\'s lyrics and futuristic music videos",
+  'leadSingle': 'https://youtu.be/6RLLOEzdxsM',
+  'releaseDate': '27-10-2017'
+},
+
+{
+  _id: ObjectId('6af99cc019737335af0df10b'),
+  'name': 'Soft Error',
+  'author': 'Yves',
+  'genre': 'k-pop',
+  'cover': 'soft_error.jpg',
+  'description': "Soft error is the third extended play by South Korean singer Yves, among tracks, it feautures singer suchs as PinkPantheress and Bratty. Coming from a k-pop background with her beginings as a member of korean girlband Loona, with Soft Error, Yves dives into a more electronic inclined sound, tought preserving it\'s unique k-pop charm.",
+  'leadSingle': 'https://youtu.be/XuBE8ns_Ato',
+  'releaseDate': '07-08-2025'
+}
