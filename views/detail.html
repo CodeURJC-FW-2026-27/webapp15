@@ -5,7 +5,7 @@
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Album Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase  mb-0 detailGrids">Whatever People Say I am, That's What I'm Not</h2>
+                <h2 class="page-section-heading text-center text-uppercase  mb-0 detailGrids">{{name}}</h2>
                 <!-- Icon Divider-->
                 <div class="divider-customd">
                     <div class="divider-custom-lined"></div>
@@ -23,27 +23,22 @@
                      <!--album cover-->
                     <div class="col-md-12 col-lg-8 mb-5">
                         <div class="portfolio-item albumcoverGrid">
-                            <img class="img-fluid" src="/uploads/wpsiatwin.jpg"/>
+                            <img class="img-fluid" src="/uploads/{{cover}}" />
                         </div>
                     </div>
 
                     <!-- Specifics-->
                      <div class="col-md-12 col-lg-4 mb-5">
                         <ul>
-                            <li><strong><u>Genre</u></strong>: Rock</li>
-                            <li><strong><u>Release Date</u></strong>: January 23rd, 2006</li>
-                            <li><strong><u>Author</u></strong>: Arctic Monkeys</li>
+                            <li><strong><u>Genre</u></strong>: {{genre}}</li>
+                            <li><strong><u>Release Date</u></strong>: {{releaseDate}}</li>
+                            <li><strong><u>Author</u></strong>: {{author}}</li>
                         </ul>
-                        <img class="img-fluiddesc rounded mb-5" src="/uploads/arctic_monkeys.jpg" alt="..." />
                     </div>  
-
-                    <div class="col-md-12 col-lg-12 mb-5 mb-lg-0">
-                       <p class="authordesc">Arctic Monkeys is a British band formed in Sheffield in 2002. The band is made of four member: Alex Turner, the singer and guitarist, Jamie Cook, the guitaris, Matt Helders, the drummer, and Nick O'Malley, the bassist.</p>
-                    </div>
 
                       <!--tracklist title-->
                     <div class="col-md-12 col-lg-12 mb-5 mb-lg-0">
-                       <h2>Tracklist</h2>>
+                       <h2>Tracklist</h2>
                     </div>
 
                     <!-- lista album-->
@@ -782,31 +777,29 @@
 
                     <!-- description title -->
                     <div class="col-md-12 col-lg-12 mb-5 mb-md-0">
-                       <h2>Description</h2>>
+                       <h2>Description</h2>
                     </div>
 
                     <!-- desc -->
                     <div class="col-md-12 col-lg-12 mb-5">
                         <p>
-                            'Whatever People Say I Am, That's What I'm Not' is Arctic Monkeys' debut studio album. It was released in the United Kingdom by Domino Recording Company and in the United States by Domino and Rough Trade Records. The album was produced by Jim Abbiss, who had previously worked with the band on their debut single "I Bet You Look Good on the Dancefloor" and B-sides. The album and its songs are a representation of the social working-class culture in Sheffield at the time.
+                            {{description}}
                         </p>
                     </div>
 
                     <!-- single video title -->
                     <div class="col-md-12 col-lg-12 mb-5 mb-md-0">
-                       <h2>Lead Single</h2>>
+                       <h2>Lead Single</h2>
                     </div>
 
                     <!-- video lead single-->
                     <div class="col-md-12 col-lg-12">
-                        <div class="videoleadsongGrid">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WyvpA-05GdU?si=VqX9kixcuBdPKbnK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                        <a href="{{leadSingleVideo}}" target="_blank">Watch the lead single video</a>
                     </div>
 
                     <!-- button go back to home -->
                     <div class="d-grid gap-2 button-detail col-md-2 col-lg-2">
-                        <button class="btn btn-primary">
+                        <button class="btn btn-primary" style="margin-top:2%">
                              <a class="text-white" href="home/1">&nbsp; Go Back To Home Page</a>
                         </button>
                     </div>
@@ -828,6 +821,8 @@
                             <input type="text" id="Sruntime" name="Sruntime"><br>
                             <label for="Sbpm" class="songformd">Song BPM:</label><br>
                             <input type="text" id="Sbpm" name="Sbpm"><br>
+                            <label for="Snum" class="songformd">Song number:</label><br>
+                            <input type="text" id="Snum" name="Snum"><br>
                             <!-- button to SUBMIT -->
                              <div style="margin-top:2%">
                                 <button type="submit" class="btn btn-primary">

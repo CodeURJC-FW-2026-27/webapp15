@@ -1,7 +1,7 @@
 import express from 'express';
 import { MongoClient } from 'mongodb';
 import * as utils from './albumHandler.js';
-/* import * as utilsongs from './songHandler.js';*/
+import * as utilsongs from './songHandler.js';
 
 const router = express.Router();
 
@@ -181,13 +181,11 @@ router.get('/new_element', (req,res) => {
   res.render('new_element');
 });
 
-router.get('/detail', (req,res) => {
-  /*let songList = await utilsongs.getSongList(songVault);
-  let songArray = [];
-  for (let name of songList) {
-    if (album==)
-    let song = await utilsongs.getSong(songVault, name);
-    songArray.push(song);
-  }*/
-  res.render('detail');
+router.get('/detail/:id', async (req,res) => {
+
+  const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
+
+  const songs = await songVault.find({album:album.name}).toArray();
+
+  res.render('detail', { album, songs });
 });
