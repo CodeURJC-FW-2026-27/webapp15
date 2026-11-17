@@ -88,15 +88,20 @@
                     </div>
 
                     <div class="col-md-12 col-lg-12" style="padding-left:5%">
-                        <form>
+                        <form method="POST" action="/detail/{{album._id}}/songs">
                             <label for="Sname" class="songformd">Song name:</label><br>
-                            <input type="text" id="Sname" name="Sname"><br>
-                            <label for="Sruntime" class="songformd">Song runtime:</label><br>
-                            <input type="text" id="Sruntime" name="Sruntime"><br>
+                            <input type="text" id="Sname" name="title" placeholder="Title" required><br>
+
                             <label for="Sbpm" class="songformd">Song BPM:</label><br>
-                            <input type="text" id="Sbpm" name="Sbpm"><br>
-                            <label for="Snum" class="songformd">Song number:</label><br>
-                            <input type="text" id="Snum" name="Snum"><br>
+                            <input type="number" id="Sbpm" name="bpm" placeholder="BPM" min="1" required><br>
+
+                            <label for="Sruntime" class="songformd">Song runtime:</label><br>
+                            <input type="text" id="Sruntime" name="runtime" placeholder="Duration (e.g., 3:45)" required><br>
+                            
+
+                            <label for="Snumero" class="songformd">Song number:</label><br>
+                            <input type="number" id="Snumero" name="number" placeholder="Number in the album" min="1" required><br>
+                            
                             <!-- button to SUBMIT -->
                              <div style="margin-top:2%">
                                 <button type="submit" class="btn btn-primary">
@@ -106,6 +111,8 @@
                                 <button type="submit" class="btn btn-primary" style="margin-left:1%">
                                     <a href="new_element">New element page</a>
                                 </button>
+
+                            
                             </div>
                         </form>
                     </div>

@@ -885,3 +885,20 @@ router.get('/detail/:id', async (req,res) => {
 
   res.render('detail', { album, songs });
 });
+router.post('/detail/:id/songs', async (req, res) => {
+    console.log('POST recibido', req.params.id, req.body);
+
+    const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
+
+    const { title, bpm, runtime, number } = req.body;
+
+    await songVault.insertOne({
+        title: title.trim(),
+        bpm: parseInt(bpm),
+        runtime: runtime.trim(),
+        number: parseInt(number),
+        album: album.name
+    });
+
+    res.redirect(`/detail/${req.params.id}`);
+});

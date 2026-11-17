@@ -7,6 +7,7 @@
     "watch": "nodemon -e js,html,css src/app.js"
   },
   "dependencies": {
+    "body-parser": "^2.4.0",
     "express": "^5.1.0",
     "express-validator": "^7.3.2",
     "mongodb": "^7.9.0",
