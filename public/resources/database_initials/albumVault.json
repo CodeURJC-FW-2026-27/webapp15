@@ -1,6 +1,6 @@
 [
     {
-      "name": "Halo",
+      "name": "HALO",
       "author": "Tiffany Day",
       "genre": "hyperpop",
       "cover": "halo.jpg",
@@ -22,7 +22,7 @@
     {
       "name": "albumList",
       "list": [
-        "Halo",
+        "HALO",
         "Different World",
         "Soft Error",
         "Whatever People Say I Am, That's What I'm Not",

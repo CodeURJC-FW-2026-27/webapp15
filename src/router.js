@@ -1,5 +1,5 @@
 import express from 'express';
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
 import fs from 'node:fs';
 import * as utils from './albumHandler.js';
 import * as utilsongs from './songHandler.js';
@@ -18,7 +18,7 @@ const db = client.db('recordScratch');
 const albumVault = db.collection('albumVault');
 const songVault = db.collection('songVault');
 
-const documentCount = await albumVault.countDocuments();
+const documentCount = await albumVault.countDocuments();  
 if (documentCount === 0) {
 
   let jsonData = fs.readFileSync('./public/resources/database_initials/albumVault.json','utf-8');
@@ -457,49 +457,49 @@ if (documentCounts === 0) {
     "title": "Ex Machina",
     "runtime": "3:02",
     "bpm": "128",
-    "album": "Soft Error : X",
+    "album": "Soft Error",
     "number": 1
   },
   {
     "title": "White cat",
     "runtime": "3:22",
     "bpm": "130",
-    "album": "Soft Error : X",
+    "album": "Soft Error",
     "number": 2
   },
   {
     "title": "Soap (feat. PinkPantheress)",
     "runtime": "2:27",
     "bpm": "136",
-    "album": "Soft Error : X",
+    "album": "Soft Error",
     "number": 3
   },
   {
     "title": "Aibo (feat. Bratty)",
     "runtime": "2:21",
     "bpm": "124",
-    "album": "Soft Error : X",
+    "album": "Soft Error",
     "number": 4
   },
   {
     "title": "Do you feel it like i touch",
     "runtime": "3:05",
     "bpm": "122",
-    "album": "Soft Error : X",
+    "album": "Soft Error",
     "number": 5
   },
   {
     "title": "Study",
     "runtime": "2:01",
     "bpm": "118",
-    "album": "Soft Error : X",
+    "album": "Soft Error",
     "number": 6
   },
   {
     "title": "mom",
     "runtime": "2:44",
     "bpm": "110",
-    "album": "Soft Error : X",
+    "album": "Soft Error",
     "number": 7
   },
   {
