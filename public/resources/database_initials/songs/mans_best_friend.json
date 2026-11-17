@@ -7,7 +7,7 @@
   "runtime": "3:33",
   "bpm": "123",
   "album": "Man's Best Friend",
-  "number": "1"
+  "number": 1
 },
 {
   "_id": {
@@ -17,7 +17,7 @@
   "runtime": "2:40",
   "bpm": "113",
   "album": "Man's Best Friend",
-  "number": "2"
+  "number": 2
 },
 {
   "_id": {
@@ -27,7 +27,7 @@
   "runtime": "3:17",
   "bpm": "120",
   "album": "Man's Best Friend",
-  "number": "3"
+  "number": 3
 },
 {
   "_id": {
@@ -37,7 +37,7 @@
   "runtime": "3:03",
   "bpm": "152",
   "album": "Man's Best Friend",
-  "number": "4"
+  "number": 4
 },
 {
   "_id": {
@@ -47,7 +47,7 @@
   "runtime": "3:23",
   "bpm": "176",
   "album": "Man's Best Friend",
-  "number": "5"
+  "number": 5
 },
 {
   "_id": {
@@ -57,7 +57,7 @@
   "runtime": "3:02",
   "bpm": "174",
   "album": "Man's Best Friend",
-  "number": "6"
+  "number": 6
 },
 {
   "_id": {
@@ -67,7 +67,7 @@
   "runtime": "3:28",
   "bpm": "92",
   "album": "Man's Best Friend",
-  "number": "7"
+  "number": 7
 },
 {
   "_id": {
@@ -77,7 +77,7 @@
   "runtime": "2:25",
   "bpm": "89",
   "album": "Man's Best Friend",
-  "number": "8"
+  "number": 8
 },
 {
   "_id": {
@@ -87,7 +87,7 @@
   "runtime": "3:13",
   "bpm": "132",
   "album": "Man's Best Friend",
-  "number": "9"
+  "number": 9
 },
 {
   "_id": {
@@ -97,7 +97,7 @@
   "runtime": "3:42",
   "bpm": "90",
   "album": "Man's Best Friend",
-  "number": "10"
+  "number": 10
 },
 {
   "_id": {
@@ -107,7 +107,7 @@
   "runtime": "2:49",
   "bpm": "118",
   "album": "Man's Best Friend",
-  "number": "11"
+  "number": 11
 },
 {
   "_id": {
@@ -117,7 +117,7 @@
   "runtime": "3:45",
   "bpm": "120",
   "album": "Man's Best Friend",
-  "number": "12"
+  "number": 12
 },
 {
   "_id": {
@@ -127,6 +127,6 @@
   "runtime": "3:52",
   "bpm": "116",
   "album": "Man's Best Friend",
-  "number": "13"
+  "number": 13
 }
 ]

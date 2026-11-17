@@ -7,7 +7,7 @@
   "runtime": "3:40",
   "bpm": "130",
   "album": "El Mañana No Es Nada...",
-  "number": "1"
+  "number": 1
 },
 {
   "_id": {
@@ -17,7 +17,7 @@
   "runtime": "2:56",
   "bpm": "167",
   "album": "El Mañana No Es Nada...",
-  "number": "2"
+  "number": 2
 },
 {
   "_id": {
@@ -27,7 +27,7 @@
   "runtime": "4:53",
   "bpm": "174",
   "album": "El Mañana No Es Nada...",
-  "number": "3"
+  "number": 3
 },
 {
   "_id": {
@@ -37,7 +37,7 @@
   "runtime": "4:15",
   "bpm": "106",
   "album": "El Mañana No Es Nada...",
-  "number": "4"
+  "number": 4
 },
 {
   "_id": {
@@ -47,7 +47,7 @@
   "runtime": "3:28",
   "bpm": "97",
   "album": "El Mañana No Es Nada...",
-  "number": "5"
+  "number": 5
 },
 {
   "_id": {
@@ -57,7 +57,7 @@
   "runtime": "4:17",
   "bpm": "170",
   "album": "El Mañana No Es Nada...",
-  "number": "6"
+  "number": 6
 },
 {
   "_id": {
@@ -67,7 +67,7 @@
   "runtime": "3:22",
   "bpm": "141",
   "album": "El Mañana No Es Nada...",
-  "number": "7"
+  "number": 7
 },
 {
   "_id": {
@@ -77,6 +77,6 @@
   "runtime": "3:10",
   "bpm": "91",
   "album": "El Mañana No Es Nada...",
-  "number": "8"
+  "number": 8
 }
 ]

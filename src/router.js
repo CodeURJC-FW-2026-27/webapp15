@@ -185,7 +185,10 @@ router.get('/detail/:id', async (req,res) => {
 
   const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
 
-  const songs = await songVault.find({album:album.name}).toArray();
+  const songs = await songVault
+    .find({album:album.name})
+    .sort({number:1})
+    .toArray();
 
   res.render('detail', { album, songs });
 });

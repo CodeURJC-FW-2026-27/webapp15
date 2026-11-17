@@ -4,76 +4,76 @@
     "runtime": "0:50",
     "bpm": "80",
     "album": "17",
-    "number": "1"
+    "number": 1
   },
   {
     "name": "Jocelyn Flores",
     "runtime": "1:59",
     "bpm": "134",
     "album": "17",
-    "number": "2"
+    "number": 2
   },
   {
     "name": "Depression & Obsession",
     "runtime": "2:24",
     "bpm": "80",
     "album": "17",
-    "number": "3"
+    "number": 3
   },
   {
     "name": "Everybody Dies In Their Nightmares",
     "runtime": "1:35",
     "bpm": "130",
     "album": "17",
-    "number": "4"
+    "number": 4
   },
   {
     "name": "Revenge",
     "runtime": "2:00",
     "bpm": "140",
     "album": "17",
-    "number": "5"
+    "number": 5
   },
   {
     "name": "Save Me",
     "runtime": "2:43",
     "bpm": "75",
     "album": "17",
-    "number": "6"
+    "number": 6
   },
   {
     "name": "Dead Inside (Interlude)",
     "runtime": "1:26",
     "bpm": "70",
     "album": "17",
-    "number": "7"
+    "number": 7
   },
   {
     "name": "Fuck Love",
     "runtime": "2:26",
     "bpm": "80",
     "album": "17",
-    "number": "8"
+    "number": 8
   },
   {
     "name": "Carry On",
     "runtime": "2:09",
     "bpm": "130",
     "album": "17",
-    "number": "9"
+    "number": 9
   },
   {
     "name": "Orlando",
     "runtime": "2:43",
     "bpm": "78",
     "album": "17",
-    "number": "10"
+    "number": 10
   },
   {
     "name": "Ayala (Outro)",
     "runtime": "1:39",
     "bpm": "72",
     "album": "17",
-    "number": "11"
+    "number": 11
   }
 ]

@@ -6,7 +6,7 @@
   "runtime": "3:38",
   "bpm": "144",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "1"
+  "number": 1
 },
 {
   "_id": {
@@ -16,7 +16,7 @@
   "runtime": "2:53",
   "bpm": "102",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "2"
+  "number": 2
 },
 {
   "_id": {
@@ -26,7 +26,7 @@
   "runtime": "2:57",
   "bpm": "127",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "3"
+  "number": 3
 },
 {
   "_id": {
@@ -36,7 +36,7 @@
   "runtime": "2:21",
   "bpm": "144",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "4"
+  "number": 4
 },
 {
   "_id": {
@@ -46,7 +46,7 @@
   "runtime": "2:10",
   "bpm": "105",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "5"
+  "number": 5
 },
 {
   "_id": {
@@ -56,7 +56,7 @@
   "runtime": "2:53",
   "bpm": "109",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "6"
+  "number": 6
 },
 {
   "_id": {
@@ -66,7 +66,7 @@
   "runtime": "2:14",
   "bpm": "104",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "7"
+  "number": 7
 },
 {
   "_id": {
@@ -76,7 +76,7 @@
   "runtime": "2:23",
   "bpm": "110",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "8"
+  "number": 8
 },
 {
   "_id": {
@@ -86,7 +86,7 @@
   "runtime": "2:55",
   "bpm": "112",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "9"
+  "number": 9
 },
 {
   "_id": {
@@ -96,7 +96,7 @@
   "runtime": "4:28",
   "bpm": "134",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "10"
+  "number": 10
 },
 {
   "_id": {
@@ -106,7 +106,7 @@
   "runtime": "3:20",
   "bpm": "169",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "11"
+  "number": 11
 },
 {
   "_id": {
@@ -116,7 +116,7 @@
   "runtime": "3:13",
   "bpm": "192",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "12"
+  "number": 12
 },
 {
   "_id": {
@@ -126,6 +126,6 @@
   "runtime": "5:31",
   "bpm": "137",
   "album": "Whatever People Say I Am, That's What I'm Not",
-  "number": "13"
+  "number": 13
 }
 ]
