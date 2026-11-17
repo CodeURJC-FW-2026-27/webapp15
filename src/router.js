@@ -1,6 +1,7 @@
 import express from 'express';
 import { MongoClient } from 'mongodb';
 import * as utils from './albumHandler.js';
+import * as utilsongs from './songHandler.js';
 
 const router = express.Router();
 
@@ -10,6 +11,7 @@ await client.connect();
 
 const db = client.db('recordScratch');
 const albumVault = db.collection('albumVault');
+const songVault = db.collection('songVault');
 
 const documentCount = await albumVault.countDocuments();
 if (documentCount === 0) {
@@ -139,6 +141,14 @@ router.get('/home/:page', async (req,res) => {
     let album = await utils.getAlbum(albumVault, name);
     albumArray.push(album);
   }
+
+  /*let songList = await utilsongs.getSongList(songVault);
+  let songArray = [];
+  for (let name of songList) {
+    if (album==)
+    let song = await utilsongs.getSong(songVault, name);
+    songArray.push(song);
+  }*/
 /* END OF DATABASE OPERATIONS -------------------- */
 
 /* START OF PAGINATION OPERATIONS -------------------- */
