@@ -1,89 +1,89 @@
 [{
-    "name": "EVERYTHING I'VE EVER WANTED",
+    "title": "EVERYTHING I'VE EVER WANTED",
     "runtime": "2:15",
     "bpm": "150",
     "album": "HALO",
     "number": 1
   },
   {
-    "name": "DOIT4ME",
+    "title": "DOIT4ME",
     "runtime": "3:01",
     "bpm": "142",
     "album": "HALO",
     "number": 2
   },
   {
-    "name": "SAME LA",
+    "title": "SAME LA",
     "runtime": "3:44",
     "bpm": "136",
     "album": "HALO",
     "number": 3
   },
   {
-    "name": "PRETTY4U",
+    "title": "PRETTY4U",
     "runtime": "2:25",
     "bpm": "148",
     "album": "HALO",
     "number": 4
   },
   {
-    "name": "COPYCAT",
+    "title": "COPYCAT",
     "runtime": "2:15",
     "bpm": "152",
     "album": "HALO",
     "number": 5
   },
   {
-    "name": "NO LUCK",
+    "title": "NO LUCK",
     "runtime": "3:08",
     "bpm": "140",
     "album": "HALO",
     "number": 6
   },
   {
-    "name": "BREAKUP",
+    "title": "BREAKUP",
     "runtime": "2:40",
     "bpm": "146",
     "album": "HALO",
     "number": 7
   },
   {
-    "name": "TELL ME WHAT I DID",
+    "title": "TELL ME WHAT I DID",
     "runtime": "2:33",
     "bpm": "144",
     "album": "HALO",
     "number": 8
   },
   {
-    "name": "START OVER",
+    "title": "START OVER",
     "runtime": "2:50",
     "bpm": "138",
     "album": "HALO",
     "number": 9
   },
   {
-    "name": "LOOK UP",
+    "title": "LOOK UP",
     "runtime": "2:17",
     "bpm": "154",
     "album": "HALO",
     "number": 10
   },
   {
-    "name": "AMERICAN GIRL",
+    "title": "AMERICAN GIRL",
     "runtime": "2:56",
     "bpm": "145",
     "album": "HALO",
     "number": 11
   },
   {
-    "name": "FAREWELL TOLEDO",
+    "title": "FAREWELL TOLEDO",
     "runtime": "2:30",
     "bpm": "132",
     "album": "HALO",
     "number": 12
   },
   {
-    "name": "IT'S NOT LIKE THAT ANYMORE",
+    "title": "IT'S NOT LIKE THAT ANYMORE",
     "runtime": "3:47",
     "bpm": "128",
     "album": "HALO",
