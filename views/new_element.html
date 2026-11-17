@@ -30,7 +30,7 @@
 
                        <div class="field col-lg-6 col-md-10 ">
                          <label for="select" class="form-label">Genre</label>
-                         <select id="select" name="Genre" class="from-control">
+                         <select id="select" name="Genre" class="form-control">
                             <option value="1">Hyperpop</option>
                             <option value="2">EDM</option>
                             <option value="3">K-pop</option>
@@ -49,17 +49,21 @@
 
                         <div class="field col-lg-6 col-md-10 ">
                           <label for ="inputLeadSingle" >Lead Single Youtube Link</label>
-                          <input type="url" id="inputLeadSingle"class="form-control" placeholder="Lead Single (Youtube Video Link)  required pattern= "https?://(www\.)?(youtube\.com/watch\?v=|youtu\.be/)[\w-]{11}.*">
-                       </div>
-
+                          <input type="url" id="inputLeadSingle"class="form-control"  required pattern= "https://youtu.be/[A-Za-z0-9_-]{11}" placeholder="Lead Single (Youtube Video Link)"> </input> 
+                        </div>
                         <div class="field col-lg-6 col-md-10 ">
                          <label for ="inputDate" >Publication Date</label>
                          <input type="date" id="inputDate" class="form-control" placeholder="Date">
                        </div>
 
                        <div class="field col-lg-6 col-md-10 ">
+                         <label for ="inputAuthor" >Album Max Songs</label>
+                         <input type="text" id="inputAuthor" class="form-control" placeholder="Album Max Songs">
+                        </div>
+
+                       <div class="field col-lg-6 col-md-10 ">
                           <label for ="Description" > Description </label>
-                          <textarea id="Description" rows="8" class="form-control" placeholder="Description"></textarea>
+                          <textarea id="Description" rows="1" class="form-control" placeholder="Description"></textarea>
                        </div>
                 
 
