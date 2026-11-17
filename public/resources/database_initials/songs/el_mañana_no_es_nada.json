@@ -3,7 +3,7 @@
   "_id": {
     "$oid": "6afc8626952f8397cab0338e"
   },
-  "name": "El Final De La Estación",
+  "title": "El Final De La Estación",
   "runtime": "3:40",
   "bpm": "130",
   "album": "El Mañana No Es Nada...",
@@ -13,7 +13,7 @@
   "_id": {
     "$oid": "6afc86f4952f8397cab0338f"
   },
-  "name": "¿Cómo Es Posible?",
+  "title": "¿Cómo Es Posible?",
   "runtime": "2:56",
   "bpm": "167",
   "album": "El Mañana No Es Nada...",
@@ -23,7 +23,7 @@
   "_id": {
     "$oid": "6afc8768952f8397cab03390"
   },
-  "name": "Espacio Sideral",
+  "title": "Espacio Sideral",
   "runtime": "4:53",
   "bpm": "174",
   "album": "El Mañana No Es Nada...",
@@ -33,7 +33,7 @@
   "_id": {
     "$oid": "6afc87b0952f8397cab03391"
   },
-  "name": "El Mañana No Es Nada",
+  "title": "El Mañana No Es Nada",
   "runtime": "4:15",
   "bpm": "106",
   "album": "El Mañana No Es Nada...",
@@ -43,7 +43,7 @@
   "_id": {
     "$oid": "6afc87ef952f8397cab03392"
   },
-  "name": "Cuarto Piso",
+  "title": "Cuarto Piso",
   "runtime": "3:28",
   "bpm": "97",
   "album": "El Mañana No Es Nada...",
@@ -53,7 +53,7 @@
   "_id": {
     "$oid": "6afc8835952f8397cab03393"
   },
-  "name": "Boca Abajo",
+  "title": "Boca Abajo",
   "runtime": "4:17",
   "bpm": "170",
   "album": "El Mañana No Es Nada...",
@@ -63,7 +63,7 @@
   "_id": {
     "$oid": "6afc8869952f8397cab03394"
   },
-  "name": "Caroline",
+  "title": "Caroline",
   "runtime": "3:22",
   "bpm": "141",
   "album": "El Mañana No Es Nada...",
@@ -73,7 +73,7 @@
   "_id": {
     "$oid": "6afc8893952f8397cab03395"
   },
-  "name": "¿Qué Pasará?",
+  "title": "¿Qué Pasará?",
   "runtime": "3:10",
   "bpm": "91",
   "album": "El Mañana No Es Nada...",

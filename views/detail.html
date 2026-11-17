@@ -45,19 +45,9 @@
                     <!-- lista album-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <ol>
-                            <li> The View From The Afternoon</li>
-                            <li> I Bet You Look Good On The Dancefloor</li>
-                            <li> Fake Tales Of San Francisco</li> 
-                            <li> Dancing Shoes</li>
-                            <li> You Probably Couldn't See For The Lights But You Were Staring Straight At Me</li>
-                            <li> Still Take You Home</li> 
-                            <li> Riot Van</li>
-                            <li> Red Light Indicates Doors Are Secured</li>
-                            <li> Mardy Bum</li> 
-                            <li> Perhaps Vampires Is A Bit Strong But...</li>
-                            <li> When The Sun Goes Down</li>
-                            <li> From The Ritz To The Rubble</li>
-                            <li> A Certain Romance</li>
+                            {{#songs}}
+                                <li>{{title}}</li>
+                            {{/songs}}
                         </ol>
                     </div>
 
