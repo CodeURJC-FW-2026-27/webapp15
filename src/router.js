@@ -216,9 +216,6 @@ if (documentCounts === 0) {
     "number": 15
   },
       {
-  "_id": {
-    "$oid": "6afc8626952f8397cab0338e"
-  },
   "title": "El Final De La Estación",
   "runtime": "3:40",
   "bpm": "130",
@@ -226,9 +223,6 @@ if (documentCounts === 0) {
   "number": 1
 },
 {
-  "_id": {
-    "$oid": "6afc86f4952f8397cab0338f"
-  },
   "title": "¿Cómo Es Posible?",
   "runtime": "2:56",
   "bpm": "167",
@@ -236,9 +230,6 @@ if (documentCounts === 0) {
   "number": 2
 },
 {
-  "_id": {
-    "$oid": "6afc8768952f8397cab03390"
-  },
   "title": "Espacio Sideral",
   "runtime": "4:53",
   "bpm": "174",
@@ -246,9 +237,6 @@ if (documentCounts === 0) {
   "number": 3
 },
 {
-  "_id": {
-    "$oid": "6afc87b0952f8397cab03391"
-  },
   "title": "El Mañana No Es Nada",
   "runtime": "4:15",
   "bpm": "106",
@@ -256,9 +244,6 @@ if (documentCounts === 0) {
   "number": 4
 },
 {
-  "_id": {
-    "$oid": "6afc87ef952f8397cab03392"
-  },
   "title": "Cuarto Piso",
   "runtime": "3:28",
   "bpm": "97",
@@ -266,9 +251,6 @@ if (documentCounts === 0) {
   "number": 5
 },
 {
-  "_id": {
-    "$oid": "6afc8835952f8397cab03393"
-  },
   "title": "Boca Abajo",
   "runtime": "4:17",
   "bpm": "170",
@@ -276,9 +258,6 @@ if (documentCounts === 0) {
   "number": 6
 },
 {
-  "_id": {
-    "$oid": "6afc8869952f8397cab03394"
-  },
   "title": "Caroline",
   "runtime": "3:22",
   "bpm": "141",
@@ -286,9 +265,6 @@ if (documentCounts === 0) {
   "number": 7
 },
 {
-  "_id": {
-    "$oid": "6afc8893952f8397cab03395"
-  },
   "title": "¿Qué Pasará?",
   "runtime": "3:10",
   "bpm": "91",
@@ -387,9 +363,6 @@ if (documentCounts === 0) {
     "number": 13
   },
   {
-  "_id": {
-    "$oid": "6afc705e952f8397cab03379"
-  },
   "title": "Manchild",
   "runtime": "3:33",
   "bpm": "123",
@@ -397,9 +370,6 @@ if (documentCounts === 0) {
   "number": 1
 },
 {
-  "_id": {
-    "$oid": "6afc714d952f8397cab0337a"
-  },
   "title": "Tears",
   "runtime": "2:40",
   "bpm": "113",
@@ -407,9 +377,6 @@ if (documentCounts === 0) {
   "number": 2
 },
 {
-  "_id": {
-    "$oid": "6afc7192952f8397cab0337b"
-  },
   "title": "My Man On Willpower",
   "runtime": "3:17",
   "bpm": "120",
@@ -417,9 +384,6 @@ if (documentCounts === 0) {
   "number": 3
 },
 {
-  "_id": {
-    "$oid": "6afc7278952f8397cab0337e"
-  },
   "title": "Sugar Talking",
   "runtime": "3:03",
   "bpm": "152",
@@ -427,9 +391,6 @@ if (documentCounts === 0) {
   "number": 4
 },
 {
-  "_id": {
-    "$oid": "6afc7326952f8397cab03380"
-  },
   "title": "We Almost Broke Up Again Last Night",
   "runtime": "3:23",
   "bpm": "176",
@@ -437,9 +398,6 @@ if (documentCounts === 0) {
   "number": 5
 },
 {
-  "_id": {
-    "$oid": "6afc7376952f8397cab03381"
-  },
   "title": "Nobody's son",
   "runtime": "3:02",
   "bpm": "174",
@@ -447,9 +405,6 @@ if (documentCounts === 0) {
   "number": 6
 },
 {
-  "_id": {
-    "$oid": "6afc73b5952f8397cab03382"
-  },
   "title": "Never Getting Laid",
   "runtime": "3:28",
   "bpm": "92",
@@ -457,9 +412,6 @@ if (documentCounts === 0) {
   "number": 7
 },
 {
-  "_id": {
-    "$oid": "6afc73de952f8397cab03383"
-  },
   "title": "When Did You Get Hot",
   "runtime": "2:25",
   "bpm": "89",
@@ -467,9 +419,6 @@ if (documentCounts === 0) {
   "number": 8
 },
 {
-  "_id": {
-    "$oid": "6afc7410952f8397cab03384"
-  },
   "title": "Go Go Juice",
   "runtime": "3:13",
   "bpm": "132",
@@ -477,9 +426,6 @@ if (documentCounts === 0) {
   "number": 9
 },
 {
-  "_id": {
-    "$oid": "6afc7445952f8397cab03385"
-  },
   "title": "Don't Worry I'll Make You Worry",
   "runtime": "3:42",
   "bpm": "90",
@@ -487,9 +433,6 @@ if (documentCounts === 0) {
   "number": 10
 },
 {
-  "_id": {
-    "$oid": "6afc7485952f8397cab03386"
-  },
   "title": "House Tour",
   "runtime": "2:49",
   "bpm": "118",
@@ -497,9 +440,6 @@ if (documentCounts === 0) {
   "number": 11
 },
 {
-  "_id": {
-    "$oid": "6afc7525952f8397cab03387"
-  },
   "title": "Goodbye",
   "runtime": "3:45",
   "bpm": "120",
@@ -507,9 +447,6 @@ if (documentCounts === 0) {
   "number": 12
 },
 {
-  "_id": {
-    "$oid": "6afc7556952f8397cab03388"
-  },
   "title": "Such A Funny Way",
   "runtime": "3:52",
   "bpm": "116",
@@ -787,11 +724,8 @@ if (documentCounts === 0) {
   "runtime":"4:11",
   "bpm":"176",
   "album":"Un Verano Sin Ti",
-  "number":23}
+  "number":23},
   {
-  "_id": {
-    "$oid": "6afc6dfe952f8397cab03367"
-  },
   "title": "The View From The Afternoon",
   "runtime": "3:38",
   "bpm": "144",
@@ -799,9 +733,6 @@ if (documentCounts === 0) {
   "number": 1
 },
 {
-  "_id": {
-    "$oid": "6afc6e2c952f8397cab03369"
-  },
   "title": "I Bet You Look Good On The Dancefloor",
   "runtime": "2:53",
   "bpm": "102",
@@ -809,9 +740,6 @@ if (documentCounts === 0) {
   "number": 2
 },
 {
-  "_id": {
-    "$oid": "6afc6ea6952f8397cab0336e"
-  },
   "title": "Fake Tales Of San Francisco",
   "runtime": "2:57",
   "bpm": "127",
@@ -819,9 +747,6 @@ if (documentCounts === 0) {
   "number": 3
 },
 {
-  "_id": {
-    "$oid": "6afc6ec5952f8397cab0336f"
-  },
   "title": "Dancing Shoes",
   "runtime": "2:21",
   "bpm": "144",
@@ -829,9 +754,6 @@ if (documentCounts === 0) {
   "number": 4
 },
 {
-  "_id": {
-    "$oid": "6afc6ee0952f8397cab03370"
-  },
   "title": "You Probably Couldn't See For The Lights But You Were Staring Straight At Me",
   "runtime": "2:10",
   "bpm": "105",
@@ -839,9 +761,6 @@ if (documentCounts === 0) {
   "number": 5
 },
 {
-  "_id": {
-    "$oid": "6afc6ef6952f8397cab03371"
-  },
   "title": "Still Take You Home",
   "runtime": "2:53",
   "bpm": "109",
@@ -849,9 +768,6 @@ if (documentCounts === 0) {
   "number": 6
 },
 {
-  "_id": {
-    "$oid": "6afc6f09952f8397cab03372"
-  },
   "title": "Riot Van",
   "runtime": "2:14",
   "bpm": "104",
@@ -859,9 +775,6 @@ if (documentCounts === 0) {
   "number": 7
 },
 {
-  "_id": {
-    "$oid": "6afc6f20952f8397cab03373"
-  },
   "title": "Red Light Indicates Doors Are Secured",
   "runtime": "2:23",
   "bpm": "110",
@@ -869,9 +782,6 @@ if (documentCounts === 0) {
   "number": 8
 },
 {
-  "_id": {
-    "$oid": "6afc6f34952f8397cab03374"
-  },
   "title": "Mardy Bum",
   "runtime": "2:55",
   "bpm": "112",
@@ -879,9 +789,6 @@ if (documentCounts === 0) {
   "number": 9
 },
 {
-  "_id": {
-    "$oid": "6afc6f46952f8397cab03375"
-  },
   "title": "Perhaps Vampires Is A Bit Strong But...",
   "runtime": "4:28",
   "bpm": "134",
@@ -889,9 +796,6 @@ if (documentCounts === 0) {
   "number": 10
 },
 {
-  "_id": {
-    "$oid": "6afc6f5c952f8397cab03376"
-  },
   "title": "When The Sun Goes Down",
   "runtime": "3:20",
   "bpm": "169",
@@ -899,9 +803,6 @@ if (documentCounts === 0) {
   "number": 11
 },
 {
-  "_id": {
-    "$oid": "6afc6f71952f8397cab03377"
-  },
   "title": "From The Ritz To The Rubble",
   "runtime": "3:13",
   "bpm": "192",
@@ -909,9 +810,6 @@ if (documentCounts === 0) {
   "number": 12
 },
 {
-  "_id": {
-    "$oid": "6afc6f83952f8397cab03378"
-  },
   "title": "A Certain Romance",
   "runtime": "5:31",
   "bpm": "137",
