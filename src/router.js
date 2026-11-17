@@ -142,13 +142,6 @@ router.get('/home/:page', async (req,res) => {
     albumArray.push(album);
   }
 
-  /*let songList = await utilsongs.getSongList(songVault);
-  let songArray = [];
-  for (let name of songList) {
-    if (album==)
-    let song = await utilsongs.getSong(songVault, name);
-    songArray.push(song);
-  }*/
 /* END OF DATABASE OPERATIONS -------------------- */
 
 /* START OF PAGINATION OPERATIONS -------------------- */
@@ -189,5 +182,12 @@ router.get('/new_element', (req,res) => {
 });
 
 router.get('/detail', (req,res) => {
+  /*let songList = await utilsongs.getSongList(songVault);
+  let songArray = [];
+  for (let name of songList) {
+    if (album==)
+    let song = await utilsongs.getSong(songVault, name);
+    songArray.push(song);
+  }*/
   res.render('detail');
 });
