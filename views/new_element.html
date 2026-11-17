@@ -16,7 +16,7 @@
                   </div>
                 <!--Form for creation page-->
                 <div> 
-                   <form class="row justify-content-center">
+                   <form class="row justify-content-center g-4">
 
                         <div class="field col-lg-6 col-md-10 ">
                          <label for ="inputAuthor" >Album Name</label>
@@ -29,8 +29,8 @@
                         </div>
 
                        <div class="field col-lg-6 col-md-10 ">
-                         <label for ="select" class="form-label" >Genre</label>
-                         <select id="select" name="Genre" class="form-select"> 
+                         <label for="select" class="form-label">Genre</label>
+                         <select id="select" name="Genre" class="from-control">
                             <option value="1">Hyperpop</option>
                             <option value="2">EDM</option>
                             <option value="3">K-pop</option>
@@ -48,8 +48,8 @@
                        </div>
 
                         <div class="field col-lg-6 col-md-10 ">
-                          <label for ="inputLeadSingle" >Lead Single</label>
-                          <input type="url" id="inputLeadSingle"class="form-control" placeholder="Lead Single (Youtube Video ID)">
+                          <label for ="inputLeadSingle" >Lead Single Youtube Link</label>
+                          <input type="url" id="inputLeadSingle"class="form-control" placeholder="Lead Single (Youtube Video Link)  required pattern= "https?://(www\.)?(youtube\.com/watch\?v=|youtu\.be/)[\w-]{11}.*">
                        </div>
 
                         <div class="field col-lg-6 col-md-10 ">
@@ -67,7 +67,9 @@
                          <button type="submit" class="btn btn-primary">
                             <a href="#">Save</a>
                          </button>
-                         <a class="btn btn-primary" href="home/1">Cancel</a>
+                         <button type="submit" class="btn btn-primary">
+                            <a href="home">Cancel</a>
+                         </button>
                        </div>
 
                     </form>
