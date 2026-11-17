@@ -1,0 +1,132 @@
+[
+    {
+  "_id": {
+    "$oid": "6afc705e952f8397cab03379"
+  },
+  "name": "Manchild",
+  "runtime": "3:33",
+  "bpm": "123",
+  "album": "Man's Best Friend",
+  "number": "1"
+},
+{
+  "_id": {
+    "$oid": "6afc714d952f8397cab0337a"
+  },
+  "name": "Tears",
+  "runtime": "2:40",
+  "bpm": "113",
+  "album": "Man's Best Friend",
+  "number": "2"
+},
+{
+  "_id": {
+    "$oid": "6afc7192952f8397cab0337b"
+  },
+  "name": "My Man On Willpower",
+  "runtime": "3:17",
+  "bpm": "120",
+  "album": "Man's Best Friend",
+  "number": "3"
+},
+{
+  "_id": {
+    "$oid": "6afc7278952f8397cab0337e"
+  },
+  "name": "Sugar Talking",
+  "runtime": "3:03",
+  "bpm": "152",
+  "album": "Man's Best Friend",
+  "number": "4"
+},
+{
+  "_id": {
+    "$oid": "6afc7326952f8397cab03380"
+  },
+  "name": "We Almost Broke Up Again Last Night",
+  "runtime": "3:23",
+  "bpm": "176",
+  "album": "Man's Best Friend",
+  "number": "5"
+},
+{
+  "_id": {
+    "$oid": "6afc7376952f8397cab03381"
+  },
+  "name": "Nobody's son",
+  "runtime": "3:02",
+  "bpm": "174",
+  "album": "Man's Best Friend",
+  "number": "6"
+},
+{
+  "_id": {
+    "$oid": "6afc73b5952f8397cab03382"
+  },
+  "name": "Never Getting Laid",
+  "runtime": "3:28",
+  "bpm": "92",
+  "album": "Man's Best Friend",
+  "number": "7"
+},
+{
+  "_id": {
+    "$oid": "6afc73de952f8397cab03383"
+  },
+  "name": "When Did You Get Hot",
+  "runtime": "2:25",
+  "bpm": "89",
+  "album": "Man's Best Friend",
+  "number": "8"
+},
+{
+  "_id": {
+    "$oid": "6afc7410952f8397cab03384"
+  },
+  "name": "Go Go Juice",
+  "runtime": "3:13",
+  "bpm": "132",
+  "album": "Man's Best Friend",
+  "number": "9"
+},
+{
+  "_id": {
+    "$oid": "6afc7445952f8397cab03385"
+  },
+  "name": "Don't Worry I'll Make You Worry",
+  "runtime": "3:42",
+  "bpm": "90",
+  "album": "Man's Best Friend",
+  "number": "10"
+},
+{
+  "_id": {
+    "$oid": "6afc7485952f8397cab03386"
+  },
+  "name": "House Tour",
+  "runtime": "2:49",
+  "bpm": "118",
+  "album": "Man's Best Friend",
+  "number": "11"
+},
+{
+  "_id": {
+    "$oid": "6afc7525952f8397cab03387"
+  },
+  "name": "Goodbye",
+  "runtime": "3:45",
+  "bpm": "120",
+  "album": "Man's Best Friend",
+  "number": "12"
+},
+{
+  "_id": {
+    "$oid": "6afc7556952f8397cab03388"
+  },
+  "name": "Such A Funny Way",
+  "runtime": "3:52",
+  "bpm": "116",
+  "album": "Man's Best Friend",
+  "number": "13"
+}
+]
