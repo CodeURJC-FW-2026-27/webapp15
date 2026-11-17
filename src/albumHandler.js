@@ -35,20 +35,6 @@ export function getDescription(album) {
   return album.description;
 }
 
-  /*function binarySearch (arr, x) {   
-    let start = 0;
-    let end = arr.length - 1;
-    let mid;
-    while (start <= end) {
-      mid = Math.floor((start + end) / 2);
-      if (arr[mid] === x) return mid;
-
-      if (arr[mid] < x) {
-          start = mid + 1;
-      } else {
-          end = mid - 1;
-      }
-    }
-
-    return -1;
-  }*/
+export function getSongNumber(album) {
+  return album.songNumber;
+}
