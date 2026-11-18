@@ -155,11 +155,12 @@ The data's categorization will be primarily organised as follows:
   * **Description:** I've continued working on the “New Element” page, adding field validations. I also modified the fields based on previous practice and linked the “New Element” page to the home page and the MongoDB database. I've also create the message page for confirmations.   
               
   * **5 most important Commits:**
-      * [Introduction to all elements of the “Create” page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/10157cc7584c51a3aa768f4492c6ac65dbd135bb)
-      * [Link the creation page to the main page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4de6c414555b959466db30ab72a11ae406d77164)
-      * [Start changing style of creation page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/b0f2e1acd03be4b422ec64154d70fc0e381da10b)
-      * [Introduced my albums at home page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4bf0fe2e8786c634d87f663c84bd76ed2f02fe9f)
-      * [Last changes at form](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/d4d4448b9954408ad2b2d29572e071724ecc0371)
+       * [Validations finished](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/f1e864d004baf174e07b1be5be84bb01c9e33549)
+      * [Conecting form whit mongodb](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/e95c6a4ad2c96bd34a17315c8920f8aeb068dfcb)
+      * [Added edit configuration por new element](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/37c07dc4041187cc963e76b57a4a9a7cf577be7a)
+      * [Finished conections](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/0ee96ec9f78a0289a83a4f9d206525e419e1432a)
+      * [Merge branch 'main' of https://github.com/CodeURJC-FW-2026-27/webapp15](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4fe653989df0954834b48fc5757669960e4190ba)
+
   * **Files I worked on:**
     *  [new_element_page](new_element.html)
     *  [message_page](message.html)
