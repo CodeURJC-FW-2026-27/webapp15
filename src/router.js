@@ -43,8 +43,33 @@ if (documentCounts === 0) {
   console.log("Initial songs inserted");
 }
 
+function validateSong(body) {
+  const title = body.title?.trim();
+  const runtime = body.runtime?.trim();
+  const bpm = parseInt(body.bpm);
+  const number = parseInt(body.number);
 
-export default router;
+  if (!title || title.length > 50) {
+    return { error: 'El título es obligatorio y no puede superar los 50 caracteres' };
+  }
+  if (!/^[0-9]{1,2}:[0-5][0-9]$/.test(runtime ?? '')) {
+    return { error: 'La duración debe tener el formato m:ss, por ejemplo 5:34' };
+  }
+  if (Number.isNaN(bpm) || bpm < 40 || bpm > 240) {
+    return { error: 'El BPM debe ser un número entre 40 y 240' };
+  }
+  if (Number.isNaN(number) || number < 1) {
+    return { error: 'El número de canción debe ser 1 o mayor' };
+  }
+
+  return { data: { title, runtime, bpm, number } };
+}
+
+function renderError(res, status, message, backUrl = '/home/1') {
+  return res.status(status).render('error', { status, message, backUrl });
+}
+
+
 
 
 router.get('/home/:page', async (req,res) => {
@@ -265,16 +290,26 @@ router.post('/detail/:id/songs', async (req, res) => {
     console.log('POST recibido', req.params.id, req.body);
 
       if (!ObjectId.isValid(req.params.id)) {
-    return res.status(404).send('Álbum no encontrado');
+    return renderError(res, 404, 'Álbum no encontrado');
   }
 
     const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
 
     if (!album) {
-    return res.status(404).send('Álbum no encontrado');
+    return renderError(res, 404, 'Álbum no encontrado');
   }
 
     const { title, bpm, runtime, number } = req.body;
+
+    const { error, data } = validateSong(req.body);
+       if (error) {
+      return renderError(res, 400, error, `/detail/${req.params.id}`);
+    }
+
+    const duplicated = await songVault.findOne({ album: album.name, number: data.number });
+      if (duplicated) {
+      return renderError(res, 400, 'Ya hay una canción con ese número en este álbum', `/detail/${req.params.id}`);
+    }
 
     await songVault.insertOne({
         title: title.trim(),
@@ -320,26 +355,36 @@ if (!ObjectId.isValid(req.params.songId)) {
 });
 
 router.post('/detail/:id/songs/:songId/edit', async (req, res) => {
-    if (!ObjectId.isValid(req.params.songId)) {
-        return res.status(404).send('Canción no encontrada');
+    const editUrl = `/detail/${req.params.id}/songs/${req.params.songId}/edit`;
+
+    if (!ObjectId.isValid(req.params.id) || !ObjectId.isValid(req.params.songId)) {
+        return renderError(res, 404, 'Canción no encontrada');
     }
 
-    const { title, bpm, runtime, number } = req.body;
+    const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
+    if (!album) {
+        return renderError(res, 404, 'Álbum no encontrado');
+    }
 
-    if (!title?.trim() || !runtime?.trim()) {
-        return res.status(400).send('Faltan campos: ' + JSON.stringify(req.body));
+    const { error, data } = validateSong(req.body);
+    if (error) {
+        return renderError(res, 400, error, editUrl);
+    }
+
+    const songId = new ObjectId(req.params.songId);
+
+    const duplicated = await songVault.findOne({
+        album: album.name,
+        number: data.number,
+        _id: { $ne: songId }
+    });
+    if (duplicated) {
+        return renderError(res, 400, 'Ya hay una canción con ese número en este álbum', editUrl);
     }
 
     await songVault.updateOne(
-        { _id: new ObjectId(req.params.songId) },
-        {
-            $set: {
-                title: title.trim(),
-                bpm: parseInt(bpm),
-                runtime: runtime.trim(),
-                number: parseInt(number)
-            }
-        }
+        { _id: songId, album: album.name },
+        { $set: data }
     );
 
     res.redirect(`/detail/${req.params.id}`);
@@ -350,3 +395,5 @@ router.get('/error', (req,res) => {
 
   res.render('error');
 });
+
+export default router;
