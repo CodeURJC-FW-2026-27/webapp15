@@ -117,6 +117,43 @@ The data's categorization will be primarily organised as follows:
  9. **View Web App:**  Open a new tab on your browser and navigate `http://localhost:3000/`
 
 ### File Description
+1. **Server Files**
+   - `src/app.js`: Main entry point of the application. It configures Express, Mustache, static resources, form processing, the `uploads` directory and the application router. It also starts the web server on port 3000.
+   - `src/router.js`: Defines the application routes and contains the main server-side logic. It connects to MongoDB, initializes the database with example data, implements pagination, search and genre filtering, validates forms, processes image uploads with Multer and manages the CRUD operations for albums and songs.
+   - `src/albumHandler.js`: Contains reusable MongoDB operations related to albums, such as retrieving the album list, finding an album by name and filtering albums by genre.
+   - `src/songHandler.js`: Contains reusable MongoDB operations related to songs, such as retrieving the songs associated with an album.
+
+2. **Views**
+   - `views/home.html`: Displays the album grid, search results, genre filters and pagination controls.
+   - `views/detail.html`: Displays all the information about an album, including its cover, attributes, lead single and related songs. It also contains the form used to add a new song.
+   - `views/new_element.html`: Contains the form used to create a new album.
+   - `views/editSong.html`: Contains the form used to edit an existing song and loads its current information.
+   - `views/confirmedit.html`: Displays the original and updated song information before confirming an edit operation.
+   - `views/message.html`: Reusable confirmation page used to display messages after successful operations.
+   - `views/error.html`: Reusable error page. It displays the HTTP status, the corresponding error message and a link that returns the user to the appropriate page.
+
+3. **Mustache Partials**
+   - `views/header.html`: Mustache partial containing the common document structure, page header and navigation menu.
+   - `views/footer.html`: Mustache partial containing the common footer and the closing elements of the HTML document.
+ 
+5. **Public Resources**
+   - `public/css/styles.css`: Contains the common application styles, responsive design rules and custom Bootstrap modifications.
+   - `public/resources/`: Contains the static resources used by the application, such as icons, decorative images and other interface assets.
+
+6. **Initial Database Data**
+   - `public/resources/database_initials/albumVault.json`: Contains the initial album documents inserted into the MongoDB `albumVault` collection when the collection is empty.
+   - `public/resources/database_initials/songVault.json`: Contains the initial song documents inserted into the MongoDB `songVault` collection when the collection is empty.
+   - `public/resources/database_initials/images/`: Contains the initial album cover images. These images are copied to the `uploads` directory when the application starts.
+
+7. **Generated Directories**
+   - `uploads/`: Stores the album cover images uploaded by users and the initial cover images copied when the application starts. This directory is generated automatically and is excluded from the Git repository.
+   - `node_modules/`: Contains the Node.js dependencies installed with `npm install`. This directory is generated automatically and is excluded from the Git repository.
+
+8. **Configuration Files**
+   - `package.json`: Defines the Node.js project, the application dependencies and the npm scripts used to start the application.
+   - `package-lock.json`: Records the exact versions of the installed npm dependencies to ensure reproducible installations.
+   - `.gitignore`: Prevents generated directories such as `node_modules` and `uploads` from being included in the Git repository.
+   - `README.md`: Contains the project description, implemented features, installation and execution instructions, file descriptions, demonstration video and team participation information.
 
 
 ### Eric Vela Pérez
