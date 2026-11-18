@@ -117,6 +117,46 @@ The data's categorization will be primarily organised as follows:
  9. **View Web App:**  Open a new tab on your browser and navigate `http://localhost:3000/`
 
 ### File Description
+1. **Server Files**
+   - `src/app.js`: Main entry point of the application. It configures Express, Mustache, static resources, form processing, the `uploads` directory and the application router. It also starts the web server on port 3000.
+   - `src/router.js`: Defines the application routes and contains the main server-side logic. It connects to MongoDB, initializes the database with example data, implements pagination, search and genre filtering, validates forms, processes image uploads with Multer and manages the CRUD operations for albums and songs.
+   - `src/albumHandler.js`: Contains reusable MongoDB operations related to albums, such as retrieving the album list, finding an album by name and filtering albums by genre.
+   - `src/songHandler.js`: Contains reusable MongoDB operations related to songs, such as retrieving the songs associated with an album.
+
+2. **Views**
+   - `views/home.html`: Displays the album grid, search results, genre filters and pagination controls.
+   - `views/detail.html`: Displays all the information about an album, including its cover, attributes, lead single and related songs. It also contains the form used to add a new song.
+   - `views/new_element.html`: Contains the form used to create a new album.
+   - `views/editSong.html`: Contains the form used to edit an existing song and loads its current information.
+   - `views/confirmedit.html`: Displays the original and updated song information before confirming an edit operation.
+   - `views/message.html`: Reusable confirmation page used to display messages after successful operations.
+   - `views/error.html`: Reusable error page. It displays the HTTP status, the corresponding error message and a link that returns the user to the appropriate page.
+   - `views/confirmeditsong.html`: Reusable song-edit confirmation page. It compares the current song data with the proposed changes in a before-and-after table, preserves the validated values in hidden form fields and allows the user either to confirm the update or return to the editing form.
+   - `views/confirmdeletesong.html`: Reusable song-deletion confirmation page. It identifies the selected song and its album, warns that the operation cannot be undone and allows the user either to submit the deletion request or cancel and return to the album detail page.
+ 
+
+3. **Mustache Partials**
+   - `views/header.html`: Mustache partial containing the common document structure, page header and navigation menu.
+   - `views/footer.html`: Mustache partial containing the common footer and the closing elements of the HTML document.
+ 
+5. **Public Resources**
+   - `public/css/styles.css`: Contains the common application styles, responsive design rules and custom Bootstrap modifications.
+   - `public/resources/`: Contains the static resources used by the application, such as icons, decorative images and other interface assets.
+
+6. **Initial Database Data**
+   - `public/resources/database_initials/albumVault.json`: Contains the initial album documents inserted into the MongoDB `albumVault` collection when the collection is empty.
+   - `public/resources/database_initials/songVault.json`: Contains the initial song documents inserted into the MongoDB `songVault` collection when the collection is empty.
+   - `public/resources/database_initials/images/`: Contains the initial album cover images. These images are copied to the `uploads` directory when the application starts.
+
+7. **Generated Directories**
+   - `uploads/`: Stores the album cover images uploaded by users and the initial cover images copied when the application starts. This directory is generated automatically and is excluded from the Git repository.
+   - `node_modules/`: Contains the Node.js dependencies installed with `npm install`. This directory is generated automatically and is excluded from the Git repository.
+
+8. **Configuration Files**
+   - `package.json`: Defines the Node.js project, the application dependencies and the npm scripts used to start the application.
+   - `package-lock.json`: Records the exact versions of the installed npm dependencies to ensure reproducible installations.
+   - `.gitignore`: Prevents generated directories such as `node_modules` and `uploads` from being included in the Git repository.
+   - `README.md`: Contains the project description, implemented features, installation and execution instructions, file descriptions, demonstration video and team participation information.
 
 
 ### Eric Vela Pérez
@@ -136,7 +176,7 @@ The data's categorization will be primarily organised as follows:
       *  [header.html](views/header.html)
 
 ### Sofía Gómez García
-  * **Description:** 
+  * **Description:** I've continued with the detail page, making it work so now when you click on an album, it shows the detail page of that specific album, generating it dinamically. I've also made the tracklist less repetitive and made its' delete and edit buttons work. Finally, I made the form to add a new song work. To do all this I created a database for the secondary entity collection (ssongVault), adding the songs of each album to it, and uploading them to the database if empty.
 
   * **5 most important Commits:**
       * [Made final changes in detail to make buttons work, made css work in detail](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/683ec7e45c26ad28ef474b6b3027525aee8e5599)
@@ -155,11 +195,12 @@ The data's categorization will be primarily organised as follows:
   * **Description:** I've continued working on the “New Element” page, adding field validations. I also modified the fields based on previous practice and linked the “New Element” page to the home page and the MongoDB database. I've also create the message page for confirmations.   
               
   * **5 most important Commits:**
-      * [Introduction to all elements of the “Create” page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/10157cc7584c51a3aa768f4492c6ac65dbd135bb)
-      * [Link the creation page to the main page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4de6c414555b959466db30ab72a11ae406d77164)
-      * [Start changing style of creation page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/b0f2e1acd03be4b422ec64154d70fc0e381da10b)
-      * [Introduced my albums at home page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4bf0fe2e8786c634d87f663c84bd76ed2f02fe9f)
-      * [Last changes at form](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/d4d4448b9954408ad2b2d29572e071724ecc0371)
+       * [Validations finished](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/f1e864d004baf174e07b1be5be84bb01c9e33549)
+      * [Conecting form whit mongodb](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/e95c6a4ad2c96bd34a17315c8920f8aeb068dfcb)
+      * [Added edit configuration por new element](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/37c07dc4041187cc963e76b57a4a9a7cf577be7a)
+      * [Finished conections](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/0ee96ec9f78a0289a83a4f9d206525e419e1432a)
+      * [Merge branch 'main' of https://github.com/CodeURJC-FW-2026-27/webapp15](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4fe653989df0954834b48fc5757669960e4190ba)
+
   * **Files I worked on:**
     *  [new_element_page](new_element.html)
     *  [message_page](message.html)
