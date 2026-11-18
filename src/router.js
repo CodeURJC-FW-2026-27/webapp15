@@ -874,6 +874,8 @@ router.get('/new_element', (req,res) => {
   res.render('new_element');
 });
 
+
+/*START DEATIL PAGE OPERATIONS -------------------- */
 router.get('/detail/:id', async (req,res) => {
 
   const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
@@ -883,8 +885,12 @@ router.get('/detail/:id', async (req,res) => {
     .sort({number:1})
     .toArray();
 
+console.log('Álbum:', JSON.stringify(album.name), '| canciones:', songs.length);
+console.log('Valores de album en songs:', await songVault.distinct('album'));
+
   res.render('detail', { album, songs });
 });
+
 router.post('/detail/:id/songs', async (req, res) => {
     console.log('POST recibido', req.params.id, req.body);
 
@@ -899,6 +905,42 @@ router.post('/detail/:id/songs', async (req, res) => {
         number: parseInt(number),
         album: album.name
     });
+
+    res.redirect(`/detail/${req.params.id}`);
+});
+router.post('/detail/:id/songs/:songId/delete', async (req, res) => {
+
+    await songVault.deleteOne({ _id: new ObjectId(req.params.songId) });
+
+    res.redirect(`/detail/${req.params.id}`);
+});
+
+router.get('/detail/:id/songs/:songId/edit', async (req, res) => {
+
+    const song = await songVault.findOne({ _id: new ObjectId(req.params.songId) });
+
+    res.render('editSong', {
+        ...song,
+        songId: song._id.toString(),
+        album_Id: req.params.id
+    });
+});
+
+router.post('/detail/:id/songs/:songId/edit', async (req, res) => {
+
+    const { name, bpm, runtime, numero } = req.body;
+
+    await songVault.updateOne(
+        { _id: new ObjectId(req.params.songId) },
+        {
+            $set: {
+                name: name.trim(),
+                bpm: parseInt(bpm),
+                runtime: runtime.trim(),
+                numero: parseInt(numero)
+            }
+        }
+    );
 
     res.redirect(`/detail/${req.params.id}`);
 });

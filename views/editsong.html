@@ -1,0 +1,91 @@
+{{>header}}
+
+<section class="page-section portfolio" id="portfolio">
+  <div class="container">
+    <!-- Edit Song Heading-->
+    <h2
+      class="page-section-heading text-center text-uppercase mb-0 detailGrids"
+      style="margin-top: 1%">
+      Edit song
+    </h2>
+    <!-- Icon Divider-->
+    <div class="divider-customd">
+      <div class="divider-custom-lined"></div>
+      <div class="divider-custom-icond"><i class="fas fa-star"></i></div>
+      <div class="divider-custom-lined"></div>
+    </div>
+    <!-- Portfolio Grid Items-->
+    <div class="row justify-content-center">
+      <form method="POST" action="" style="margin-top: 5%">
+        <div class="col-md-12 col-lg-12 mb-12">
+          <label for="Sname" class="songformd">Song name:</label>
+          <input
+            type="text"
+            name="name"
+            value="{{name}}"
+            maxlength="50"
+            style="margin-bottom: 4%"
+            required
+          /><br />
+        </div>
+
+        <div class="col-md-12 col-lg-12 mb-12">
+          <label for="bpm" class="songformd"
+            >BPM:
+            <output id="bpmValue">{{bpm}}</output>
+          </label>
+          <input
+            type="range"
+            id="bpm"
+            name="bpm"
+            min="40"
+            max="240"
+            value="{{bpm}}"
+            step="1"
+            oninput="
+              document.getElementById('bpmValue').textContent = this.value
+            "
+          /><br />
+        </div>
+
+        <div class="col-md-12 col-lg-12 mb-12">
+          <label for="Sruntime" class="songformd" style="margin-top: 4%"
+            >Song runtime:</label
+          >
+          <input
+            type="text"
+            name="runtime"
+            value="{{runtime}}"
+            pattern="[0-9]{1,2}:[0-5][0-9]"
+            title="Formato m:ss, por ejemplo 5:34"
+            maxlength="5"
+            style="margin-top: 4%; margin-bottom: 4%"
+            required
+          /><br />
+        </div>
+
+        <div class="col-md-12 col-lg-12 mb-12">
+          <label for="Snumero" class="songformd">Song number:</label>
+          <input
+            type="number"
+            name="numero"
+            value="{{numero}}"
+            min="1"
+            style="margin-bottom: 4%"
+            required
+          /><br />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        <button type="submit" class="btn btn-primary">
+          <a href="javascript:history.back()">Cancelar</a>
+        </button>
+      </form>
+      </div>
+
+                </div>
+            </div>
+        </section>
+
+      {{>footer}}
+

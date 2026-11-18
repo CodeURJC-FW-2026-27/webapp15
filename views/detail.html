@@ -43,18 +43,22 @@
                     </div>
 
                     <!-- lista album-->
-                    <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="col-md-12 col-lg-12 mb-12">
                         <ol>
                             {{#songs}}
                                 <li>{{title}} <br>
                                     runtime: {{runtime}}, BPM: {{bpm}} <br>
+
+                                <!-- button to edit -->    
                                 <button type="submit" class="btn btn-primary">
-                                    <a>Edit</a>
+                                    <a href="/detail/{{album._id}}/songs/{{_id}}/edit">Edit</a>
                                 </button>         
-                                <!-- button to delete -->                       
-                                <button type="submit" class="btn btn-primary">
-                                    <a>Delete</a>
-                                </button></li>
+                                <!-- button to delete -->     
+                                <form method="POST" action="/detail/{{album._id}}/songs/{{_id}}/delete" style="display:inline;">                  
+                                    <button type="submit" class="btn btn-primary">
+                                        <a>Delete</a>
+                                    </button>
+                                </form>
                             </li>
                             {{/songs}}
                         </ol>
@@ -90,17 +94,17 @@
                     <div class="col-md-12 col-lg-12" style="padding-left:5%">
                         <form method="POST" action="/detail/{{album._id}}/songs">
                             <label for="Sname" class="songformd">Song name:</label><br>
-                            <input type="text" id="Sname" name="title" placeholder="Title" required><br>
-
-                            <label for="Sbpm" class="songformd">Song BPM:</label><br>
-                            <input type="number" id="Sbpm" name="bpm" placeholder="BPM" min="1" required><br>
+                            <input type="text" id="Sname" name="title" placeholder="Title" maxlength="60" required><br>
 
                             <label for="Sruntime" class="songformd">Song runtime:</label><br>
-                            <input type="text" id="Sruntime" name="runtime" placeholder="Duration (e.g., 3:45)" required><br>
+                            <input type="text" id="Sruntime" name="runtime" placeholder="Duration (e.g., 3:45)" pattern="[0-9]{1,2}:[0-5][0-9]" title="incorrect format. pattern is m:ss, e.g., 3:45" maxlength="5" required><br>
                             
 
                             <label for="Snumero" class="songformd">Song number:</label><br>
                             <input type="number" id="Snumero" name="number" placeholder="Number in the album" min="1" required><br>
+
+                            <label for="Sbpm" class="songformd">Song BPM: <output id="bpmValue">120</output></label><br>
+                            <input type="range" id="Sbpm" name="bpm" min="40" max="240" value="120" step="1" oninput="document.getElementById('bpmValue').textContent=this.value"><br>
                             
                             <!-- button to SUBMIT -->
                              <div style="margin-top:2%">
