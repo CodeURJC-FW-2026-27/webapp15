@@ -55,8 +55,6 @@ The data's categorization will be primarily organised as follows:
 ### Creation Page
 ![Creation Page screenshot](public/resources/screenshots/creation_v1.png)
 
-### Demonstration video
-(https://youtu.be/lo0aLUm9iwU)
 
 ### Eric Vela Pérez
   * **Description:** I've created the index and home page, which includes the heading, footer, navigation bar and album grid. It also has a "Create New Element" button that links to the creation page. I made the album grid show the image in a vinyl record case style and also display the Title and Author of the album. At last, I've also added my 3 favorite albums to the grid.
@@ -161,6 +159,8 @@ The data's categorization will be primarily organised as follows:
    - `.gitignore`: Prevents generated directories such as `node_modules` and `uploads` from being included in the Git repository.
    - `README.md`: Contains the project description, implemented features, installation and execution instructions, file descriptions, demonstration video and team participation information.
 
+### Demonstration video
+(https://youtu.be/lo0aLUm9iwU)
 
 ### Eric Vela Pérez
   * **Description:** I've continued working on the home page, inserting the header and footer with moustache partials, adding the pagination system, the search by title query and the filter by genre. I've also implemented the transfer of the example album images to the uploads folder as well as the creation of the database and the primary entity collection (albumVault) if non-existent, uploading the example primary entities (albums) to the database if empty. At last, I've also created the error page template and the json data used in the data base for all the example albums and the HALO, Different World and Soft Error's songs.
