@@ -1006,7 +1006,8 @@ if (!album) {
 
   res.render('detail', { album, songs });
 });
-
+ 
+/*new song*/
 router.post('/detail/:id/songs', async (req, res) => {
     console.log('POST recibido', req.params.id, req.body);
 
@@ -1033,6 +1034,7 @@ router.post('/detail/:id/songs', async (req, res) => {
     res.redirect(`/detail/${req.params.id}`);
 });
 
+/*delete song*/
 router.post('/detail/:id/songs/:songId/delete', async (req, res) => {
 
  if (!ObjectId.isValid(req.params.songId)) {
@@ -1044,6 +1046,7 @@ router.post('/detail/:id/songs/:songId/delete', async (req, res) => {
     res.redirect(`/detail/${req.params.id}`);
 });
 
+/*edit song*/
 router.get('/detail/:id/songs/:songId/edit', async (req, res) => {
 
 if (!ObjectId.isValid(req.params.songId)) {
