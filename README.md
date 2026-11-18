@@ -152,7 +152,7 @@ The data's categorization will be primarily organised as follows:
     *  [Styles](styles.css)
 
 ### Adrienn Brinza
-  * **Description:**    
+  * **Description:** I've continued working on the “New Element” page, adding field validations. I also modified the fields based on previous practice and linked the “New Element” page to the home page and the MongoDB database. I've also create the message page for confirmations.   
               
   * **5 most important Commits:**
       * [Introduction to all elements of the “Create” page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/10157cc7584c51a3aa768f4492c6ac65dbd135bb)
@@ -161,8 +161,9 @@ The data's categorization will be primarily organised as follows:
       * [Introduced my albums at home page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4bf0fe2e8786c634d87f663c84bd76ed2f02fe9f)
       * [Last changes at form](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/d4d4448b9954408ad2b2d29572e071724ecc0371)
   * **Files I worked on:**
-    *  [Creation page](creation.html)
-    *  [Home page](home.html)
-    *  [Styles](styles.css)
-    *  [Detail page](detail_WPSIATWIN.html)
-    *  [Template Page](template.html)
+    *  [new_element_page](new_element.html)
+    *  [message_page](message.html)
+    *  [router.js](router.js)
+    *  [app.js](app.js)
+    *  [detail page](detail.html)
+    
