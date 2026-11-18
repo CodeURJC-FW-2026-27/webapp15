@@ -875,7 +875,7 @@ router.get('/home/:page', async (req,res) => {
 });
 
 router.get('/new_element', (req,res) => {
-  res.render('new_element');
+  res.render('new_element', {errores: {}, valores: {}});
 });
 
 /*START OF VALIDATIONS OF NEW ELEMENT-------------------- */
@@ -912,20 +912,20 @@ if (genre === '') {
 //youTube
 const leadSingle = (req.body.leadSingle || '').trim();
 if (leadSingle === '') {
-  errores.leadSingle = 'The link is a required field';
+  errores.leadSingle = 'The  YouTube link is a required field';
 } else if (!/^https:\/\/youtu\.be\/[A-Za-z0-9_-]{11}$/.test(leadSingle)) {
   errores.leadSingle = 'Enter a link of the type https://youtu.be/XXXXXXXXXXX';
 }
 
 //date
 const releaseDate = req.body.releaseDate || '';
-const fecha = new Date(releaseDate);
+const fecha = new Date(releaseDate); //new date turns text to a real date 
 if (releaseDate === '') {
   errores.releaseDate = 'The date is a required field';
-} else if (!/^\d{4}-\d{2}-\d{2}$/.test(releaseDate)
-           || Number.isNaN(fecha.getTime())
-           || fecha.toISOString().slice(0, 10) !== releaseDate) {
-  errores.releaseDate = 'Enter a valid date';
+} else if (!/^\d{4}-\d{2}-\d{2}$/.test(releaseDate) //comprove 4 digits, 2 digits and 2 digits 
+           || Number.isNaN(fecha.getTime()) //if date is something not real, isNaN tells is not a date, and turns in getTime NaN
+           || fecha.toISOString().slice(0, 10) !== releaseDate) {//turns date to a text again and compare with the original text, if is not the same is not a valid date
+  errores.releaseDate = 'Enter a valid date'; // silce is for reconversion
 } else if (releaseDate < '1900-01-01' || fecha > new Date()) {
   errores.releaseDate = 'The date must be between 1900 and today';
 }
@@ -948,11 +948,11 @@ if (!req.file) {
 } else if (!req.file.mimetype.startsWith('image/')) {
   errores.cover = 'The file must be an image';
 }
-  
-  if (Object.keys(errores).length > 0) { // object keys is a function that returns an array with the properties of the object, if the length is greater than 0 there are errors 
-    return res.render('new_element', { errores, valores: req.body });
-  }
-
+   if (Object.keys(errores).length > 0) {
+  if (req.file) fs.unlink(req.file.path, () => {});
+  return res.render('new_element', { errores, valores: req.body });
+} // object keys is a function that returns an array with the properties of the object, if the length is greater than 0 there are errors 
+   
   // aquí tengo que poner el guardado en mongoDB 
  
 });
