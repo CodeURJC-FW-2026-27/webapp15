@@ -136,7 +136,7 @@ The data's categorization will be primarily organised as follows:
       *  [header.html](views/header.html)
 
 ### Sofía Gómez García
-  * **Description:** 
+  * **Description:** I've continued with the detail page, making it work so now when you click on an album, it shows the detail page of that specific album, generating it dinamically. I've also made the tracklist less repetitive and made its' delete and edit buttons work. Finally, I made the form to add a new song work. To do all this I created a database for the secondary entity collection (ssongVault), adding the songs of each album to it, and uploading them to the database if empty.
 
   * **5 most important Commits:**
       * [Made final changes in detail to make buttons work, made css work in detail](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/683ec7e45c26ad28ef474b6b3027525aee8e5599)
