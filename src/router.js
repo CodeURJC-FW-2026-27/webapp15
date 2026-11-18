@@ -1,10 +1,14 @@
 import express from 'express';
 import { MongoClient, ObjectId } from 'mongodb';
+import multer from 'multer';
 import fs from 'node:fs';
 import * as utils from './albumHandler.js';
 import * as utilsongs from './songHandler.js';
 
 const router = express.Router();
+
+const upload = multer({ dest: 'uploads/' });
+const generosPermitidos = ['hyperpop', 'EDM', 'k-pop', 'rock', 'pop', 'rap', 'bachata', 'reggaeton']; 
 
 
 
@@ -873,6 +877,86 @@ router.get('/home/:page', async (req,res) => {
 router.get('/new_element', (req,res) => {
   res.render('new_element');
 });
+
+/*START OF VALIDATIONS OF NEW ELEMENT-------------------- */
+ router.post('/new_element', upload.single('cover'), async (req, res) => {
+
+  const errores = {}; //create a new object errores, if errores is empty there are no errors, if it has properties there are errors 
+
+  //name 
+  const name = (req.body.name || '').trim(); //req.body.name is what user enter like name, all is saved in name 
+  if (name === '') {
+    errores.name = 'The name is a required field';
+  } else if (name[0] !== name[0].toUpperCase() || name[0] === name[0].toLowerCase()) { 
+    errores.name = 'The name must start with a capital letter';
+  } else if (await albumVault.findOne({ name: name })) { //awai is the function that waits until mongodb returns the result, findone is the function that 
+    errores.name = 'An album with that name already exists';// returns null or the value that is duplicated
+  }
+
+  // author
+const author = (req.body.author || '').trim();
+if (author === '') {
+  errores.author = 'The author is a required field';
+} else if (author.length > 100) {
+  errores.author = 'The author cannot exceed 100 characters';
+}
+
+// genre
+const genre = (req.body.genre || '').trim();
+if (genre === '') {
+  errores.genre = 'The genre is a required field';
+} else if (!generosPermitidos.includes(genre)) { //looks at the top list and look for it 
+  errores.genre = 'Select a valid genre';
+}
+
+//youTube
+const leadSingle = (req.body.leadSingle || '').trim();
+if (leadSingle === '') {
+  errores.leadSingle = 'The link is a required field';
+} else if (!/^https:\/\/youtu\.be\/[A-Za-z0-9_-]{11}$/.test(leadSingle)) {
+  errores.leadSingle = 'Enter a link of the type https://youtu.be/XXXXXXXXXXX';
+}
+
+//date
+const releaseDate = req.body.releaseDate || '';
+const fecha = new Date(releaseDate);
+if (releaseDate === '') {
+  errores.releaseDate = 'The date is a required field';
+} else if (!/^\d{4}-\d{2}-\d{2}$/.test(releaseDate)
+           || Number.isNaN(fecha.getTime())
+           || fecha.toISOString().slice(0, 10) !== releaseDate) {
+  errores.releaseDate = 'Enter a valid date';
+} else if (releaseDate < '1900-01-01' || fecha > new Date()) {
+  errores.releaseDate = 'The date must be between 1900 and today';
+}
+
+// songs number
+const songNumber = Number(req.body.songNumber);
+if (req.body.songNumber === '' || !Number.isInteger(songNumber) || songNumber < 1 || songNumber > 100) {
+  errores.songNumber = 'Enter an integer between 1 and 100';
+}
+
+// description
+const description = (req.body.description || '').trim();
+if (description.length < 50 || description.length > 500) {
+  errores.description = 'The description must be between 50 and 500 characters';
+}
+
+// cover 
+if (!req.file) {
+  errores.cover = 'You must upload a cover';
+} else if (!req.file.mimetype.startsWith('image/')) {
+  errores.cover = 'The file must be an image';
+}
+  
+  if (Object.keys(errores).length > 0) { // object keys is a function that returns an array with the properties of the object, if the length is greater than 0 there are errors 
+    return res.render('new_element', { errores, valores: req.body });
+  }
+
+  // aquí tengo que poner el guardado en mongoDB 
+ 
+});
+
 
 
 /*START DEATIL PAGE OPERATIONS -------------------- */
