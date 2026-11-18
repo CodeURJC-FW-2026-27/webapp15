@@ -3,13 +3,18 @@
 
 <!-- Album Section Heading-->
 <h2 class="homeHeading page-section-heading text-center text-uppercase  mb-0 detailGrids">
-    Error
+    Error {{status}}
 </h2>
 <!-- Icon Divider-->
 <div class="homeDivider divider-customd">
     <div class="divider-custom-lined"></div>
     <div class="divider-custom-icond"><i class="fas fa-star"></i></div>
     <div class="divider-custom-lined"></div>
+</div>
+
+<div class="errorMessage">
+    <p style="color: white;">{{message}}</p>
+    <a class="btn btn-primary" href="{{backUrl}}">Go back</a>
 </div>
 
 

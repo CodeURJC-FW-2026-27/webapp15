@@ -851,7 +851,9 @@ body {
 
 /* END OF SEARCH FORM -------------------------------------*/
 
-
+.errorMessage {
+  text-align: center;
+}
 
 /* START OF ALBUM GRID -------------------------------------*/
 
