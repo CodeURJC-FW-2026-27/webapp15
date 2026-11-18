@@ -320,12 +320,15 @@ if (!ObjectId.isValid(req.params.songId)) {
 });
 
 router.post('/detail/:id/songs/:songId/edit', async (req, res) => {
-
- if (!ObjectId.isValid(req.params.songId)) {
+    if (!ObjectId.isValid(req.params.songId)) {
         return res.status(404).send('Canción no encontrada');
     }
 
     const { title, bpm, runtime, number } = req.body;
+
+    if (!title?.trim() || !runtime?.trim()) {
+        return res.status(400).send('Faltan campos: ' + JSON.stringify(req.body));
+    }
 
     await songVault.updateOne(
         { _id: new ObjectId(req.params.songId) },
