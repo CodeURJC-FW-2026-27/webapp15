@@ -114,7 +114,10 @@ The data's categorization will be primarily organised as follows:
  6. **Verify the MongoDB sevice:** Run the following command `sc query MongoDB`. If MongoDB is not running, open CMD as administrator on the same project folder and execute `net start MongoDB`
  7. **Install the project Dependencies:** From the project root folder run the following command `npm install`
  8. **Start Web App:** Run the folowwing command `npm start`
- 9. **View Web App:**  Open a new tab on your browser and navigate `http://localhost:3000/` 
+ 9. **View Web App:**  Open a new tab on your browser and navigate `http://localhost:3000/`
+
+### File Description
+
 
 ### Eric Vela Pérez
   * **Description:** I've continued working on the home page, inserting the header and footer with moustache partials, adding the pagination system, the search by title query and the filter by genre. I've also implemented the transfer of the example album images to the uploads folder as well as the creation of the database and the primary entity collection (albumVault) if non-existent, uploading the example primary entities (albums) to the database if empty. At last, I've also created the error page template and the json data used in the data base for all the example albums and the HALO, Different World and Soft Error's songs.
