@@ -139,17 +139,17 @@ The data's categorization will be primarily organised as follows:
   * **Description:** 
 
   * **5 most important Commits:**
-      * [Created project files form template](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/e50f708434dbf8fec9bc9afaf45f8052ef9ea885)
-      * [Made changes in the distribution of detail page and added WPSIATWIN album](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/9f6ee6275a4ebe57e665ae7bd1b34ac5e2aae294)
-      * [Made the last changes in detail page and added albums to home](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/9aa2c14bb8cec7df92b12ca10d322f09eb875161)
-      * [Changed some details in detail pages](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/d8ec57f6b8f8212f3472f20057e677a05f0a57e3)
-      * [Added delete and edit buttons to each song in detail](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/8f1bfc576a83cab56cf172eee48d8c085d560a08)
+      * [Made final changes in detail to make buttons work, made css work in detail](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/683ec7e45c26ad28ef474b6b3027525aee8e5599)
+      * [Made confirmation page for edit page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/cfabd6e221dc615242bc57734f2f956eab05cefa)
+      * [Made confirm deleta page in each song](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4ecc8f534ab1e45f5cddc52a6866e397cdcabc67)
+      * [Made edit work](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/1e70934ada0e23b4c514db59b2ccd9b954bbb0cb)
+      * [Made changes in router detail so it checks if the data is valid](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/7ec0e9c6ee8c20a64e7f5ae80abe3de63a79dd5d)
   * **Files I worked on:**
-    *  [Detail Template page](detail.html)  [Home page](home.html)
-    *  [Detail page](detail_WPSIATWIN.html)
+    *  [Detail page](detail.html)
+    *  [Edit song page](editsong.html)
+    *  [confirm edit song page](confirmeditsong.html)
+    *  [confirm delete song page](confirmdeletesong.html)
     *  [Styles](styles.css)
-    *  [Home page](home.html)
-    *  [Creation page](detail.html)
 
 ### Adrienn Brinza
   * **Description:**    
