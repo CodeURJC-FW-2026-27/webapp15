@@ -24,7 +24,7 @@
                           <label for="inputName">Album Name</label>
                           <input type="text" id="inputName" class="form-control" name="name"
                            value="{{valores.name}}" required pattern="[A-ZÁÉÍÓÚÑ].*" 
-                           title="Must start with a capital letter" placeholder="Album Name"> 
+                           title="Must start with a capital letter and this field is required" placeholder="Album Name"> 
                            {{#errores.name}}<div class="text-danger">{{errores.name}}</div>{{/errores.name}}
                          </div>
                          
@@ -32,13 +32,13 @@
                          <div class="field col-lg-6 col-md-10 ">
                           <label for="inputAuthor">Author</label>
                           <input type="text" id="inputAuthor" class="form-control" name="author"
-                          value="{{valores.author}}" required maxlength="100" placeholder="Author">
+                          value="{{valores.author}}" title="This field is required" required maxlength="100" placeholder="Author">
                          {{#errores.author}}<div class="text-danger">{{errores.author}}</div>{{/errores.author}}
                          </div>
 
                      <div class="field col-lg-6 col-md-10 ">
                       <label for="select" class="form-label">Genre</label>
-                      <select id="select" name="genre" class="form-control" required>
+                      <select id="select" name="genre" class="form-control" title="This field is required" required>
                       <option value="">Select a genre</option>
                       <option value="hyperpop">Hyperpop</option>
                       <option value="EDM">EDM</option>
@@ -55,14 +55,14 @@
                      <div class="field col-lg-6 col-md-10 ">
                       <label for="inputAlbumCover">Album Cover</label>
                       <input type="file" id="inputAlbumCover" class="form-control" name="cover"
-                       accept="image/*" required>
+                       accept="image/*" title="This field is required" required>
                       {{#errores.cover}}<div class="text-danger">{{errores.cover}}</div>{{/errores.cover}}
                      </div>
 
                      <div class="field col-lg-6 col-md-10 ">
                       <label for="inputLeadSingle">Lead Single Youtube Link</label>
                       <input type="url" id="inputLeadSingle" class="form-control" name="leadSingle"
-                        value="{{valores.leadSingle}}" required
+                        value="{{valores.leadSingle}}" title="This field is required" required
                         pattern="https://youtu\.be/[A-Za-z0-9_\-]{11}"
                         title="Format: https://youtu.be/XXXXXXXXXXX"
                         placeholder="Lead Single (Youtube Video Link)">
@@ -73,14 +73,14 @@
                      <div class="field col-lg-6 col-md-10 ">
                          <label for="inputDate">Publication Date</label>
                          <input type="date" id="inputDate" class="form-control" name="releaseDate"
-                           value="{{valores.releaseDate}}" required min="1900-01-01">
+                           value="{{valores.releaseDate}}" title="This field is required" required min="1900-01-01">
                           {{#errores.releaseDate}}<div class="text-danger">{{errores.releaseDate}}</div>{{/errores.releaseDate}}
                      </div>
 
                      <div class="field col-lg-6 col-md-10 ">
                       <label for="inputSongNumber">Song Number</label>
                       <input type="number" id="inputSongNumber" class="form-control" name="songNumber"
-                         value="{{valores.songNumber}}" required min="1" max="100" step="1"
+                         value="{{valores.songNumber}}" title="This field is required" required min="1" max="100" step="1"
                          placeholder="Song Number">
                          {{#errores.songNumber}}<div class="text-danger">{{errores.songNumber}}</div>{{/errores.songNumber}}
                      </div>
@@ -88,7 +88,7 @@
                      <div class="field col-lg-6 col-md-10 ">
                        <label for="Description">Description</label>
                        <textarea id="Description" rows="3" class="form-control" name="description"
-                        required minlength="50" maxlength="500"
+                        title="This field is required" required minlength="50" maxlength="500"
                         placeholder="Description">{{valores.description}}</textarea>
                        {{#errores.description}}<div class="text-danger">{{errores.description}}</div>{{/errores.description}}
                     </div>

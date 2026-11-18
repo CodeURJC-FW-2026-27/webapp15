@@ -1,0 +1,24 @@
+{{>header}}
+
+<main>
+  <div class="container">
+    <h2 class="page-section-heading text-center text-uppercase mb-0 mt-3 detailGrids">{{title}}</h2>
+
+    <!-- Icon Divider -->
+    <div class="divider-customd">
+      <div class="divider-custom-lined"></div>
+      <div class="divider-custom-icond"><i class="fas fa-star"></i></div>
+      <div class="divider-custom-lined"></div>
+    </div>
+
+    <p class="text-center text-white mt-4">{{message}}</p>
+
+    <div class="formButtons col-12 d-flex justify-content-center gap-3 mb-5">
+      {{#links}}
+        <a href="{{url}}" class="btn btn-primary">{{text}}</a>
+      {{/links}}
+    </div>
+  </div>
+</main>
+
+{{>footer}}

@@ -14,7 +14,7 @@ const generosPermitidos = ['hyperpop', 'EDM', 'k-pop', 'rock', 'pop', 'rap', 'ba
 
 /* CREATION OF DATABASE ON MONGO DB IF NOT FOUND*/
 
-const client = new MongoClient('mongodb://localhost:27017');
+const client = new MongoClient('mongodb://127.0.0.1:27017');
 
 await client.connect();
 
@@ -322,16 +322,16 @@ router.post('/detail/:id/songs/:songId/edit', async (req, res) => {
         return res.status(404).send('Canción no encontrada');
     }
 
-    const { name, bpm, runtime, numero } = req.body;
+    const { title, bpm, runtime, number } = req.body;
 
     await songVault.updateOne(
         { _id: new ObjectId(req.params.songId) },
         {
             $set: {
-                name: name.trim(),
+                title: title.trim(),
                 bpm: parseInt(bpm),
                 runtime: runtime.trim(),
-                numero: parseInt(numero)
+                number: parseInt(number)
             }
         }
     );
