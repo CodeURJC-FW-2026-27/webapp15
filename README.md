@@ -106,7 +106,7 @@ The data's categorization will be primarily organised as follows:
 ## Práctica 2 
 
 ### Eric Vela Pérez
-  * **Description:** I've continued working on the home page, adding the pagination system, the search by title query and the filter by genre. I've also implemented the transfer of the example album images to the uploads folder as well as the creation of the database and the primary entity collection (albumVault) if non-existent, uploading the example primary entities (albums) to the database if empty. At last, I've also created the error page template and the json data used in the data base for all the example albums and the HALO, Different World and Soft Error's songs.
+  * **Description:** I've continued working on the home page, inserting the header and footer with moustache partials, adding the pagination system, the search by title query and the filter by genre. I've also implemented the transfer of the example album images to the uploads folder as well as the creation of the database and the primary entity collection (albumVault) if non-existent, uploading the example primary entities (albums) to the database if empty. At last, I've also created the error page template and the json data used in the data base for all the example albums and the HALO, Different World and Soft Error's songs.
 
   * **5 most important Commits:**
       * [Changed Header and Footer to be generated with mustache partials](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/9772786b1d80d86542fe98da3071be61e81b33f5)
