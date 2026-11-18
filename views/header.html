@@ -23,46 +23,31 @@
 
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
-            <div>  
+            <div> 
+
                 <img class="masthead-avatar" src="/{{#home}}../{{/home}}resources/assets/record_left.png" alt="Vinyl Record" />
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
-                <div class="dropdown">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                        Categories
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li class="dropend">
-                            <a class="dropdown-item dropdown-toggle" href="#">Genre</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Pop</a></li>
-                                <li><a class="dropdown-item" href="#">Hyperpop</a></li>
-                                <li><a class="dropdown-item" href="#">K-Pop</a></li>
-                                <li><a class="dropdown-item" href="#">EDM</a></li>
-                                <li><a class="dropdown-item" href="#">Rock</a></li>
-                                <li><a class="dropdown-item" href="#">Rap</a></li>
-                                <li><a class="dropdown-item" href="#">Bachata</a></li>
-                                <li><a class="dropdown-item" href="#">Reggaetón</a></li>
-                            </ul>
-                        </li>
-                        <!--<li class="dropend">
-                            <a class="dropdown-item dropdown-toggle" href="#">Author</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Tiffany Day</a></li>
-                                <li><a class="dropdown-item" href="#">Alan Walker</a></li>
-                                <li><a class="dropdown-item" href="#">BlackPink</a></li>
-                                <li><a class="dropdown-item" href="#">Bad Bunny</a></li>
-                                <li><a class="dropdown-item" href="#">Olivia Rodrigo</a></li>
-                                <li><a class="dropdown-item" href="#">Conan Gray</a></li>
-                                <li><a class="dropdown-item" href="#">The Gluttonies</a></li>
-                            </ul>
-                        </li>-->
-                        <li class="dropdown-item">
-                            Release Date &nbsp;
-                            <input type="date">
-                        </li>
-                    </ul>
-                </div>
+
+                <form class="searchForm" action="/home">
+                    <input type="search" name="search" class="form-control" placeholder='Search by title (e.g "Halo")' aria-label="Search">
+                    <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+
+                <form action="/home" >
+                        <div class="field genreFilter">
+                            <select id="select" name="genre" class="form-control">
+                            <option value="hyperpop">Hyperpop</option>
+                            <option value="EDM">EDM</option>
+                            <option value="k-pop">K-pop</option>
+                            <option value="rock">Rock</option>
+                            <option value="pop">Pop</option>
+                            <option value="rap">Rap</option>
+                            <option value="bachata">Bachata</option>
+                            <option value="reggaeton">Reggaetón</option>
+                            </select>
+                        </div>
+                    <button class="btn btn-primary" type="submit">Filter Genre</button>
+                </form>
+                
                 <img class="masthead-avatar" src="/{{#home}}../{{/home}}resources/assets/record_right.png" alt="Vinyl Record" />
             </div>
         </header>

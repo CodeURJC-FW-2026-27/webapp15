@@ -20,6 +20,10 @@
             <div class="container">
                 <div class="row">
 
+                    {{^found}}
+                        <p>No results</p>
+                    {{/found}}
+
                     {{#shownAlbumsArray}}
                         <div class="slot col-lg-4 col-md-6 col-xs-12">
                             <a href="/detail/{{_id}}">
@@ -42,6 +46,7 @@
         
 
         <!-- Pagination Section Begin -->
+         {{^searchPage}}
         <nav aria-label="..." class="homePagination">
             <ul class="pagination">
 
@@ -63,6 +68,7 @@
 
             </ul>
         </nav>
+        {{/searchPage}}
         <!-- Pagination Section End -->
 
 {{>footer}}
