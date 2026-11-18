@@ -105,6 +105,17 @@ The data's categorization will be primarily organised as follows:
  
 ## Práctica 2 
 
+### Execution Instructions
+ 1. **Open terminal in the project root folder**
+ 2. **(If not installed) Install MongoDB Community Server:** Run the following command `winget install -e --id MongoDB.Server --silent --accept-package-agreements --accept-source-agreements`
+ 3. **(If not installed) Install Node.js LTS:** Run the following command `winget install -e --id OpenJS.NodeJS.LTS`
+ 4. **Close and Reopen the terminal**
+ 5. **Verify installations:** Run the following commands, one after the other `node --version` and `npm --version`. If any of these fail refer to step 3.
+ 6. **Verify the MongoDB sevice:** Run the following command `sc query MongoDB`. If MongoDB is not running, open CMD as administrator on the same project folder and execute `net start MongoDB`
+ 7. **Install the project Dependencies:** From the project root folder run the following command `npm install`
+ 8. **Start Web App:** Run the folowwing command `npm start`
+ 9. **View Web App:**  Open a new tab on your browser and navigate `http://localhost:3000/` 
+
 ### Eric Vela Pérez
   * **Description:** I've continued working on the home page, inserting the header and footer with moustache partials, adding the pagination system, the search by title query and the filter by genre. I've also implemented the transfer of the example album images to the uploads folder as well as the creation of the database and the primary entity collection (albumVault) if non-existent, uploading the example primary entities (albums) to the database if empty. At last, I've also created the error page template and the json data used in the data base for all the example albums and the HALO, Different World and Soft Error's songs.
 
