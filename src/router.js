@@ -344,3 +344,9 @@ router.post('/detail/:id/songs/:songId/edit', async (req, res) => {
 
     res.redirect(`/detail/${req.params.id}`);
 });
+
+
+router.get('/error', (req,res) => {
+
+  res.render('error');
+});
