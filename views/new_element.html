@@ -8,7 +8,7 @@
            <!-- Creation Container for Grid-->
 
             <div class="container"> 
-                  <h2 class="page-section-heading text-center text-uppercase mb-0 mt-3 detailGrids">New Album </h2>
+                  <h2 class="page-section-heading text-center text-uppercase mb-0 mt-3 detailGrids">{{formTitle}}</h2>
                   <!-- Icon Divider-->
                   <div class="divider-customd">
                       <div class="divider-custom-lined"></div>
@@ -17,85 +17,81 @@
                   </div>
                 <!--Form for creation page-->
                 <div> 
-                   <form class="row justify-content-center g-4" method="POST" action="/new_element" enctype="multipart/form-data"> <!--post is for join with JS, action is the directon where the form is, and envtype is for multer -->
+                   <form class="row justify-content-center g-4" method="POST" action="{{action}}" enctype="multipart/form-data"><!--post is for join with JS, action is the directon where the form is, and envtype is for multer -->
                    
 
                         <div class="field col-lg-6 col-md-10 ">
                           <label for="inputName">Album Name</label>
                           <input type="text" id="inputName" class="form-control" name="name"
-                           value="{{valores.name}}" required pattern="[A-ZÁÉÍÓÚÑ].*" 
+                           value="{{values.name}}" required pattern="[A-ZÁÉÍÓÚÑ].*" 
                            title="Must start with a capital letter and this field is required" placeholder="Album Name"> 
-                           {{#errores.name}}<div class="text-danger">{{errores.name}}</div>{{/errores.name}}
+                           {{#errors.name}}<div class="text-danger">{{errors.name}}</div>{{/errors.name}}
                          </div>
                          
                           <!-- title is the message user see and value is for save whats user wrote in case of error -->
                          <div class="field col-lg-6 col-md-10 ">
                           <label for="inputAuthor">Author</label>
                           <input type="text" id="inputAuthor" class="form-control" name="author"
-                          value="{{valores.author}}" title="This field is required" required maxlength="100" placeholder="Author">
-                         {{#errores.author}}<div class="text-danger">{{errores.author}}</div>{{/errores.author}}
+                          value="{{values.author}}" title="This field is required" required maxlength="100" placeholder="Author">
+                         {{#errors.author}}<div class="text-danger">{{errors.author}}</div>{{/errors.author}}
                          </div>
 
-                     <div class="field col-lg-6 col-md-10 ">
-                      <label for="select" class="form-label">Genre</label>
-                      <select id="select" name="genre" class="form-control" title="This field is required" required>
-                      <option value="">Select a genre</option>
-                      <option value="hyperpop">Hyperpop</option>
-                      <option value="EDM">EDM</option>
-                      <option value="k-pop">K-pop</option>
-                      <option value="rock">Rock</option>
-                      <option value="pop">Pop</option>
-                      <option value="rap">Rap</option>
-                      <option value="bachata">Bachata</option>
-                      <option value="reggaeton">Reggaetón</option>
-                     </select>
-                     {{#errores.genre}}<div class="text-danger">{{errores.genre}}</div>{{/errores.genre}}
-                     </div>
+                        <div class="field col-lg-6 col-md-10 ">
+                         <label for="select" class="form-label">Genre</label>
+                         <select id="select" name="genre" class="form-control" title="This field is required" required>
+                         <option value="">Select a genre</option>
+                         {{#genreOptions}}
+                         <option value="{{value}}" {{#selected}}selected{{/selected}}>{{label}}</option>
+                         {{/genreOptions}}
+                         </select>
+                         {{#errors.genre}}<div class="text-danger">{{errors.genre}}</div>{{/errors.genre}}
+                        </div>
 
-                     <div class="field col-lg-6 col-md-10 ">
-                      <label for="inputAlbumCover">Album Cover</label>
-                      <input type="file" id="inputAlbumCover" class="form-control" name="cover"
-                       accept="image/*" title="This field is required" required>
-                      {{#errores.cover}}<div class="text-danger">{{errores.cover}}</div>{{/errores.cover}}
-                     </div>
+                        <div class="field col-lg-6 col-md-10 ">
+                         <label for="inputAlbumCover">Album Cover</label>
+                         <input type="file" id="inputAlbumCover" class="form-control" name="cover"
+                         accept="image/*" title="Upload an image" {{^isEdit}}required{{/isEdit}}>
+                         {{#isEdit}}<small class="text-white">Leave empty to keep the current image</small>{{/isEdit}}
+                         {{#errors.cover}}<div class="text-danger">{{errors.cover}}</div>{{/errors.cover}}
+                       </div>
 
                      <div class="field col-lg-6 col-md-10 ">
                       <label for="inputLeadSingle">Lead Single Youtube Link</label>
                       <input type="url" id="inputLeadSingle" class="form-control" name="leadSingle"
-                        value="{{valores.leadSingle}}" title="This field is required" required
+                        value="{{values.leadSingle}}" required
                         pattern="https://youtu\.be/[A-Za-z0-9_\-]{11}"
                         title="Format: https://youtu.be/XXXXXXXXXXX"
                         placeholder="Lead Single (Youtube Video Link)">
-                       {{#errores.leadSingle}}<div class="text-danger">{{errores.leadSingle}}</div>{{/errores.leadSingle}}
+                       {{#errors.leadSingle}}<div class="text-danger">{{errors.leadSingle}}</div>{{/errors.leadSingle}}
                      </div>
 
 
                      <div class="field col-lg-6 col-md-10 ">
                          <label for="inputDate">Publication Date</label>
                          <input type="date" id="inputDate" class="form-control" name="releaseDate"
-                           value="{{valores.releaseDate}}" title="This field is required" required min="1900-01-01">
-                          {{#errores.releaseDate}}<div class="text-danger">{{errores.releaseDate}}</div>{{/errores.releaseDate}}
+                           value="{{values.releaseDate}}" title="This field is required" required min="1900-01-01">
+                          {{#errors.releaseDate}}<div class="text-danger">{{errors.releaseDate}}</div>{{/errors.releaseDate}}
                      </div>
 
                      <div class="field col-lg-6 col-md-10 ">
                       <label for="inputSongNumber">Song Number</label>
                       <input type="number" id="inputSongNumber" class="form-control" name="songNumber"
-                         value="{{valores.songNumber}}" title="This field is required" required min="1" max="100" step="1"
+                         value="{{values.songNumber}}" title="This field is required" required min="1" max="100" step="1"
                          placeholder="Song Number">
-                         {{#errores.songNumber}}<div class="text-danger">{{errores.songNumber}}</div>{{/errores.songNumber}}
+                         {{#errors.songNumber}}<div class="text-danger">{{errors.songNumber}}</div>{{/errors.songNumber}}
                      </div>
 
                      <div class="field col-lg-6 col-md-10 ">
                        <label for="Description">Description</label>
                        <textarea id="Description" rows="3" class="form-control" name="description"
                         title="This field is required" required minlength="50" maxlength="500"
-                        placeholder="Description">{{valores.description}}</textarea>
-                       {{#errores.description}}<div class="text-danger">{{errores.description}}</div>{{/errores.description}}
+                        placeholder="Description">{{values.description}}</textarea>
+                       {{#errors.description}}<div class="text-danger">{{errors.description}}</div>{{/errors.description}}
                     </div>
 
                        <div class="formButtons col-12 d-flex justify-content-center gap-3 mb-5">
                         <button type="submit" class="btn btn-primary">Save</button>
-                        <a href="/home/1" class="btn btn-primary">Cancel</a>
+                        <a href="{{cancelUrl}}" class="btn btn-primary">Cancel</a>
                       </div>
 
                     </form>
