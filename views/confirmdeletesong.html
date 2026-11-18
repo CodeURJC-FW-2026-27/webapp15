@@ -1,0 +1,46 @@
+{{>header}}
+
+<section class="page-section portfolio" id="portfolio">
+  <div class="container">
+    <!-- Edit Song Heading-->
+    <h2
+      class="page-section-heading text-center text-uppercase mb-0 detailGrids"
+      style="margin-top: 1%">
+      Confirm Delete
+    </h2>
+    <!-- Icon Divider-->
+    <div class="divider-customd">
+      <div class="divider-custom-lined"></div>
+      <div class="divider-custom-icond"><i class="fas fa-star"></i></div>
+      <div class="divider-custom-lined"></div>
+    </div>
+    <!-- Portfolio Grid Items-->
+    <div class="row justify-content-center">
+
+<h1>Eliminar canción</h1>
+
+<p>
+    Are you sure you want to delete <strong>{{song.title}}</strong>
+    (song {{song.number}} from {{albumName}})?
+    This action cannot be undone.
+</p>
+
+<div class="button-detail ">
+<form method="POST" action="/detail/{{albumId}}/songs/{{songId}}/delete">
+    <button type="submit" class="btn btn-primary">Yes, delete</button>
+</form>
+</div>
+
+<div class="button-detail ">
+<button type="submit" class="btn btn-primary">
+    <a href="/detail/{{albumId}}" >Cancel</a>
+</button>
+</div>
+
+</div>
+
+    </div>
+  </div>
+</section>
+
+{{>footer}}

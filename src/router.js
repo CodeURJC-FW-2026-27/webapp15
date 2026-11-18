@@ -323,6 +323,31 @@ router.post('/detail/:id/songs', async (req, res) => {
 });
 
 /*delete song*/
+router.get('/detail/:id/songs/:songId/delete/confirm', async (req, res) => {
+    if (!ObjectId.isValid(req.params.id) || !ObjectId.isValid(req.params.songId)) {
+        return renderError(res, 404, 'Canción no encontrada');
+    }
+
+    const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
+    if (!album) {
+        return renderError(res, 404, 'Álbum no encontrado');
+    }
+
+    const song = await songVault.findOne({
+        _id: new ObjectId(req.params.songId),
+        album: album.name
+    });
+    if (!song) {
+        return renderError(res, 404, 'Canción no encontrada', `/detail/${req.params.id}`);
+    }
+
+    res.render('confirmdeletesong', {
+        song,
+        albumName: album.name,
+        albumId: req.params.id,
+        songId: req.params.songId
+    });
+});
 router.post('/detail/:id/songs/:songId/delete', async (req, res) => {
 
  if (!ObjectId.isValid(req.params.songId)) {
@@ -385,7 +410,7 @@ router.post('/detail/:id/songs/:songId/edit/confirm', async (req, res) => {
         return renderError(res, 400, 'Ya hay una canción con ese número en este álbum', editUrl);
     }
 
-    res.render('confirmedit', {
+    res.render('confirmeditsong', {
         old: song,
         new: data,
         albumId: req.params.id,
