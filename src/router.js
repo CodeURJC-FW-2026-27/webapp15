@@ -1069,16 +1069,16 @@ router.post('/detail/:id/songs/:songId/edit', async (req, res) => {
         return res.status(404).send('Canción no encontrada');
     }
 
-    const { name, bpm, runtime, numero } = req.body;
+    const { title, bpm, runtime, number } = req.body;
 
     await songVault.updateOne(
         { _id: new ObjectId(req.params.songId) },
         {
             $set: {
-                name: name.trim(),
+                title: title.trim(),
                 bpm: parseInt(bpm),
                 runtime: runtime.trim(),
-                numero: parseInt(numero)
+                number: parseInt(number)
             }
         }
     );
