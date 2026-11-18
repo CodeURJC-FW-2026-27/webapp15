@@ -2,13 +2,19 @@ import express from 'express';
 import { MongoClient, ObjectId } from 'mongodb';
 import multer from 'multer';
 import fs from 'node:fs';
+import path from 'node:path';
 import * as utils from './albumHandler.js';
 import * as utilsongs from './songHandler.js';
 
 const router = express.Router();
 
-const upload = multer({ dest: 'uploads/' });
-const generosPermitidos = ['hyperpop', 'EDM', 'k-pop', 'rock', 'pop', 'rap', 'bachata', 'reggaeton']; 
+const storage = multer.diskStorage({
+  destination: 'uploads/',
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + '-' + Math.round(Math.random() * 1e9) + path.extname(file.originalname).toLowerCase());
+  }
+});
+const upload = multer({ storage });
 
 
 
@@ -152,116 +158,105 @@ router.get('/home', async (req,res) => {
 
 
 
-router.get('/new_element', (req,res) => {
-  res.render('new_element', {errores: {}, valores: {}});
+// Helper functions 
+function renderMessage(res, status, title, message, links) {
+  res.status(status).render('message', { title, message, links });
+}
+
+function renderNotFound(res) {
+  renderMessage(res, 404, 'Error', 'Album not found.', [{ url: '/home/1', text: 'Back to home' }]);
+}
+
+function renderAlbumForm(res, { albumId = null, errors = {}, values = {} }) {
+  const isEdit = albumId !== null;
+  res.render('new_element', {
+    isEdit,
+    formTitle: isEdit ? 'Edit Album' : 'New Album',
+    action: isEdit ? `/edit/${albumId}` : '/new_element',
+    cancelUrl: isEdit ? `/detail/${albumId}` : '/home/1',
+    errors,
+    values,
+    genreOptions: utils.GENRES.map(g => ({ ...g, selected: g.value === values.genre }))
+  });
+}
+
+// ---------- Create ----------
+router.get('/new_element', (req, res) => {
+  renderAlbumForm(res, {});
 });
 
-/*START OF VALIDATIONS OF NEW ELEMENT-------------------- */
- router.post('/new_element', upload.single('cover'), async (req, res) => {
+router.post('/new_element', upload.single('cover'), async (req, res) => {
+  const { errors, data } = await utils.validateAlbum(albumVault, req.body, req.file);
 
-  const errores = {}; //create a new object errores, if errores is empty there are no errors, if it has properties there are errors 
-
-  //name 
-  const name = (req.body.name || '').trim(); //req.body.name is what user enter like name, all is saved in name 
-  if (name === '') {
-    errores.name = 'The name is a required field';
-  } else if (name[0] !== name[0].toUpperCase() || name[0] === name[0].toLowerCase()) { 
-    errores.name = 'The name must start with a capital letter';
-  } else if (await albumVault.findOne({ name: name })) { //awai is the function that waits until mongodb returns the result, findone is the function that 
-    errores.name = 'An album with that name already exists';// returns null or the value that is duplicated
+  if (Object.keys(errors).length > 0) {
+    if (req.file) fs.unlink(req.file.path, () => {});
+    return renderAlbumForm(res, { errors, values: req.body });
   }
 
-  // author
-const author = (req.body.author || '').trim();
-if (author === '') {
-  errores.author = 'The author is a required field';
-} else if (author.length > 100) {
-  errores.author = 'The author cannot exceed 100 characters';
-}
-
-// genre
-const genre = (req.body.genre || '').trim();
-if (genre === '') {
-  errores.genre = 'The genre is a required field';
-} else if (!generosPermitidos.includes(genre)) { //looks at the top list and look for it 
-  errores.genre = 'Select a valid genre';
-}
-
-//youTube
-const leadSingle = (req.body.leadSingle || '').trim();
-if (leadSingle === '') {
-  errores.leadSingle = 'The  YouTube link is a required field';
-} else if (!/^https:\/\/youtu\.be\/[A-Za-z0-9_-]{11}$/.test(leadSingle)) {
-  errores.leadSingle = 'Enter a link of the type https://youtu.be/XXXXXXXXXXX';
-}
-
-//date
-const releaseDate = req.body.releaseDate || '';
-const fecha = new Date(releaseDate); //new date turns text to a real date 
-if (releaseDate === '') {
-  errores.releaseDate = 'The date is a required field';
-} else if (!/^\d{4}-\d{2}-\d{2}$/.test(releaseDate) //comprove 4 digits, 2 digits and 2 digits 
-           || Number.isNaN(fecha.getTime()) //if date is something not real, isNaN tells is not a date, and turns in getTime NaN
-           || fecha.toISOString().slice(0, 10) !== releaseDate) {//turns date to a text again and compare with the original text, if is not the same is not a valid date
-  errores.releaseDate = 'Enter a valid date'; // silce is for reconversion
-} else if (releaseDate < '1900-01-01' || fecha > new Date()) {
-  errores.releaseDate = 'The date must be between 1900 and today';
-}
-
-// songs number
-const songNumber = Number(req.body.songNumber);
-if (req.body.songNumber === '' || !Number.isInteger(songNumber) || songNumber < 1 || songNumber > 100) {
-  errores.songNumber = 'Enter an integer between 1 and 100';
-}
-
-// description
-const description = (req.body.description || '').trim();
-if (description.length < 50 || description.length > 500) {
-  errores.description = 'The description must be between 50 and 500 characters';
-}
-
-// cover 
-if (!req.file) {
-  errores.cover = 'You must upload a cover';
-} else if (!req.file.mimetype.startsWith('image/')) {
-  errores.cover = 'The file must be an image';
-}
-   if (Object.keys(errores).length > 0) {
-  if (req.file) fs.unlink(req.file.path, () => {});
-  return res.render('new_element', { errores, valores: req.body });
-} // object keys is a function that returns an array with the properties of the object, if the length is greater than 0 there are errors 
-   
-  //mongodb operations
-  const [year, month, day] = releaseDate.split('-');
-
-   const result = await albumVault.insertOne({
-    name: name,
-    author: author,
-    genre: genre,
+  const result = await albumVault.insertOne({
+    ...data,
     cover: req.file.filename,
-    songNumber: songNumber,
-    leadSingle: leadSingle,
-    releaseDate: `${day}-${month}-${year}`,
-    description: description
+    releaseDate: utils.swapDateFormat(data.releaseDate)
   });
 
-  // The home page reads the album names from the "albumList" document
-  await albumVault.updateOne(
-    { name: 'albumList' },
-    { $push: { list: name } }
-  );
+  await albumVault.updateOne({ name: 'albumList' }, { $push: { list: data.name } });
 
-  res.render('message', {
-    title: 'Album created',
-    message: `The album "${name}" has been created successfully.`,
-    links: [
-      { url: `/detail/${result.insertedId}`, text: 'View album' },
-      { url: '/home/1', text: 'Back to home' }
-    ]
+  renderMessage(res, 200, 'Album created', `The album "${data.name}" has been created successfully.`, [
+    { url: `/detail/${result.insertedId}`, text: 'View album' },
+    { url: '/home/1', text: 'Back to home' }
+  ]);
+});
+
+// ---------- Edit ----------
+router.get('/edit/:id', async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) return renderNotFound(res);
+
+  const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
+  if (!album) return renderNotFound(res);
+
+  renderAlbumForm(res, {
+    albumId: req.params.id,
+    values: { ...album, releaseDate: utils.swapDateFormat(album.releaseDate) }
   });
-}); 
- 
+});
 
+router.post('/edit/:id', upload.single('cover'), async (req, res) => {
+  const discardFile = () => { if (req.file) fs.unlink(req.file.path, () => {}); };
+
+  if (!ObjectId.isValid(req.params.id)) { discardFile(); return renderNotFound(res); }
+
+  const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
+  if (!album) { discardFile(); return renderNotFound(res); }
+
+  const { errors, data } = await utils.validateAlbum(albumVault, req.body, req.file, {
+    excludeId: req.params.id,
+    coverRequired: false
+  });
+
+  if (Object.keys(errors).length > 0) {
+    discardFile();
+    return renderAlbumForm(res, { albumId: req.params.id, errors, values: req.body });
+  }
+
+  const changes = { ...data, releaseDate: utils.swapDateFormat(data.releaseDate) };
+  if (req.file) changes.cover = req.file.filename;
+
+  await albumVault.updateOne({ _id: album._id }, { $set: changes });
+
+  if (req.file && album.cover) {
+    fs.unlink(path.join('uploads', album.cover), () => {});
+  }
+
+  if (data.name !== album.name) {
+    await songVault.updateMany({ album: album.name }, { $set: { album: data.name } });
+    await albumVault.updateOne({ name: 'albumList', list: album.name }, { $set: { 'list.$': data.name } });
+  }
+
+  renderMessage(res, 200, 'Album updated', `The album "${data.name}" has been updated successfully.`, [
+    { url: `/detail/${req.params.id}`, text: 'Back to album' },
+    { url: '/home/1', text: 'Back to home' }
+  ]);
+});
 
 
 /*START DEATIL PAGE OPERATIONS -------------------- */
@@ -323,6 +318,31 @@ router.post('/detail/:id/songs', async (req, res) => {
 });
 
 /*delete song*/
+router.get('/detail/:id/songs/:songId/delete/confirm', async (req, res) => {
+    if (!ObjectId.isValid(req.params.id) || !ObjectId.isValid(req.params.songId)) {
+        return renderError(res, 404, 'Canción no encontrada');
+    }
+
+    const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
+    if (!album) {
+        return renderError(res, 404, 'Álbum no encontrado');
+    }
+
+    const song = await songVault.findOne({
+        _id: new ObjectId(req.params.songId),
+        album: album.name
+    });
+    if (!song) {
+        return renderError(res, 404, 'Canción no encontrada', `/detail/${req.params.id}`);
+    }
+
+    res.render('confirmdeletesong', {
+        song,
+        albumName: album.name,
+        albumId: req.params.id,
+        songId: req.params.songId
+    });
+});
 router.post('/detail/:id/songs/:songId/delete', async (req, res) => {
 
  if (!ObjectId.isValid(req.params.songId)) {
@@ -385,7 +405,7 @@ router.post('/detail/:id/songs/:songId/edit/confirm', async (req, res) => {
         return renderError(res, 400, 'There is a song with the same number in this album already', editUrl);
     }
 
-    res.render('confirmedit', {
+    res.render('confirmeditsong', {
         old: song,
         new: data,
         albumId: req.params.id,

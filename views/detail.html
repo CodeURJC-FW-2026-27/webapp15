@@ -54,7 +54,7 @@
                                     <a href="/detail/{{album._id}}/songs/{{_id}}/edit">Edit</a>
                                 </button>         
                                 <!-- button to delete -->     
-                                <form method="POST" action="/detail/{{album._id}}/songs/{{_id}}/delete" style="display:inline;">                  
+                                <form method="GET" action="/detail/{{album._id}}/songs/{{_id}}/delete/confirm" style="display:inline;">                  
                                     <button type="submit" class="btn btn-primary">
                                         <a>Delete</a>
                                     </button>
@@ -80,6 +80,12 @@
                         <button class="btn btn-primary" style="margin-top:2%">
                              <a class="text-white" href="/home/1">&nbsp; Go Back To Home Page</a>
                         </button>
+                    </div>
+
+                    <!-- album butto -->
+                    <div class="col-12 d-flex justify-content-center gap-3 my-4">
+                    <a href="/edit/{{album._id}}" class="btn btn-primary">Edit</a>
+        
                     </div>
 
                     <!-- add song text -->

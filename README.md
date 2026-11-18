@@ -139,20 +139,20 @@ The data's categorization will be primarily organised as follows:
   * **Description:** 
 
   * **5 most important Commits:**
-      * [Created project files form template](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/e50f708434dbf8fec9bc9afaf45f8052ef9ea885)
-      * [Made changes in the distribution of detail page and added WPSIATWIN album](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/9f6ee6275a4ebe57e665ae7bd1b34ac5e2aae294)
-      * [Made the last changes in detail page and added albums to home](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/9aa2c14bb8cec7df92b12ca10d322f09eb875161)
-      * [Changed some details in detail pages](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/d8ec57f6b8f8212f3472f20057e677a05f0a57e3)
-      * [Added delete and edit buttons to each song in detail](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/8f1bfc576a83cab56cf172eee48d8c085d560a08)
+      * [Made final changes in detail to make buttons work, made css work in detail](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/683ec7e45c26ad28ef474b6b3027525aee8e5599)
+      * [Made confirmation page for edit page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/cfabd6e221dc615242bc57734f2f956eab05cefa)
+      * [Made confirm deleta page in each song](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4ecc8f534ab1e45f5cddc52a6866e397cdcabc67)
+      * [Made edit work](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/1e70934ada0e23b4c514db59b2ccd9b954bbb0cb)
+      * [Made changes in router detail so it checks if the data is valid](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/7ec0e9c6ee8c20a64e7f5ae80abe3de63a79dd5d)
   * **Files I worked on:**
-    *  [Detail Template page](detail.html)  [Home page](home.html)
-    *  [Detail page](detail_WPSIATWIN.html)
+    *  [Detail page](detail.html)
+    *  [Edit song page](editsong.html)
+    *  [confirm edit song page](confirmeditsong.html)
+    *  [confirm delete song page](confirmdeletesong.html)
     *  [Styles](styles.css)
-    *  [Home page](home.html)
-    *  [Creation page](detail.html)
 
 ### Adrienn Brinza
-  * **Description:**    
+  * **Description:** I've continued working on the “New Element” page, adding field validations. I also modified the fields based on previous practice and linked the “New Element” page to the home page and the MongoDB database. I've also create the message page for confirmations.   
               
   * **5 most important Commits:**
       * [Introduction to all elements of the “Create” page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/10157cc7584c51a3aa768f4492c6ac65dbd135bb)
@@ -161,8 +161,9 @@ The data's categorization will be primarily organised as follows:
       * [Introduced my albums at home page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/4bf0fe2e8786c634d87f663c84bd76ed2f02fe9f)
       * [Last changes at form](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/d4d4448b9954408ad2b2d29572e071724ecc0371)
   * **Files I worked on:**
-    *  [Creation page](creation.html)
-    *  [Home page](home.html)
-    *  [Styles](styles.css)
-    *  [Detail page](detail_WPSIATWIN.html)
-    *  [Template Page](template.html)
+    *  [new_element_page](new_element.html)
+    *  [message_page](message.html)
+    *  [router.js](router.js)
+    *  [app.js](app.js)
+    *  [detail page](detail.html)
+    
