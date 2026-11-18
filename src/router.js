@@ -56,16 +56,16 @@ function validateSong(body) {
   const number = parseInt(body.number);
 
   if (!title || title.length > 50) {
-    return { error: 'El título es obligatorio y no puede superar los 50 caracteres' };
+    return { error: "Title is required and can't exceed 50 characters" };
   }
   if (!/^[0-9]{1,2}:[0-5][0-9]$/.test(runtime ?? '')) {
-    return { error: 'La duración debe tener el formato m:ss, por ejemplo 5:34' };
+    return { error: 'Duration must be in format X:YY with YY being equal or less than 60' };
   }
   if (Number.isNaN(bpm) || bpm < 40 || bpm > 240) {
-    return { error: 'El BPM debe ser un número entre 40 y 240' };
+    return { error: 'BPM must be a number betwen 40 and 240' };
   }
   if (Number.isNaN(number) || number < 1) {
-    return { error: 'El número de canción debe ser 1 o mayor' };
+    return { error: 'Song number must be at least 1' };
   }
 
   return { data: { title, runtime, bpm, number } };
@@ -263,13 +263,13 @@ router.post('/edit/:id', upload.single('cover'), async (req, res) => {
 router.get('/detail/:id', async (req,res) => {
 
 if (!ObjectId.isValid(req.params.id)) {
-    return res.status(404).send('Álbum no encontrado');
+    return renderError(res,404,'Album not found','/home/1');
   }
 
   const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
 
 if (!album) {
-    return res.status(404).send('Álbum no encontrado');
+    return renderError(res,404,'Album not found','/home/1');
   }
 
   const songs = await songVault
@@ -285,13 +285,13 @@ router.post('/detail/:id/songs', async (req, res) => {
     console.log('POST recibido', req.params.id, req.body);
 
       if (!ObjectId.isValid(req.params.id)) {
-    return renderError(res, 404, 'Álbum no encontrado');
+    return renderError(res, 404, 'Album not found','/home/1');
   }
 
     const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
 
     if (!album) {
-    return renderError(res, 404, 'Álbum no encontrado');
+    return renderError(res, 404, 'Album not found','/home/1');
   }
 
     const { title, bpm, runtime, number } = req.body;
@@ -303,7 +303,7 @@ router.post('/detail/:id/songs', async (req, res) => {
 
     const duplicated = await songVault.findOne({ album: album.name, number: data.number });
       if (duplicated) {
-      return renderError(res, 400, 'Ya hay una canción con ese número en este álbum', `/detail/${req.params.id}`);
+      return renderError(res, 400, 'There is a song with the same number in this album already', `/detail/${req.params.id}`);
     }
 
     await songVault.insertOne({
@@ -346,7 +346,7 @@ router.get('/detail/:id/songs/:songId/delete/confirm', async (req, res) => {
 router.post('/detail/:id/songs/:songId/delete', async (req, res) => {
 
  if (!ObjectId.isValid(req.params.songId)) {
-        return res.status(404).send('Canción no encontrada');
+        return renderError(res,404,'Song not found',`/detail/${req.params.id}`);
     }
 
     await songVault.deleteOne({ _id: new ObjectId(req.params.songId) });
@@ -358,13 +358,13 @@ router.post('/detail/:id/songs/:songId/delete', async (req, res) => {
 router.get('/detail/:id/songs/:songId/edit', async (req, res) => {
 
 if (!ObjectId.isValid(req.params.songId)) {
-        return res.status(404).send('Canción no encontrada');
+        return renderError(res,404,'Song not found',`/detail/${req.params.id}`);
     }
 
     const song = await songVault.findOne({ _id: new ObjectId(req.params.songId) });
 
     if (!song) {
-        return res.status(404).send('Canción no encontrada');
+        return renderError(res,404,'Song not found',`/detail/${req.params.id}`);
     }
 
     res.render('editSong', {
@@ -378,17 +378,17 @@ router.post('/detail/:id/songs/:songId/edit/confirm', async (req, res) => {
     const editUrl = `/detail/${req.params.id}/songs/${req.params.songId}/edit`;
 
     if (!ObjectId.isValid(req.params.id) || !ObjectId.isValid(req.params.songId)) {
-        return renderError(res, 404, 'Canción no encontrada');
+        return renderError(res, 404, 'Song not found', `/detail/${req.params.id}`);
     }
 
     const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
     if (!album) {
-        return renderError(res, 404, 'Álbum no encontrado');
+        return renderError(res, 404, 'Album not found', '/home/1');
     }
 
     const song = await songVault.findOne({ _id: new ObjectId(req.params.songId) });
     if (!song) {
-        return renderError(res, 404, 'Canción no encontrada');
+        return renderError(res, 404, 'Song not found', `/detail/${req.params.id}`);
     }
 
     const { error, data } = validateSong(req.body);
@@ -402,7 +402,7 @@ router.post('/detail/:id/songs/:songId/edit/confirm', async (req, res) => {
         _id: { $ne: song._id }
     });
     if (duplicated) {
-        return renderError(res, 400, 'Ya hay una canción con ese número en este álbum', editUrl);
+        return renderError(res, 400, 'There is a song with the same number in this album already', editUrl);
     }
 
     res.render('confirmeditsong', {
@@ -417,13 +417,13 @@ router.post('/detail/:id/songs/:songId/edit', async (req, res) => {
     const editUrl = `/detail/${req.params.id}/songs/${req.params.songId}/edit`;
 
     if (!ObjectId.isValid(req.params.id) || !ObjectId.isValid(req.params.songId)) {
-        return renderError(res, 404, 'Canción no encontrada');
+        return renderError(res, 404, 'Song not found', `/detail/${req.params.id}`);
     }
 
     const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
     if (!album) {
-        return renderError(res, 404, 'Álbum no encontrado');
-    }
+        return renderError(res, 404, 'Song not found', '/home/1');
+        }
 
     const { error, data } = validateSong(req.body);
     if (error) {
@@ -438,7 +438,7 @@ router.post('/detail/:id/songs/:songId/edit', async (req, res) => {
         _id: { $ne: songId }
     });
     if (duplicated) {
-        return renderError(res, 400, 'Ya hay una canción con ese número en este álbum', editUrl);
+        return renderError(res, 400, 'There is a song with the same number in this album already', editUrl);
     }
 
     await songVault.updateOne(
@@ -447,12 +447,6 @@ router.post('/detail/:id/songs/:songId/edit', async (req, res) => {
     );
 
     res.redirect(`/detail/${req.params.id}`);
-});
-
-
-router.get('/error', (req,res) => {
-
-  res.render('error');
 });
 
 export default router;
