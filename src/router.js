@@ -953,9 +953,36 @@ if (!req.file) {
   return res.render('new_element', { errores, valores: req.body });
 } // object keys is a function that returns an array with the properties of the object, if the length is greater than 0 there are errors 
    
-  // aquí tengo que poner el guardado en mongoDB 
+  //mongodb operations
+  const [year, month, day] = releaseDate.split('-');
+
+   const result = await albumVault.insertOne({
+    name: name,
+    author: author,
+    genre: genre,
+    cover: req.file.filename,
+    songNumber: songNumber,
+    leadSingle: leadSingle,
+    releaseDate: `${day}-${month}-${year}`,
+    description: description
+  });
+
+  // The home page reads the album names from the "albumList" document
+  await albumVault.updateOne(
+    { name: 'albumList' },
+    { $push: { list: name } }
+  );
+
+  res.render('message', {
+    title: 'Album created',
+    message: `The album "${name}" has been created successfully.`,
+    links: [
+      { url: `/detail/${result.insertedId}`, text: 'View album' },
+      { url: '/home/1', text: 'Back to home' }
+    ]
+  });
+}); 
  
-});
 
 
 

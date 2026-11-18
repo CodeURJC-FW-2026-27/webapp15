@@ -17,7 +17,7 @@
                   </div>
                 <!--Form for creation page-->
                 <div> 
-                   <form class="row justify-content-center g-4" method="POST" action="/new_element" enctype="multipart/form-data"></form> //post is for join with JS, action is the directon where the form is, and envtype is for multer  
+                   <form class="row justify-content-center g-4" method="POST" action="/new_element" enctype="multipart/form-data"> <!--post is for join with JS, action is the directon where the form is, and envtype is for multer -->
                    
 
                         <div class="field col-lg-6 col-md-10 ">
@@ -28,7 +28,7 @@
                            {{#errores.name}}<div class="text-danger">{{errores.name}}</div>{{/errores.name}}
                          </div>
                          
-                          // title is the message user see and value is for save whats user wrote in case of error 
+                          <!-- title is the message user see and value is for save whats user wrote in case of error -->
                          <div class="field col-lg-6 col-md-10 ">
                           <label for="inputAuthor">Author</label>
                           <input type="text" id="inputAuthor" class="form-control" name="author"
@@ -94,13 +94,9 @@
                     </div>
 
                        <div class="formButtons col-12 d-flex justify-content-center gap-3 mb-5">
-                         <button type="submit" class="btn btn-primary">
-                            <a href="#">Save</a>
-                         </button>
-                         <button type="submit" class="btn btn-primary">
-                            <a href="home">Cancel</a>
-                         </button>
-                       </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <a href="/home/1" class="btn btn-primary">Cancel</a>
+                      </div>
 
                     </form>
                 </div>      
