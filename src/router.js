@@ -162,9 +162,8 @@ router.get('/home', async (req,res) => {
 function renderMessage(res, status, title, message, links) {
   res.status(status).render('message', { title, message, links });
 }
-
 function renderNotFound(res) {
-  renderMessage(res, 404, 'Error', 'Album not found.', [{ url: '/home/1', text: 'Back to home' }]);
+  return renderError(res, 404, 'Album not found', '/home/1');
 }
 
 function renderAlbumForm(res, { albumId = null, errors = {}, values = {} }) {
@@ -190,7 +189,7 @@ router.post('/new_element', upload.single('cover'), async (req, res) => {
 
   if (Object.keys(errors).length > 0) {
     if (req.file) fs.unlink(req.file.path, () => {});
-    return renderAlbumForm(res, { errors, values: req.body });
+   return renderError(res, 400, Object.values(errors).join('. '), '/new_element');
   }
 
   const result = await albumVault.insertOne({
@@ -235,7 +234,7 @@ router.post('/edit/:id', upload.single('cover'), async (req, res) => {
 
   if (Object.keys(errors).length > 0) {
     discardFile();
-    return renderAlbumForm(res, { albumId: req.params.id, errors, values: req.body });
+   return renderError(res, 400, Object.values(errors).join('. '), `/edit/${req.params.id}`);
   }
 
   const changes = { ...data, releaseDate: utils.swapDateFormat(data.releaseDate) };
