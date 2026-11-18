@@ -878,15 +878,20 @@ router.get('/new_element', (req,res) => {
 /*START DEATIL PAGE OPERATIONS -------------------- */
 router.get('/detail/:id', async (req,res) => {
 
+if (!ObjectId.isValid(req.params.id)) {
+    return res.status(404).send('Álbum no encontrado');
+  }
+
   const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
+
+if (!album) {
+    return res.status(404).send('Álbum no encontrado');
+  }
 
   const songs = await songVault
     .find({album:album.name})
     .sort({number:1})
     .toArray();
-
-console.log('Álbum:', JSON.stringify(album.name), '| canciones:', songs.length);
-console.log('Valores de album en songs:', await songVault.distinct('album'));
 
   res.render('detail', { album, songs });
 });
@@ -894,7 +899,15 @@ console.log('Valores de album en songs:', await songVault.distinct('album'));
 router.post('/detail/:id/songs', async (req, res) => {
     console.log('POST recibido', req.params.id, req.body);
 
+      if (!ObjectId.isValid(req.params.id)) {
+    return res.status(404).send('Álbum no encontrado');
+  }
+
     const album = await albumVault.findOne({ _id: new ObjectId(req.params.id) });
+
+    if (!album) {
+    return res.status(404).send('Álbum no encontrado');
+  }
 
     const { title, bpm, runtime, number } = req.body;
 
@@ -908,7 +921,12 @@ router.post('/detail/:id/songs', async (req, res) => {
 
     res.redirect(`/detail/${req.params.id}`);
 });
+
 router.post('/detail/:id/songs/:songId/delete', async (req, res) => {
+
+ if (!ObjectId.isValid(req.params.songId)) {
+        return res.status(404).send('Canción no encontrada');
+    }
 
     await songVault.deleteOne({ _id: new ObjectId(req.params.songId) });
 
@@ -917,7 +935,15 @@ router.post('/detail/:id/songs/:songId/delete', async (req, res) => {
 
 router.get('/detail/:id/songs/:songId/edit', async (req, res) => {
 
+if (!ObjectId.isValid(req.params.songId)) {
+        return res.status(404).send('Canción no encontrada');
+    }
+
     const song = await songVault.findOne({ _id: new ObjectId(req.params.songId) });
+
+    if (!song) {
+        return res.status(404).send('Canción no encontrada');
+    }
 
     res.render('editSong', {
         ...song,
@@ -927,6 +953,10 @@ router.get('/detail/:id/songs/:songId/edit', async (req, res) => {
 });
 
 router.post('/detail/:id/songs/:songId/edit', async (req, res) => {
+
+ if (!ObjectId.isValid(req.params.songId)) {
+        return res.status(404).send('Canción no encontrada');
+    }
 
     const { name, bpm, runtime, numero } = req.body;
 
