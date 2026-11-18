@@ -105,24 +105,38 @@ The data's categorization will be primarily organised as follows:
  
 ## Práctica 2 
 
+### Execution Instructions
+ 1. **Open terminal in the project root folder**
+ 2. **(If not installed) Install MongoDB Community Server:** Run the following command `winget install -e --id MongoDB.Server --silent --accept-package-agreements --accept-source-agreements`
+ 3. **(If not installed) Install Node.js LTS:** Run the following command `winget install -e --id OpenJS.NodeJS.LTS`
+ 4. **Close and Reopen the terminal**
+ 5. **Verify installations:** Run the following commands, one after the other `node --version` and `npm --version`. If any of these fail refer to step 3.
+ 6. **Verify the MongoDB sevice:** Run the following command `sc query MongoDB`. If MongoDB is not running, open CMD as administrator on the same project folder and execute `net start MongoDB`
+ 7. **Install the project Dependencies:** From the project root folder run the following command `npm install`
+ 8. **Start Web App:** Run the folowwing command `npm start`
+ 9. **View Web App:**  Open a new tab on your browser and navigate `http://localhost:3000/`
+
+### File Description
+
+
 ### Eric Vela Pérez
-  * **Description:** I've continued working on the home page, adding the pagination system, the search by title query and the filter by genre. I've also implemented the transfer of the example album images to the uploads folder as well as the creation of the database and the primary entity collection (albumVault) if non-existent, uploading the example primary entities (albums) to the database if empty. At last, I've also created the error page template and the json data used in the data base for all the example albums and the HALO, Different World and Soft Error's songs.
+  * **Description:** I've continued working on the home page, inserting the header and footer with moustache partials, adding the pagination system, the search by title query and the filter by genre. I've also implemented the transfer of the example album images to the uploads folder as well as the creation of the database and the primary entity collection (albumVault) if non-existent, uploading the example primary entities (albums) to the database if empty. At last, I've also created the error page template and the json data used in the data base for all the example albums and the HALO, Different World and Soft Error's songs.
 
   * **5 most important Commits:**
-      * [Added title header](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/9e7c2b8b1d768a6e071da477823f6faddea327db)
-      * [Created navbar and added it to all pages](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/05f83ece66ac5770e550efaddbd3bb3736be3981)
-      * [Created album grid on home page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/5815b4f6def1eb4b74983e1597ed7a2580774f57)
-      * [Made searchbar and filter button on Header and added it to all pages](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/729c64cbc0903a604141e84ca50cbec62d8efc49)
-      * [Created index landing page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/1099921e9c17a1626a6e9a281e7ee24546628cf6)
+      * [Changed Header and Footer to be generated with mustache partials](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/9772786b1d80d86542fe98da3071be61e81b33f5)
+      * [Added functional pagination to home page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/9f26440c6644c03d920b907c1dcd4d4ee29a6661)
+      * [Made connection, database, collection and documents be created if not found with mongoDB, and made initial database images be copied to uploads if not found](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/dd7488721ca6251f178e18311b8c7dd33f4474a0)
+      * [Added search by title and filter by genre](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/8730a0190abc5cce6086509b1e4a67276c68a818)
+      * [Added error tenplate page to views](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/001a3fa930cac86c7b57cec3ee1aa3e62b4b5785)
   * **Files I worked on:**
-      *  [Index page](index.html)
-      *  [Home page](home.html)
-      *  [Detail page](detail_WPSIATWIN.html)
-      *  [Creation page](detail.html)
-      *  [Styles](styles.css)
+      *  [app.js](src/app.js)
+      *  [router.js](src/router.js)
+      *  [albumHandler.js](src/albumHandler.js)
+      *  [home.html](views/home.html)
+      *  [header.html](views/header.html)
 
 ### Sofía Gómez García
-  * **Description:** I made the detail page template, along with the detail page that shows an album as an example whenever you click any album in the home page. The detail page Shows the title of the album, its cover, specifications about the genre, release date and author; the tracklist along with each song's runtime and bpm, and a button to delete and edit each one as well; a description of the album and what it is about, a video of the album's lead single, a button to go to creation page, another button to go to home page, a form to add a new song to the album, and the footer. I have also added three albums to the home page.
+  * **Description:** 
 
   * **5 most important Commits:**
       * [Created project files form template](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/e50f708434dbf8fec9bc9afaf45f8052ef9ea885)
@@ -138,7 +152,7 @@ The data's categorization will be primarily organised as follows:
     *  [Creation page](detail.html)
 
 ### Adrienn Brinza
-  * **Description:** I've made the creation page template, which includes a form with 8 different fields and 2 buttons: one labeled “Save” (which has no function) and   another labeled “Cancel” that redirects you to the home page. I've also added my 3 favorite albums to the home page, each with its cover art and respective genre.     
+  * **Description:**    
               
   * **5 most important Commits:**
       * [Introduction to all elements of the “Create” page](https://github.com/CodeURJC-FW-2026-27/webapp15/commit/10157cc7584c51a3aa768f4492c6ac65dbd135bb)

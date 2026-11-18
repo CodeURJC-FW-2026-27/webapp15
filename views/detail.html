@@ -54,9 +54,9 @@
                                     <a href="/detail/{{album._id}}/songs/{{_id}}/edit">Edit</a>
                                 </button>         
                                 <!-- button to delete -->     
-                                <form method="POST" action="/detail/{{album._id}}/songs/{{_id}}/delete" style="display:inline;">                  
+                                <form method="GET" action="/detail/{{album._id}}/songs/{{_id}}/delete/confirm" style="display:inline;">                  
                                     <button type="submit" class="btn btn-primary">
-                                        <a>Delete</a>
+                                        <a>Eliminar</a>
                                     </button>
                                 </form>
                             </li>
