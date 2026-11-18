@@ -134,6 +134,9 @@ The data's categorization will be primarily organised as follows:
    - `views/confirmedit.html`: Displays the original and updated song information before confirming an edit operation.
    - `views/message.html`: Reusable confirmation page used to display messages after successful operations.
    - `views/error.html`: Reusable error page. It displays the HTTP status, the corresponding error message and a link that returns the user to the appropriate page.
+   - `views/confirmeditsong.html`: Reusable song-edit confirmation page. It compares the current song data with the proposed changes in a before-and-after table, preserves the validated values in hidden form fields and allows the user either to confirm the update or return to the editing form.
+   - `views/confirmdeletesong.html`: Reusable song-deletion confirmation page. It identifies the selected song and its album, warns that the operation cannot be undone and allows the user either to submit the deletion request or cancel and return to the album detail page.
+ 
 
 3. **Mustache Partials**
    - `views/header.html`: Mustache partial containing the common document structure, page header and navigation menu.
