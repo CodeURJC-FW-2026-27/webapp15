@@ -14,7 +14,7 @@ const generosPermitidos = ['hyperpop', 'EDM', 'k-pop', 'rock', 'pop', 'rap', 'ba
 
 /* CREATION OF DATABASE ON MONGO DB IF NOT FOUND*/
 
-const client = new MongoClient('mongodb://localhost:27017');
+const client = new MongoClient('mongodb://127.0.0.1:27017');
 
 await client.connect();
 
