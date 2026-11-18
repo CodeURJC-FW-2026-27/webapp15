@@ -842,6 +842,17 @@ body {
 /* END OF NAVBAR -------------------------------------------*/
 
 
+/* START OF SEARCH FORM -------------------------------------*/
+
+.searchForm {
+  display: flex;
+  margin-right: 3%;
+}
+
+/* END OF SEARCH FORM -------------------------------------*/
+
+
+
 /* START OF ALBUM GRID -------------------------------------*/
 
 .homeHeading {
@@ -965,6 +976,10 @@ body {
     .genre {
       top: 5%;
     }
+
+    .genreFilter {
+      height: 30%;
+    }
 }
 
 @media (max-width: 575px) {
@@ -981,6 +996,9 @@ body {
     }
     .genre {
       top: 5%;
+    }
+    .genreFilter {
+      height: 10%;
     }
 }
 
@@ -1551,7 +1569,7 @@ legend + * {
   margin-right: 1%;
   outline-offset: -2px;
   -webkit-appearance: textfield;
-  max-width: 40%;
+  min-width: 35vw;
 }
 @media (max-width: 991px) {
     [type=search] {

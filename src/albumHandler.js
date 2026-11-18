@@ -7,6 +7,10 @@ export async function getAlbum(collection, name){
   return await collection.findOne({name: name});
 }
 
+export async function getAlbumByGenre(collection, genre) {
+  return await collection.find({genre: genre}).toArray();
+}
+
 export function getName(album) {
   return album.name;
 }
@@ -38,3 +42,4 @@ export function getDescription(album) {
 export function getSongNumber(album) {
   return album.songNumber;
 }
+
